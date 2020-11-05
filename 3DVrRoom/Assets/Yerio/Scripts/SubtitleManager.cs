@@ -10,6 +10,7 @@ public class SubtitleManager : MonoBehaviour
     [Header("--Canvas--")]
     public GameObject subtilePanel;
     public TMP_Text subtitleText;
+    public TMP_Text nameText;
     [Header("--Lines--")]
     public Line[] startingStageLines;
     int startingStageLineIndex;
@@ -45,7 +46,7 @@ public class SubtitleManager : MonoBehaviour
         }
     }
 
-    IEnumerator TimeText(float time)
+    IEnumerator ShowTextTimed(float time)
     {
         yield return new WaitForSeconds(time);
     }
