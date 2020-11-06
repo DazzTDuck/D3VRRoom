@@ -10,17 +10,17 @@ public class KeypadScreen : MonoBehaviour
     public void AddNumber(string number)
     {
         if (keypadSceenText.text == "00000")
-            ClearText();
+            SetText("");
 
         if (keypadSceenText.text.Length < 5)
         {           
             keypadSceenText.text += number;
-            Debug.Log(keypadSceenText.text);
+            //Debug.Log(keypadSceenText.text);
         }     
     }
 
-    public void ClearText()
+    public void SetText(string text)
     {
-        keypadSceenText.text = "";
+        keypadSceenText.text = text;
     }
 }

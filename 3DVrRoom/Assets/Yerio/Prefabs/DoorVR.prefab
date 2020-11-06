@@ -1,0 +1,178 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5760220798070149961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5760220798070149962}
+  - component: {fileID: 5760220798070149963}
+  - component: {fileID: 5760220798070149956}
+  m_Layer: 0
+  m_Name: DoorCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5760220798070149962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5760220798070149961}
+  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071069}
+  m_LocalPosition: {x: 0.425169, y: 0.17026305, z: 1.3199406}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2119456826495670599}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5760220798070149963
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5760220798070149961}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.06205175, y: 2.4317813, z: 1.1960993}
+  m_Center: {x: 0.025671799, y: 0.0028750896, z: -0.00297153}
+--- !u!114 &5760220798070149956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5760220798070149961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70edf846b4e31cc48a9c27bb7e75360e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1976728549316798237}
+--- !u!1 &6468057911543702399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2119456826495670599}
+  m_Layer: 0
+  m_Name: DoorVR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2119456826495670599
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6468057911543702399}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.39084673, y: 2.8105147, z: 10.99942}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5760220798070149962}
+  - {fileID: 7411050074674496598}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &5760220798708452652
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2119456826495670599}
+    m_Modifications:
+    - target: {fileID: 2477802400308450240, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
+        type: 3}
+      propertyPath: m_Name
+      value: door for doorframe
+      objectReference: {fileID: 0}
+    - target: {fileID: 2965968398091979130, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.17483091
+      objectReference: {fileID: 0}
+    - target: {fileID: 2965968398091979130, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.17026305
+      objectReference: {fileID: 0}
+    - target: {fileID: 2965968398091979130, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.3199406
+      objectReference: {fileID: 0}
+    - target: {fileID: 2965968398091979130, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2965968398091979130, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2965968398091979130, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2965968398091979130, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2965968398091979130, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2965968398091979130, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2965968398091979130, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2965968398091979130, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472418022635897938, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
+        type: 3}
+      propertyPath: m_Name
+      value: DoorColliderPoint
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 48f60bd2e5ed8f84d907c64e04b1be02, type: 3}
+--- !u!4 &7411050074674496598 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2965968398091979130, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
+    type: 3}
+  m_PrefabInstance: {fileID: 5760220798708452652}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1976728549316798237 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6097498310530247217, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
+    type: 3}
+  m_PrefabInstance: {fileID: 5760220798708452652}
+  m_PrefabAsset: {fileID: 0}

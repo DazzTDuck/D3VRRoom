@@ -30,6 +30,7 @@ public class Door : MonoBehaviour
         {
             handleCollider.enabled = false;
             doorOpenCollider.enabled = true;
+            Debug.Log("open");
         }
         else
         {
@@ -40,6 +41,10 @@ public class Door : MonoBehaviour
     {
         doorOpenCollider.enabled = false;
         handleCollider.enabled = true;
+    }
+    public void LockDoor()
+    {
+        locked = true;
     }
 
 
