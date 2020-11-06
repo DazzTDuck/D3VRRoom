@@ -2,29 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof (Rigidbody))]
 public class Door : MonoBehaviour
 {
     public bool locked = true;
-    new Rigidbody rigidbody;
 
     public Transform doorHandle;
-
-    private void Awake()
-    {
-        rigidbody = GetComponent<Rigidbody>();
-        rigidbody.isKinematic = locked;
-    }
+    public Collider doorOpenCollider;
+    public Collider handleCollider;
 
    public void UnlockDoor()
     {
         if (locked)
         {
             locked = false;
-            rigidbody.isKinematic = locked;
             Debug.Log("unlocked door");
         }
     }
+
+    public void OpenDoor()
+    {
+        if (!locked)
+        {
+            handleCollider.enabled = false;
+            doorOpenCollider.enabled = true;
+        }
+        else
+        {
+            //play sound
+        }
+    }
+    public void CloseDoor()
+    {
+        doorOpenCollider.enabled = false;
+        handleCollider.enabled = true;
+    }
+
 
     public float GetDistance(Transform transform)
     {

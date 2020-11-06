@@ -391,41 +391,44 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.071544126, y: 2.440909, z: 1.2002201}
   m_Center: {x: 0.02369992, y: 0, z: 0.6001096}
---- !u!59 &550750430
-HingeJoint:
+--- !u!114 &550750430
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 550750427}
-  m_ConnectedBody: {fileID: 0}
-  m_Anchor: {x: 0.03, y: -1.22, z: 0}
-  m_Axis: {x: 1, y: 90, z: 0}
-  m_AutoConfigureConnectedAnchor: 0
-  m_ConnectedAnchor: {x: -7.3433, y: 0.010800123, z: -4.0999994}
-  m_UseSpring: 0
-  m_Spring:
-    spring: 0
-    damper: 0
-    targetPosition: 0
-  m_UseMotor: 0
-  m_Motor:
-    targetVelocity: 0
-    force: 0
-    freeSpin: 0
-  m_UseLimits: 1
-  m_Limits:
-    min: -82.91373
-    max: 147.98256
-    bounciness: 0
-    bounceMinVelocity: 0.2
-    contactDistance: 0
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 4
-  m_ConnectedMassScale: 1
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f32883eed859804dbb0c5fedac91496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axisOfRotation: 1
+  childCollider: {fileID: 1363967750}
+  linearMapping: {fileID: 0}
+  hoverLock: 0
+  limited: 1
+  frozenDistanceMinMaxThreshold: {x: 0.1, y: 0.2}
+  onFrozenDistanceThreshold:
+    m_PersistentCalls:
+      m_Calls: []
+  minAngle: -10
+  freezeOnMin: 0
+  onMinAngle:
+    m_PersistentCalls:
+      m_Calls: []
+  maxAngle: 190
+  freezeOnMax: 0
+  onMaxAngle:
+    m_PersistentCalls:
+      m_Calls: []
+  forceStart: 0
+  startAngle: 0
+  rotateGameObject: 1
+  debugPath: 0
+  dbgPathLimit: 50
+  debugText: {fileID: 0}
+  outAngle: 0
 --- !u!54 &550750431
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -434,7 +437,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 550750427}
   serializedVersion: 2
-  m_Mass: 4
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -456,6 +459,60 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locked: 1
   doorHandle: {fileID: 2014744568}
+  doorOpenCollider: {fileID: 0}
+  handleCollider: {fileID: 0}
+--- !u!114 &550750433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550750427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b93b6a877adcbf94c89a9d6e0c0e844d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateActionSetOnAttach:
+    actionSetPath: 
+  hideHandOnAttach: 1
+  hideSkeletonOnAttach: 0
+  hideControllerOnAttach: 0
+  handAnimationOnPickup: 0
+  setRangeOfMotionOnPickup: -1
+  useHandObjectAttachmentPoint: 1
+  attachEaseIn: 0
+  snapAttachEaseInCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  snapAttachEaseInTime: 0.15
+  snapAttachEaseInCompleted: 0
+  skeletonPoser: {fileID: 0}
+  handFollowTransform: 1
+  highlightOnHover: 1
+  hideHighlight: []
+  hoverPriority: 0
 --- !u!1 &586537943
 GameObject:
   m_ObjectHideFlags: 0
@@ -1936,7 +1993,7 @@ PrefabInstance:
     - target: {fileID: 3131547231302307244, guid: df199905dc5a6a140b56a13e45c7c98c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.9562
+      value: -7.928
       objectReference: {fileID: 0}
     - target: {fileID: 3131547231302307244, guid: df199905dc5a6a140b56a13e45c7c98c,
         type: 3}
@@ -2011,8 +2068,8 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1335173061}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &1335173063
-MeshCollider:
+--- !u!65 &1335173063
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2021,10 +2078,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2241096569260840705, guid: 688b096ef62a52c4fbebf33cfc1bf7c6, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.07500001, y: 0.00448825, z: 0.027734369}
+  m_Center: {x: 0.022739163, y: 0, z: 0.0001830454}
 --- !u!114 &1335173064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2090,8 +2146,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2197,6 +2253,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1363967750 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 8039262058287709556, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
+    type: 3}
+  m_PrefabInstance: {fileID: 2090518400}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1423235724
 GameObject:
   m_ObjectHideFlags: 0
@@ -2998,6 +3060,66 @@ MonoBehaviour:
   m_GameObject: {fileID: 2014744567}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f32883eed859804dbb0c5fedac91496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axisOfRotation: 0
+  childCollider: {fileID: 2014744571}
+  linearMapping: {fileID: 0}
+  hoverLock: 0
+  limited: 1
+  frozenDistanceMinMaxThreshold: {x: 0.1, y: 0.2}
+  onFrozenDistanceThreshold:
+    m_PersistentCalls:
+      m_Calls: []
+  minAngle: 0
+  freezeOnMin: 0
+  onMinAngle:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 550750432}
+        m_MethodName: CloseDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  maxAngle: -40
+  freezeOnMax: 0
+  onMaxAngle:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 550750432}
+        m_MethodName: OpenDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  forceStart: 0
+  startAngle: 0
+  rotateGameObject: 1
+  debugPath: 0
+  dbgPathLimit: 50
+  debugText: {fileID: 0}
+  outAngle: 0
+--- !u!114 &2014744570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014744567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b93b6a877adcbf94c89a9d6e0c0e844d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -3041,18 +3163,19 @@ MonoBehaviour:
   highlightOnHover: 1
   hideHighlight: []
   hoverPriority: 0
---- !u!114 &2014744573
-MonoBehaviour:
+--- !u!65 &2014744571
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2014744567}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: caf126b89767a36439ff9144f7d04717, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 2
+  m_Size: {x: 0.076704055, y: 0.054678917, z: 0.18201905}
+  m_Center: {x: -0.05, y: 0, z: -0.063670546}
 --- !u!1001 &2090518400
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3083,22 +3206,22 @@ PrefabInstance:
     - target: {fileID: 2965968398091979130, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2965968398091979130, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.70710576
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 2965968398091979130, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2965968398091979130, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70710784
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 2965968398091979130, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
         type: 3}
@@ -3113,14 +3236,30 @@ PrefabInstance:
     - target: {fileID: 2965968398091979130, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90.00001
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 2965968398091979130, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4435985281824928994, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618900849288559225, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8039262058287709556, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8927767590221749540, guid: 48f60bd2e5ed8f84d907c64e04b1be02, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 48f60bd2e5ed8f84d907c64e04b1be02, type: 3}
 --- !u!1 &2099345992 stripped
 GameObject:
