@@ -23,7 +23,7 @@ Material:
   m_Name: doorframe
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ShaderKeywords: _METALLICSPECGLOSSMAP _NORMALMAP
-  m_LightmapFlags: 4
+  m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2050
@@ -34,11 +34,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: dfa252f3f7257714d80103f0b00ebded, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0bbe97f3a5e1917429b199cf7beb322d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: d0c4ef152219263498ba106814334f93, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2343a063382897d42ada4e17827c768c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -46,11 +46,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: dfa252f3f7257714d80103f0b00ebded, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0bbe97f3a5e1917429b199cf7beb322d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 4e27a2ef986da6e4386f5059f72290d1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0c6467e7e0d458141b60013aaed61d26, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
