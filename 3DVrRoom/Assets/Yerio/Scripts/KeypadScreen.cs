@@ -9,7 +9,7 @@ public class KeypadScreen : MonoBehaviour
 
     public void AddNumber(string number)
     {
-        if(keypadSceenText.text.Length < 6)
+        if(keypadSceenText.text.Length < 5)
         {
             if (keypadSceenText.text == "00000")
                 ClearText();
