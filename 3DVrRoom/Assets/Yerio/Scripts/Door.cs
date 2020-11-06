@@ -6,7 +6,7 @@ public class Door : MonoBehaviour
 {
     public bool locked = true;
 
-    public Transform doorHandle;
+    public Transform keyCheck;
     public Collider doorOpenCollider;
     public Collider handleCollider;
 
@@ -40,6 +40,6 @@ public class Door : MonoBehaviour
 
     public float GetDistance(Transform transform)
     {
-        return Vector3.Distance(doorHandle.position, transform.position);
+        return Vector3.Distance(keyCheck.position, transform.position);
     }
 }
