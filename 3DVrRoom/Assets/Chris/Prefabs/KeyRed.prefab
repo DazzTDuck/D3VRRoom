@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 2079156732234220041}
   - component: {fileID: 4268938839952602819}
   - component: {fileID: 1335173065}
-  - component: {fileID: 1335173063}
   - component: {fileID: 1335173064}
   - component: {fileID: 1335173066}
   - component: {fileID: 1335173067}
-  m_Layer: 0
+  - component: {fileID: 1335173063}
+  m_Layer: 8
   m_Name: KeyRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 2323484887586281238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.3381, y: 0, z: 0}
-  m_LocalScale: {x: 1.32, y: 1.32, z: 1.32}
+  m_LocalScale: {x: 1.6896, y: 1.6896, z: 1.6896}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -99,20 +99,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &1335173063
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2323484887586281238}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.07500001, y: 0.00448825, z: 0.027734369}
-  m_Center: {x: 0.022739163, y: 0, z: 0.0001830454}
+  m_CollisionDetection: 1
 --- !u!114 &1335173064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateActionSetOnAttach:
     actionSetPath: 
-  hideHandOnAttach: 1
+  hideHandOnAttach: 0
   hideSkeletonOnAttach: 0
   hideControllerOnAttach: 0
   handAnimationOnPickup: 0
@@ -233,3 +220,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorToOpen: {fileID: 0}
   keyOpenDistance: 0.2
+--- !u!64 &1335173063
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2323484887586281238}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2241096569260840705, guid: 688b096ef62a52c4fbebf33cfc1bf7c6, type: 3}
