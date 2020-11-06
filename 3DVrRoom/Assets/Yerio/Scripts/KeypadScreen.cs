@@ -9,11 +9,11 @@ public class KeypadScreen : MonoBehaviour
 
     public void AddNumber(string number)
     {
-        if(keypadSceenText.text.Length < 5)
-        {
-            if (keypadSceenText.text == "00000")
-                ClearText();
+        if (keypadSceenText.text == "00000")
+            ClearText();
 
+        if (keypadSceenText.text.Length < 5)
+        {           
             keypadSceenText.text += number;
             Debug.Log(keypadSceenText.text);
         }     

@@ -10,7 +10,12 @@ public class Door : MonoBehaviour
     public Collider doorOpenCollider;
     public Collider handleCollider;
 
-   public void UnlockDoor()
+    private void Awake()
+    {
+        CloseDoor();
+    }
+
+    public void UnlockDoor()
     {
         if (locked)
         {

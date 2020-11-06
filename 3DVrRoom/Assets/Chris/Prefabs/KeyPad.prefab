@@ -1348,6 +1348,7 @@ GameObject:
   - component: {fileID: 4455256456256892690}
   - component: {fileID: 7660297106290956492}
   - component: {fileID: 3578959952564001208}
+  - component: {fileID: 766267278}
   m_Layer: 0
   m_Name: KeypadMain
   m_TagString: Untagged
@@ -1416,6 +1417,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &766267278
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3982289393147536105}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7274909674424713961, guid: 575c189a79ee9094bbfd9276b717bb9f, type: 3}
 --- !u!1 &4181536605286169192
 GameObject:
   m_ObjectHideFlags: 0
