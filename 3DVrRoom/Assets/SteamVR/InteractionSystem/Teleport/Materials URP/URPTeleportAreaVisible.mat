@@ -105,7 +105,7 @@ Material:
     - _CameraNearFadeDistance: 1
     - _ColorMask: 15
     - _ColorMode: 0
-    - _Cull: 0
+    - _Cull: 2
     - _Cutoff: 0.5
     - _Darken: 0.641
     - _DetailNormalMapScale: 1
