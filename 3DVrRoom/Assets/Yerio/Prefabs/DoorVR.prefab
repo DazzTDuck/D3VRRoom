@@ -81,7 +81,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6468057911543702399}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.39084673, y: 2.8105147, z: 10.99942}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -97,6 +97,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2119456826495670599}
     m_Modifications:
+    - target: {fileID: 1182928374, guid: 48f60bd2e5ed8f84d907c64e04b1be02, type: 3}
+      propertyPath: onMaxAngle.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1182928374, guid: 48f60bd2e5ed8f84d907c64e04b1be02, type: 3}
+      propertyPath: onMaxAngle.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5760220798157997516}
+    - target: {fileID: 1182928374, guid: 48f60bd2e5ed8f84d907c64e04b1be02, type: 3}
+      propertyPath: onMaxAngle.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1182928374, guid: 48f60bd2e5ed8f84d907c64e04b1be02, type: 3}
+      propertyPath: onMaxAngle.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1182928374, guid: 48f60bd2e5ed8f84d907c64e04b1be02, type: 3}
+      propertyPath: onMaxAngle.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1182928374, guid: 48f60bd2e5ed8f84d907c64e04b1be02, type: 3}
+      propertyPath: onMaxAngle.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1182928374, guid: 48f60bd2e5ed8f84d907c64e04b1be02, type: 3}
+      propertyPath: onMaxAngle.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 5760220798157997516}
+    - target: {fileID: 1182928374, guid: 48f60bd2e5ed8f84d907c64e04b1be02, type: 3}
+      propertyPath: onMaxAngle.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: LockDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1182928374, guid: 48f60bd2e5ed8f84d907c64e04b1be02, type: 3}
+      propertyPath: onMaxAngle.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1182928374, guid: 48f60bd2e5ed8f84d907c64e04b1be02, type: 3}
+      propertyPath: onMaxAngle.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1182928374, guid: 48f60bd2e5ed8f84d907c64e04b1be02, type: 3}
+      propertyPath: onMaxAngle.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2477802400308450240, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
         type: 3}
       propertyPath: m_Name
@@ -170,6 +214,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5760220798708452652}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5760220798157997516 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 550750432, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
+    type: 3}
+  m_PrefabInstance: {fileID: 5760220798708452652}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2c2c9d6f307828439bffcf0bd12c979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1976728549316798237 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6097498310530247217, guid: 48f60bd2e5ed8f84d907c64e04b1be02,
