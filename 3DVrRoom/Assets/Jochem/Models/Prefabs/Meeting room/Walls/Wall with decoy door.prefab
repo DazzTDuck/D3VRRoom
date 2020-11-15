@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3057441782075598401}
   - component: {fileID: 4287991161053323366}
   - component: {fileID: 6418774920578763525}
+  - component: {fileID: 7261759968539803140}
   m_Layer: 0
   m_Name: Wall with decoy door
   m_TagString: Untagged
@@ -80,6 +81,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7261759968539803140
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7591815676701406396}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1466233956973707298, guid: 50df8aa1729da434fb73352a134b7bd8, type: 3}
 --- !u!1001 &6396473165082073447
 PrefabInstance:
   m_ObjectHideFlags: 0
