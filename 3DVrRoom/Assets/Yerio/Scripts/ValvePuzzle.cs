@@ -68,6 +68,8 @@ public class ValvePuzzle : MonoBehaviour
         Quaternion zRotBlueHandle = Quaternion.Euler(0, 0, blueHandleRotation);
         blueGaugeHandle.rotation = zRotBlueHandle;
 
+        //Debug.Log(zRotBlueHandle);
+
         //---green---
         greenHandleRotation = (maxHandleRot / 100) * greenValveRotProcent;
         greenHandleRotation = Mathf.Clamp(greenHandleRotation, minHandleRot, maxHandleRot);
@@ -95,7 +97,7 @@ public class ValvePuzzle : MonoBehaviour
         int bluePsiValue = Mathf.RoundToInt(maxPsiValue / 100 * blueGaugePercentage);
         blueValveSet = bluePsiValue == correctPsiValueBlueValve;
 
-        Debug.Log(bluePsiValue);
+        //Debug.Log(bluePsiValue);
 
         //---green---
         float greenGaugePercentage = (greenHandleRotation - minHandleRot) / (maxHandleRot - minHandleRot) * 100;

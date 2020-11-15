@@ -23,13 +23,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475099056980849422}
-  m_LocalRotation: {x: -0.49999976, y: -0.5000001, z: 0.5000002, w: 0.5}
-  m_LocalPosition: {x: 0.00880001, y: 0.000000003022535, z: 0.0005001036}
+  m_LocalRotation: {x: -0.6597399, y: 0.7071066, z: -0.18301241, w: 0.1767768}
+  m_LocalPosition: {x: 0.010499971, y: -0.0005000277, z: -0.01090013}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2705505365747412936}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -180, y: 89.99999, z: -90}
+  m_LocalEulerAnglesHint: {x: -181.465, y: -29.448975, z: 93.584}
 --- !u!1 &3368747940007507314
 GameObject:
   m_ObjectHideFlags: 0
@@ -46,7 +46,8 @@ GameObject:
   - component: {fileID: 1080476154613038499}
   - component: {fileID: 2323484886587181270}
   - component: {fileID: 2323484886587181269}
-  - component: {fileID: 2323484886587181268}
+  - component: {fileID: 640536773}
+  - component: {fileID: 3070935597105218990}
   m_Layer: 0
   m_Name: KeyRedPickup
   m_TagString: Untagged
@@ -179,7 +180,7 @@ MonoBehaviour:
   handAnimationOnPickup: 0
   setRangeOfMotionOnPickup: -1
   useHandObjectAttachmentPoint: 0
-  attachEaseIn: 0
+  attachEaseIn: 1
   snapAttachEaseInCurve:
     serializedVersion: 2
     m_Curve:
@@ -226,7 +227,7 @@ MonoBehaviour:
   attachmentFlags: 84
   attachmentOffset: {fileID: 7953466110151876098}
   catchingSpeedThreshold: -1
-  releaseVelocityStyle: 3
+  releaseVelocityStyle: 1
   releaseVelocityTimeOffset: -0.011
   scaleReleaseVelocity: 1.1
   scaleReleaseVelocityThreshold: -1
@@ -257,15 +258,37 @@ MonoBehaviour:
   restoreOriginalParent: 0
   onPickUp:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3368747940007507314}
+        m_MethodName: set_layer
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDetachFromHand:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3368747940007507314}
+        m_MethodName: set_layer
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeldUpdate:
     m_PersistentCalls:
       m_Calls: []
   interactable: {fileID: 0}
---- !u!114 &2323484886587181268
+--- !u!114 &640536773
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -274,9 +297,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 3368747940007507314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 783750eec4c41da428b7651515146d14, type: 3}
+  m_Script: {fileID: 11500000, guid: e7418c7dd8f977d4e969202d3fa7e926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocityAverageFrames: 5
-  angularVelocityAverageFrames: 11
-  estimateOnAwake: 0
+  poseEditorExpanded: 1
+  blendEditorExpanded: 1
+  poseNames:
+  - KeyHolding (MAIN)
+  overridePreviewLeftHandPrefab: {fileID: 1000013348574242, guid: 638779290bce1af49b356f33dcc6fccf,
+    type: 3}
+  overridePreviewRightHandPrefab: {fileID: 1000010304998954, guid: 6def53d002137b747aec0b29551e0e25,
+    type: 3}
+  skeletonMainPose: {fileID: 11400000, guid: 0714e26c9e3cb7e42850a52648dd35ef, type: 2}
+  skeletonAdditionalPoses: []
+  showLeftPreview: 0
+  showRightPreview: 0
+  previewLeftInstance: {fileID: 0}
+  previewRightInstance: {fileID: 0}
+  previewPoseSelection: 0
+  blendingBehaviours: []
+  scale: 1
+--- !u!114 &3070935597105218990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3368747940007507314}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

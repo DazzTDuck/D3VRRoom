@@ -77,6 +77,8 @@ namespace Valve.VR.InteractionSystem
 
         public GameObject renderModelPrefab;
         [HideInInspector]
+        public GameObject renderModelInstance;
+        [HideInInspector]
         public List<RenderModel> renderModels = new List<RenderModel>();
         [HideInInspector]
         public RenderModel mainRenderModel;
@@ -1638,7 +1640,7 @@ namespace Valve.VR.InteractionSystem
 
             renderModels.Clear();
 
-            GameObject renderModelInstance = GameObject.Instantiate(renderModelPrefab);
+            renderModelInstance = GameObject.Instantiate(renderModelPrefab);
             renderModelInstance.layer = gameObject.layer;
             renderModelInstance.tag = gameObject.tag;
             renderModelInstance.transform.parent = this.transform;

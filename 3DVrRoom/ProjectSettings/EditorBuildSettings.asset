@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Yerio/Scenes/Yerio.unity
+    guid: 4bf2d1f8af12e854eb7168ecb770a6e9
   m_configObjects: {}

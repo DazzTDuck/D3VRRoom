@@ -11,5 +11,6 @@ public class Follow : MonoBehaviour
     void FixedUpdate()
     {
         transform.position = target.transform.position;
+        transform.rotation = target.transform.rotation;
     }
 }
