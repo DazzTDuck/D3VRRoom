@@ -46,7 +46,7 @@ public class FuzeBoxPuzzle : MonoBehaviour
         {
             placed = true;
             replacementFuze.SetActive(true);
-            Destroy(newFuze, 0.2f);
+            Destroy(newFuze);
 
             onFuzeReplaced.Invoke();
 
