@@ -29,9 +29,16 @@ public class BlackLightLamp : MonoBehaviour
         strength = (newPercentage / 100) * maxStrength;
         //Debug.Log(strength);
 
-        reveal.SetFloat("Vector1_4E73A3A0", strength);
-        reveal.SetVector("Vector4_58A462A8", light.transform.position);
-        reveal.SetVector("Vector4_D5976873", -light.transform.forward);
-        reveal.SetFloat("Vector1_985FC512", light.spotAngle);
+        if (light.enabled)
+        {
+            reveal.SetFloat("Vector1_4E73A3A0", strength);
+            reveal.SetVector("Vector4_58A462A8", light.transform.position);
+            reveal.SetVector("Vector4_D5976873", -light.transform.forward);
+            reveal.SetFloat("Vector1_985FC512", light.spotAngle);
+        }
+        else
+        {
+            reveal.SetFloat("Vector1_4E73A3A0", 0);
+        }
     }
 }
