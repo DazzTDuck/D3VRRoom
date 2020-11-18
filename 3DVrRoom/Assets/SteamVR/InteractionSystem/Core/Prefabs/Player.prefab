@@ -294,7 +294,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.76, z: -0.45}
+  m_Center: {x: 0, y: 0.76, z: -0.36}
 --- !u!114 &1437485341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1193,9 +1193,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupInput:
-    actionPath: /actions/default/in/PickupRay
+    actionPath: /actions/default/in/GrabGrip
     needsReinit: 0
-  pickupDistance: 10
+  pickupDistance: 4
   showLine: 1
 --- !u!1 &160596
 GameObject:
@@ -1354,9 +1354,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupInput:
-    actionPath: /actions/default/in/PickupRay
+    actionPath: /actions/default/in/GrabGrip
     needsReinit: 0
-  pickupDistance: 10
+  pickupDistance: 4
   showLine: 1
 --- !u!120 &1053778459
 LineRenderer:
