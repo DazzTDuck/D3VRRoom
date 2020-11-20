@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8057569643295234695}
   - component: {fileID: 6376507128862627106}
   - component: {fileID: 9194397959734338024}
+  - component: {fileID: 1551321582371625060}
   m_Layer: 0
   m_Name: WaterBottle
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7249084881276567613}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.84, y: 0.693, z: 0.052}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_Children: []
@@ -80,3 +81,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1551321582371625060
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7249084881276567613}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3329825995488561363, guid: 206dc4d3b5ca26248a7521342a71ca49, type: 3}

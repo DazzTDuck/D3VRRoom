@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7082306947337850309}
   - component: {fileID: 6189831758156235360}
   - component: {fileID: 8215203959816943274}
+  - component: {fileID: 6344491974296225156}
   m_Layer: 0
   m_Name: Teabag
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6344491974296225156
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7566812674892945279}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7846272259619961921, guid: 38a00ff86885954419ad32f19221c05f, type: 3}
