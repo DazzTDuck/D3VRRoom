@@ -86,48 +86,48 @@ public class RayInteractor : MonoBehaviour
 
                 //Debug.Log(interactableOfHoveringObject + " " + handType);
             }
-            #endregion         
+            #endregion
+
+            #region UIInteractable
+            if (interactWithUi)
+            {
+                RaycastHit hitUi;
+                if (Physics.Raycast(HandPos(), hand.renderModelInstance.transform.forward, out hitUi, 100f, uiLayer))
+                {
+                    SetLineRenderer(hitUi.point);
+
+                    if (SelectedButton != hitUi.transform.GetComponent<Button>())
+                    {
+                        SelectedButton = hitUi.transform.GetComponent<Button>();
+                        SelectedButton.animator.SetTrigger(SelectedButton.animationTriggers.highlightedTrigger);
+                    }
+
+                    if (uiInput[hand.handType].stateDown)
+                    {
+                        //press input
+                        SetLineRendererColor(pressColor);
+
+                        SelectedButton.animator.ResetTrigger(SelectedButton.animationTriggers.highlightedTrigger);
+                        SelectedButton.animator.SetTrigger(SelectedButton.animationTriggers.pressedTrigger);
+                        SelectedButton.onClick.Invoke();
+                    }
+
+                    if (uiInput[hand.handType].stateUp) //just to reset Color
+                        SetLineRendererColor(originalColor);
+
+                }
+                else
+                {
+                    if (SelectedButton)
+                    {
+                        SelectedButton.animator.ResetTrigger(SelectedButton.animationTriggers.highlightedTrigger);
+                        SelectedButton.animator.SetTrigger(SelectedButton.animationTriggers.normalTrigger);
+                        SelectedButton = null;
+                    }
+                }
+            }
+            #endregion
         }
-
-        #region UIInteractable
-        if (interactWithUi)
-        {
-            RaycastHit hitUi;
-            if (Physics.Raycast(HandPos(), hand.renderModelInstance.transform.forward, out hitUi, 100f, uiLayer))
-            {
-                SetLineRenderer(hitUi.point);
-
-                if (SelectedButton != hitUi.transform.GetComponent<Button>())
-                {
-                    SelectedButton = hitUi.transform.GetComponent<Button>();
-                    SelectedButton.animator.SetTrigger(SelectedButton.animationTriggers.highlightedTrigger);
-                }
-
-                if (uiInput[hand.handType].stateDown)
-                {
-                    //press input
-                    SetLineRendererColor(pressColor);
-
-                    SelectedButton.animator.ResetTrigger(SelectedButton.animationTriggers.highlightedTrigger);
-                    SelectedButton.animator.SetTrigger(SelectedButton.animationTriggers.pressedTrigger);
-                    SelectedButton.onClick.Invoke();
-                }
-
-                if (uiInput[hand.handType].stateUp) //just to reset Color
-                    SetLineRendererColor(originalColor);
-
-            }
-            else
-            {
-                if (SelectedButton)
-                {
-                    SelectedButton.animator.ResetTrigger(SelectedButton.animationTriggers.highlightedTrigger);
-                    SelectedButton.animator.SetTrigger(SelectedButton.animationTriggers.normalTrigger);
-                    SelectedButton = null;
-                }
-            }
-        }    
-        #endregion
     }
 
     void EnableOutline(GameObject gameObject)
