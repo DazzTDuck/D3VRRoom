@@ -1,36 +1,51 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
 
-public class DistancePickup : MonoBehaviour
+public class RayInteractor : MonoBehaviour
 {
+    [Header("Pickup")]
     public SteamVR_Action_Boolean pickupInput;
     public float pickupDistance = 5f;
+    [Header("UI")]
+    public SteamVR_Action_Boolean uiInput;
+    public LayerMask uiLayer;
+    public Color pressColor;
+    public bool interactWithUi = false;
     [Space]
     public bool showLine = false;
 
+    //UI
+    Button SelectedButton;
+
+    //Pickup
     LineRenderer lineRenderer;
     Throwable throwableObjectSelected;
     Hand hand;
- 
     Outline outline;
     bool hasOutline = false;
+
+    Color originalColor;
 
     private void Awake()
     {
         hand = GetComponent<Hand>();
         lineRenderer = GetComponent<LineRenderer>();
+        originalColor = lineRenderer.startColor;
     }
 
     private void Update()
     {
         if (hand.AttachedObjects.Count == 0 && hand.renderModelInstance)
         {
+            #region Pickup
             RaycastHit hit;     
             if (Physics.Raycast(HandPos(), hand.renderModelInstance.transform.forward, out hit, pickupDistance))
             {
+                
                 //show if hovering over object with raycast
                 if (hit.transform.GetComponent<Throwable>())
                 {
@@ -38,6 +53,7 @@ public class DistancePickup : MonoBehaviour
 
                     DisableOutline();
                     EnableOutline(throwableObjectSelected.gameObject);
+                    SetLineRendererColor(originalColor);
                     SetLineRenderer(hit.point);
 
                     //Debug.Log(interactableOfGrabbedObject + " " + handType);  
@@ -70,7 +86,48 @@ public class DistancePickup : MonoBehaviour
 
                 //Debug.Log(interactableOfHoveringObject + " " + handType);
             }
+            #endregion         
         }
+
+        #region UIInteractable
+        if (interactWithUi)
+        {
+            RaycastHit hitUi;
+            if (Physics.Raycast(HandPos(), hand.renderModelInstance.transform.forward, out hitUi, 100f, uiLayer))
+            {
+                SetLineRenderer(hitUi.point);
+
+                if (SelectedButton != hitUi.transform.GetComponent<Button>())
+                {
+                    SelectedButton = hitUi.transform.GetComponent<Button>();
+                    SelectedButton.animator.SetTrigger(SelectedButton.animationTriggers.highlightedTrigger);
+                }
+
+                if (uiInput[hand.handType].stateDown)
+                {
+                    //press input
+                    SetLineRendererColor(pressColor);
+
+                    SelectedButton.animator.ResetTrigger(SelectedButton.animationTriggers.highlightedTrigger);
+                    SelectedButton.animator.SetTrigger(SelectedButton.animationTriggers.pressedTrigger);
+                    SelectedButton.onClick.Invoke();
+                }
+
+                if (uiInput[hand.handType].stateUp) //just to reset Color
+                    SetLineRendererColor(originalColor);
+
+            }
+            else
+            {
+                if (SelectedButton)
+                {
+                    SelectedButton.animator.ResetTrigger(SelectedButton.animationTriggers.highlightedTrigger);
+                    SelectedButton.animator.SetTrigger(SelectedButton.animationTriggers.normalTrigger);
+                    SelectedButton = null;
+                }
+            }
+        }    
+        #endregion
     }
 
     void EnableOutline(GameObject gameObject)
@@ -90,6 +147,12 @@ public class DistancePickup : MonoBehaviour
             outline.enabled = false;
             hasOutline = false;
         }
+    }
+
+    void SetLineRendererColor(Color newColor)
+    {
+        lineRenderer.startColor = newColor;
+        lineRenderer.endColor = newColor;
     }
 
     void SetLineRenderer(Vector3 posisiton)
