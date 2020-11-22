@@ -57,10 +57,10 @@ public class Outline : MonoBehaviour {
   private Mode outlineMode;
 
   //[SerializeField]
-  private Color outlineColor = Color.yellow;
+  private Color outlineColor;
 
   //[SerializeField] [Range(0f, 10f)]
-  private float outlineWidth = 8f;
+  private float outlineWidth;
 
   [Header("Optional")]
 

@@ -79,8 +79,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Vector4_58A462A8: {r: -8.81, g: 1.95, b: -0.25, a: 0}
-    - Vector4_D5976873: {r: -0.074747965, g: 0.039732598, b: 0.99641067, a: 0}
+    - Vector4_58A462A8: {r: -8.04324, g: 1.1433429, b: -2.0856245, a: 0}
+    - Vector4_D5976873: {r: -0.79517156, g: -0.0150348395, b: 0.6061986, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

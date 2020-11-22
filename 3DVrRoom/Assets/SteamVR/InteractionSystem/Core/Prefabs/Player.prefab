@@ -294,7 +294,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: -0.3, y: 0.76, z: -0.28}
+  m_Center: {x: -0.3, y: 0.76, z: -0.43}
 --- !u!114 &1437485341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,7 +592,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.12
+  m_Radius: 0.08
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &5452286
 Rigidbody:
@@ -625,6 +625,7 @@ MonoBehaviour:
   player: {fileID: 107946}
   fadeEnabled: 0
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  isCollision: 0
 --- !u!1 &125964
 GameObject:
   m_ObjectHideFlags: 0

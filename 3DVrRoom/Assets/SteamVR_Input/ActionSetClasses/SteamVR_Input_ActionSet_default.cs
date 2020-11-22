@@ -113,6 +113,14 @@ namespace Valve.VR
             }
         }
         
+        public virtual SteamVR_Action_Boolean FlashlightSwitch
+        {
+            get
+            {
+                return SteamVR_Actions.default_FlashlightSwitch;
+            }
+        }
+        
         public virtual SteamVR_Action_Vibration Haptic
         {
             get
