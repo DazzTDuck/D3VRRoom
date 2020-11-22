@@ -11,7 +11,6 @@ public class FlashlightFuctionality : MonoBehaviour
     [SerializeField] Animator buttonAnimator;
     [SerializeField] SteamVR_Skeleton_Poser skeletonPoser;
 
-
     int lightsIndex = 2;
     Hand holdingHand;
     Hand[] hands;
