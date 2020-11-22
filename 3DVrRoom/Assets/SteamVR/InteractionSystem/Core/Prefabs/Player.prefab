@@ -289,12 +289,12 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 1.52
-  m_Radius: 0.2
+  m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.76, z: -0.36}
+  m_Center: {x: -0.3, y: 0.76, z: -0.28}
 --- !u!114 &1437485341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,9 +559,10 @@ GameObject:
   - component: {fileID: 453574}
   - component: {fileID: 13533284}
   - component: {fileID: 5452286}
+  - component: {fileID: 1864483075151046155}
   m_Layer: 8
   m_Name: HeadCollider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -609,6 +610,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1864483075151046155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e23094fddba1334baf51e8d3a682fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 107946}
+  fadeEnabled: 0
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &125964
 GameObject:
   m_ObjectHideFlags: 0
@@ -3235,7 +3251,7 @@ PrefabInstance:
     - target: {fileID: 6289232968170698678, guid: 0ae8a81359fee8044af9623f73423793,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6289232968170698678, guid: 0ae8a81359fee8044af9623f73423793,
         type: 3}

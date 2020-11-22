@@ -10,15 +10,17 @@ public class PlayerLocalMotion : MonoBehaviour
     public float speed = 1;
 
     CharacterController controller;
+    VRHeadBlocking headBlocking;
 
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
+        headBlocking = FindObjectOfType<VRHeadBlocking>();
     }
 
     private void Update()
     {
-        if(input.axis.magnitude > 0.1)
+        if(input.axis.magnitude > 0.1 && !headBlocking.isCollision)
         {
             Vector3 direction = Player.instance.hmdTransform.TransformDirection(new Vector3(input.axis.x, 0, input.axis.y));
             controller.Move(speed * Time.deltaTime * Vector3.ProjectOnPlane(direction.normalized, Vector3.up) - new Vector3(0, 9.81f, 0) * Time.deltaTime);
