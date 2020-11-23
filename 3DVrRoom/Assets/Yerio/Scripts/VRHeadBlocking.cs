@@ -101,8 +101,14 @@ public class VRHeadBlocking : MonoBehaviour
                     else headDiff.z = backupCap * -1;
                     notCapped = false;
                 }
+                if (Mathf.Abs(headDiff.y) > backupCap)
+                {
+                    if (headDiff.y > 0) headDiff.y = backupCap;
+                    else headDiff.y = backupCap * -1;
+                    notCapped = false;
+                }
                 Vector3 adjHeadPos = new Vector3(player.transform.position.x - headDiff.x,
-                                                 player.transform.position.y,
+                                                 player.transform.position.y - headDiff.y,
                                                  player.transform.position.z - headDiff.z);
                 player.transform.SetPositionAndRotation(adjHeadPos, player.transform.rotation);
                 // Trigger fade if enabled

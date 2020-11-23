@@ -58,6 +58,14 @@
       "type": "boolean"
     },
     {
+      "name": "/actions/default/in/RightMenuButton",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/default/in/LeftMenuButton",
+      "type": "boolean"
+    },
+    {
       "name": "/actions/default/out/Haptic",
       "type": "vibration"
     },
