@@ -103,8 +103,15 @@ public class RayInteractor : MonoBehaviour
                 {
                     SetLineRenderer(hitUi.point);
 
+                    if (!hitUi.transform.GetComponent<Button>() && SelectedButton)
+                        ResetSelectedButton();
+
                     if (SelectedButton != hitUi.transform.GetComponent<Button>())
                     {
+                        if (SelectedButton)
+                        {
+                            ResetSelectedButton();
+                        }
                         SelectedButton = hitUi.transform.GetComponent<Button>();
                         SelectedButton.animator.SetTrigger(SelectedButton.animationTriggers.highlightedTrigger);
                     }
@@ -126,15 +133,18 @@ public class RayInteractor : MonoBehaviour
                 else
                 {
                     if (SelectedButton)
-                    {
-                        SelectedButton.animator.ResetTrigger(SelectedButton.animationTriggers.highlightedTrigger);
-                        SelectedButton.animator.SetTrigger(SelectedButton.animationTriggers.normalTrigger);
-                        SelectedButton = null;
-                    }
+                        ResetSelectedButton();
                 }
             }
             #endregion
         }
+    }
+
+    void ResetSelectedButton()
+    {
+        SelectedButton.animator.ResetTrigger(SelectedButton.animationTriggers.highlightedTrigger);
+        SelectedButton.animator.SetTrigger(SelectedButton.animationTriggers.normalTrigger);
+        SelectedButton = null;
     }
 
     void EnableOutline(GameObject gameObject)

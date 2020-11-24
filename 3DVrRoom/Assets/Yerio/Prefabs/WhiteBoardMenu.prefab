@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 7186986605046273629}
   - component: {fileID: 8866858784256329384}
   - component: {fileID: 7233891059402078136}
-  m_Layer: 5
+  - component: {fileID: 1870108398}
+  - component: {fileID: 4628994462558936229}
+  m_Layer: 11
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,6 +103,31 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!65 &1870108398
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075143432475001844}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5813618, y: 1.5620961, z: 0.038658623}
+  m_Center: {x: -0.0026961565, y: -0.007879734, z: 0.007879561}
+--- !u!114 &4628994462558936229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075143432475001844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 970cf8678596e8746b335db4473dffaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2099139531824774794
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,7 +172,7 @@ GameObject:
   - component: {fileID: 8233523089800303474}
   - component: {fileID: 1554363165104208148}
   - component: {fileID: 6564604018180406528}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +225,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Quit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e6763aace85053f44a104ef3b4d489cc, type: 2}
   m_sharedMaterial: {fileID: 5136059269023204361, guid: e6763aace85053f44a104ef3b4d489cc,
@@ -282,8 +309,8 @@ GameObject:
   - component: {fileID: 3640345496444672209}
   - component: {fileID: 189477492}
   - component: {fileID: 189477497}
-  m_Layer: 5
-  m_Name: Button
+  m_Layer: 11
+  m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -388,7 +415,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8403873455299329013}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4628994462558936229}
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &189477492
 Animator:
   serializedVersion: 3
@@ -435,8 +473,8 @@ GameObject:
   - component: {fileID: 7267337663826332969}
   - component: {fileID: 1345642674}
   - component: {fileID: 1345642679}
-  m_Layer: 5
-  m_Name: Button (1)
+  m_Layer: 11
+  m_Name: Settings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -541,7 +579,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8858392615563388842}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4628994462558936229}
+        m_MethodName: OpenSettings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &1345642674
 Animator:
   serializedVersion: 3
@@ -613,7 +662,7 @@ GameObject:
   - component: {fileID: 8731859030789347151}
   - component: {fileID: 5236384909568458363}
   - component: {fileID: 9074094950675107738}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,7 +715,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Settings
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e6763aace85053f44a104ef3b4d489cc, type: 2}
   m_sharedMaterial: {fileID: 5136059269023204361, guid: e6763aace85053f44a104ef3b4d489cc,
@@ -750,8 +799,8 @@ GameObject:
   - component: {fileID: 379213570453895904}
   - component: {fileID: 922854743}
   - component: {fileID: 922854748}
-  m_Layer: 5
-  m_Name: Button (2)
+  m_Layer: 11
+  m_Name: Quit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -856,7 +905,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 879274944070694860}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4628994462558936229}
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &922854743
 Animator:
   serializedVersion: 3
@@ -900,7 +960,7 @@ GameObject:
   - component: {fileID: 3914747258794798703}
   - component: {fileID: 6645712374369369134}
   - component: {fileID: 36429178940779724}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -953,7 +1013,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Start
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e6763aace85053f44a104ef3b4d489cc, type: 2}
   m_sharedMaterial: {fileID: 5136059269023204361, guid: e6763aace85053f44a104ef3b4d489cc,
@@ -1097,15 +1157,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2e2a1723d5ce404591337c3ae5f1539, type: 3}
---- !u!1 &7280815925105313661 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d2e2a1723d5ce404591337c3ae5f1539,
-    type: 3}
-  m_PrefabInstance: {fileID: 7623413653603482156}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7944762260069064135 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d2e2a1723d5ce404591337c3ae5f1539,
+    type: 3}
+  m_PrefabInstance: {fileID: 7623413653603482156}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7280815925105313661 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d2e2a1723d5ce404591337c3ae5f1539,
     type: 3}
   m_PrefabInstance: {fileID: 7623413653603482156}
   m_PrefabAsset: {fileID: 0}
@@ -1183,15 +1243,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3ccd00ac2f103d4a988ada1b16f93bb, type: 3}
---- !u!1 &7280815925203548739 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f3ccd00ac2f103d4a988ada1b16f93bb,
-    type: 3}
-  m_PrefabInstance: {fileID: 7623413653702608658}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7944762259970187513 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f3ccd00ac2f103d4a988ada1b16f93bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 7623413653702608658}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7280815925203548739 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f3ccd00ac2f103d4a988ada1b16f93bb,
     type: 3}
   m_PrefabInstance: {fileID: 7623413653702608658}
   m_PrefabAsset: {fileID: 0}

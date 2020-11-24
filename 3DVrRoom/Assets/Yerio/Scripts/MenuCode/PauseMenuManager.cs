@@ -7,8 +7,6 @@ using Valve.VR.InteractionSystem;
 public class PauseMenuManager : MonoBehaviour
 {
     [SerializeField] Transform vrCamera;
-    [SerializeField] Transform rightHand;
-    [SerializeField] Transform leftHand;
     [SerializeField] SteamVR_Action_Boolean rightInput;
     [SerializeField] SteamVR_Action_Boolean leftInput;
     [Space]
@@ -21,37 +19,27 @@ public class PauseMenuManager : MonoBehaviour
 
     private void Update()
     {
-        if (rightInput.stateDown && !paused)
+        if (rightInput.stateDown && !paused || leftInput.stateDown && !paused)
         {
             //Instantiate menu on right hand       
-            ActivateMenu(rightHand);
+            ActivateMenu();
         }
-        else if (rightInput.stateDown && paused)
-        {
-            CloseMenu();
-        }
-
-        if (leftInput.stateDown && !paused)
-        {
-            //Instantiate menu on left hand
-            ActivateMenu(leftHand);
-        }
-        else if (leftInput.stateDown && paused)
+        else if (rightInput.stateDown && paused || leftInput.stateDown && paused)
         {
             CloseMenu();
         }
     }
 
-    void ActivateMenu(Transform hand)
+    void ActivateMenu()
     {
         teleportObject.SetActive(false);
         paused = true;
-        instantiatedPauseMenu = Instantiate(pauseMenu, hand.transform.position + vrCamera.forward, Quaternion.identity);
+        instantiatedPauseMenu = Instantiate(pauseMenu, vrCamera.position + vrCamera.forward, Quaternion.identity);
         var rotation = Quaternion.LookRotation(vrCamera.forward, Vector3.up);
         instantiatedPauseMenu.transform.rotation = rotation;
     }
 
-    void CloseMenu()
+    public void CloseMenu()
     {
         teleportObject.SetActive(true);
         paused = false;

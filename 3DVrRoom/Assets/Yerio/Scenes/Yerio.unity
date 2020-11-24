@@ -13234,7 +13234,7 @@ GameObject:
   - component: {fileID: 1751896778}
   - component: {fileID: 1751896777}
   m_Layer: 0
-  m_Name: PauseMenuManager
+  m_Name: Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16114,35 +16114,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2075143432475001844, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
     - target: {fileID: 2099139531824774794, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
         type: 3}
       propertyPath: m_Name
       value: WhiteBoardMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 2099139531824774794, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 2465676737916765744, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 2618961280609891821, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 4085380181312573917, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6402877783268258543, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
         type: 3}
@@ -16204,31 +16179,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1836365278}
-    - target: {fileID: 7280815925105313661, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 7280815925203548739, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 7739914312884239871, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 8454690545788209890, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 9179546459750214676, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c58ae69ae4bc964ea530f3662c7ffc8, type: 3}
 --- !u!1001 &5328493029214940028
@@ -16626,6 +16576,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ReplacementFuze
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250813054888955960, guid: 767eb52e70c52f74fbc9d3017a7376a7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 767eb52e70c52f74fbc9d3017a7376a7, type: 3}
