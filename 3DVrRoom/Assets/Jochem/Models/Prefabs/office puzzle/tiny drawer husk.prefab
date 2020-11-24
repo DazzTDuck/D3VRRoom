@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1590479059324014763}
   - component: {fileID: 2431204731003838222}
   - component: {fileID: 457582223876123588}
+  - component: {fileID: 5519352451400863937}
   m_Layer: 0
   m_Name: tiny drawer husk
   m_TagString: Untagged
@@ -81,6 +82,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5519352451400863937
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114814870519335441}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 9ecd463fd57d5ea47ad97f9fc31f0b9d, type: 3}
 --- !u!1001 &1267830616424123185
 PrefabInstance:
   m_ObjectHideFlags: 0
