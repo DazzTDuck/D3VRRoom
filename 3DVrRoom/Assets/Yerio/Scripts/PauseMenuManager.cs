@@ -6,37 +6,37 @@ using Valve.VR.InteractionSystem;
 
 public class PauseMenuManager : MonoBehaviour
 {
-    [SerializeField] Transform player;
+    [SerializeField] Transform vrCamera;
     [SerializeField] Transform rightHand;
     [SerializeField] Transform leftHand;
     [SerializeField] SteamVR_Action_Boolean rightInput;
     [SerializeField] SteamVR_Action_Boolean leftInput;
     [Space]
     [SerializeField] GameObject pauseMenu;
-    [Space]
-    [SerializeField] Vector3 menuOffset;
+    [SerializeField] GameObject teleportObject;
 
     GameObject instantiatedPauseMenu;
-    bool menuActive;
+    [HideInInspector]
+    public bool paused;
 
     private void Update()
     {
-        if (rightInput.stateDown && !menuActive)
+        if (rightInput.stateDown && !paused)
         {
             //Instantiate menu on right hand       
             ActivateMenu(rightHand);
         }
-        else if (rightInput.stateDown && menuActive)
+        else if (rightInput.stateDown && paused)
         {
             CloseMenu();
         }
 
-        if (leftInput.stateDown && !menuActive)
+        if (leftInput.stateDown && !paused)
         {
             //Instantiate menu on left hand
             ActivateMenu(leftHand);
         }
-        else if (leftInput.stateDown && menuActive)
+        else if (leftInput.stateDown && paused)
         {
             CloseMenu();
         }
@@ -44,14 +44,17 @@ public class PauseMenuManager : MonoBehaviour
 
     void ActivateMenu(Transform hand)
     {
-        menuActive = true;
-        instantiatedPauseMenu = Instantiate(pauseMenu, hand.transform.position + menuOffset, Quaternion.identity);
-        instantiatedPauseMenu.transform.LookAt(player);
+        teleportObject.SetActive(false);
+        paused = true;
+        instantiatedPauseMenu = Instantiate(pauseMenu, hand.transform.position + vrCamera.forward, Quaternion.identity);
+        var rotation = Quaternion.LookRotation(vrCamera.forward, Vector3.up);
+        instantiatedPauseMenu.transform.rotation = rotation;
     }
 
     void CloseMenu()
     {
-        menuActive = false;
+        teleportObject.SetActive(true);
+        paused = false;
 
         if (instantiatedPauseMenu)
         {

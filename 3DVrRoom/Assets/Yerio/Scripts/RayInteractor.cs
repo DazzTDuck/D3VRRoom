@@ -42,10 +42,10 @@ public class RayInteractor : MonoBehaviour
         if (hand.AttachedObjects.Count == 0 && hand.renderModelInstance)
         {
             #region Pickup
-            RaycastHit hit;     
+            RaycastHit hit;
             if (Physics.Raycast(HandPos(), hand.renderModelInstance.transform.forward, out hit, pickupDistance))
             {
-                
+
                 //show if hovering over object with raycast
                 if (hit.transform.GetComponent<Throwable>())
                 {
@@ -64,6 +64,13 @@ public class RayInteractor : MonoBehaviour
                     DisableOutline();
                     DisableLineRenderer();
                 }
+
+                if (hand.hoveringInteractable)
+                {
+                    DisableOutline();
+                    DisableLineRenderer();
+                }
+
             }
             else
             {
@@ -72,17 +79,17 @@ public class RayInteractor : MonoBehaviour
                 DisableLineRenderer();
             }
 
-            if (pickupInput[hand.handType].stateDown && throwableObjectSelected)
+            if (pickupInput[hand.handType].stateDown && throwableObjectSelected && !hand.hoveringInteractable)
             {
+                DisableOutline();
+                DisableLineRenderer();
+
                 GrabTypes bestGrabType = hand.GetBestGrabbingType();
 
                 if (bestGrabType != GrabTypes.None)
                 {
                     hand.AttachObject(throwableObjectSelected.gameObject, bestGrabType, throwableObjectSelected.attachmentFlags);
                 }
-
-                DisableOutline();
-                DisableLineRenderer();
 
                 //Debug.Log(interactableOfHoveringObject + " " + handType);
             }

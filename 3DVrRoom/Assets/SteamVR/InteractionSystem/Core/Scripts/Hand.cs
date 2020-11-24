@@ -125,7 +125,8 @@ namespace Valve.VR.InteractionSystem
 
         public bool hoverLocked { get; private set; }
 
-        private Interactable _hoveringInteractable;
+        [HideInInspector]
+        public Interactable _hoveringInteractable;
 
         private TextMesh debugText;
         private int prevOverlappingColliders = 0;

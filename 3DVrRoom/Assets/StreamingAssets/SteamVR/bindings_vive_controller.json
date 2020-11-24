@@ -119,27 +119,8 @@
                      "output" : "/actions/default/in/grabgrip"
                   }
                },
-               "mode" : "button",
-               "parameters" : {
-                  "click_activate_threshold" : "0.05",
-                  "click_deactivate_threshold" : "0",
-                  "force_input" : "force"
-               },
+               "mode" : "toggle_button",
                "path" : "/user/hand/left/input/grip"
-            },
-            {
-               "inputs" : {
-                  "click" : {
-                     "output" : "/actions/default/in/grabpinch"
-                  }
-               },
-               "mode" : "button",
-               "parameters" : {
-                  "click_activate_threshold" : "0.75",
-                  "click_deactivate_threshold" : "0.7",
-                  "force_input" : "value"
-               },
-               "path" : "/user/hand/left/input/trigger"
             },
             {
                "inputs" : {
@@ -148,19 +129,6 @@
                   }
                },
                "mode" : "button",
-               "path" : "/user/hand/right/input/trigger"
-            },
-            {
-               "inputs" : {
-                  "click" : {
-                     "output" : "/actions/default/in/grabpinch"
-                  }
-               },
-               "mode" : "button",
-               "parameters" : {
-                  "click_activate_threshold" : "0.75",
-                  "click_deactivate_threshold" : "0.7"
-               },
                "path" : "/user/hand/right/input/trigger"
             },
             {
@@ -195,12 +163,7 @@
                      "output" : "/actions/default/in/grabgrip"
                   }
                },
-               "mode" : "button",
-               "parameters" : {
-                  "click_activate_threshold" : "0.05",
-                  "click_deactivate_threshold" : "0",
-                  "force_input" : "force"
-               },
+               "mode" : "toggle_button",
                "path" : "/user/hand/right/input/grip"
             },
             {
