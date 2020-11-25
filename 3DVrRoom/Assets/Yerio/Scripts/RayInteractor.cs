@@ -8,15 +8,15 @@ using Valve.VR.InteractionSystem;
 public class RayInteractor : MonoBehaviour
 {
     [Header("Pickup")]
-    public SteamVR_Action_Boolean pickupInput;
-    public float pickupDistance = 5f;
+    [SerializeField] SteamVR_Action_Boolean pickupInput;
+    [SerializeField] float pickupDistance = 5f;
     [Header("UI")]
-    public SteamVR_Action_Boolean uiInput;
-    public LayerMask uiLayer;
-    public Color pressColor;
-    public bool interactWithUi = false;
+    [SerializeField] SteamVR_Action_Boolean uiInput;
+    [SerializeField] LayerMask uiLayer;
+    [SerializeField] Color pressColor;
+    [SerializeField] bool interactWithUi = false;
     [Space]
-    public bool showLine = false;
+    [SerializeField] bool showLine = false;
 
     //UI
     Button SelectedButton;

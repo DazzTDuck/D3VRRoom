@@ -72,7 +72,7 @@ LightmapSettings:
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
-    m_BakeBackend: 1
+    m_BakeBackend: 2
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 512
@@ -2362,6 +2362,12 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!223 &332266535 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 2594883469358102064, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
+    type: 3}
+  m_PrefabInstance: {fileID: 4628994462558936227}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &339406507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3864,6 +3870,40 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 518183093, guid: 3522564f309e8bd4f89e14cd412b8df2, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 518183097, guid: 3522564f309e8bd4f89e14cd412b8df2, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 518183101, guid: 3522564f309e8bd4f89e14cd412b8df2, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 518183105, guid: 3522564f309e8bd4f89e14cd412b8df2, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 518183109, guid: 3522564f309e8bd4f89e14cd412b8df2, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 518183113, guid: 3522564f309e8bd4f89e14cd412b8df2, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940680952987172322, guid: 3522564f309e8bd4f89e14cd412b8df2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940680952987172322, guid: 3522564f309e8bd4f89e14cd412b8df2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5940680953939690870, guid: 3522564f309e8bd4f89e14cd412b8df2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3923,6 +3963,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: file cabinet husk
+      objectReference: {fileID: 0}
+    - target: {fileID: 8621964102154220493, guid: 3522564f309e8bd4f89e14cd412b8df2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.753
+      objectReference: {fileID: 0}
+    - target: {fileID: 8621964102154220493, guid: 3522564f309e8bd4f89e14cd412b8df2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.039
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3522564f309e8bd4f89e14cd412b8df2, type: 3}
@@ -4012,7 +4062,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 518750655}
   m_LocalRotation: {x: -0, y: -0.70710677, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 3.402, y: 1.829, z: -2.92}
+  m_LocalPosition: {x: 4.485, y: 1.829, z: 0.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5364,6 +5414,12 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!20 &636162037 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2083460, guid: dc06161b6d97feb419f45f03b62e14b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1437485338}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &640529549
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10018,6 +10074,12 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -6402532953415861574, guid: 016cdf0feef4419498a31316397db4e6, type: 3}
+--- !u!223 &1265946537 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 7186986605046273629, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
+    type: 3}
+  m_PrefabInstance: {fileID: 4628994462558936227}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1268453336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11260,18 +11322,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
---- !u!4 &1437485339 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 476540, guid: dc06161b6d97feb419f45f03b62e14b9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1437485338}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1437485340 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 485514, guid: dc06161b6d97feb419f45f03b62e14b9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1437485338}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1444804393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13233,6 +13283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1751896778}
   - component: {fileID: 1751896777}
+  - component: {fileID: 1751896779}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -13253,8 +13304,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vrCamera: {fileID: 1967603628}
-  rightHand: {fileID: 1437485340}
-  leftHand: {fileID: 1437485339}
   rightInput:
     actionPath: /actions/default/in/RightMenuButton
     needsReinit: 0
@@ -13279,6 +13328,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1751896779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751896776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5231ab3f9522d344880e5badfc221f65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  awakeMainMenuMusic: 0
+  awakeInGameMusic: 0
 --- !u!1001 &1765655722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16119,6 +16183,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: WhiteBoardMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 2594883469358102064, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 636162037}
+    - target: {fileID: 2594883469358102064, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628994462558936229, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
+        type: 3}
+      propertyPath: mainMenuCanvas
+      value: 
+      objectReference: {fileID: 1265946537}
+    - target: {fileID: 4628994462558936229, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
+        type: 3}
+      propertyPath: settingsCanvas
+      value: 
+      objectReference: {fileID: 332266535}
     - target: {fileID: 6402877783268258543, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16178,7 +16262,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 1836365278}
+      objectReference: {fileID: 636162037}
+    - target: {fileID: 7186986605046273629, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233891059402078136, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866858784256329384, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c58ae69ae4bc964ea530f3662c7ffc8, type: 3}
 --- !u!1001 &5328493029214940028
