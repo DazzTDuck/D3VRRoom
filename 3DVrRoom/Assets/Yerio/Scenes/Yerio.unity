@@ -2362,12 +2362,6 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!223 &332266535 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 2594883469358102064, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-    type: 3}
-  m_PrefabInstance: {fileID: 4628994462558936227}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &339406507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10074,12 +10068,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -6402532953415861574, guid: 016cdf0feef4419498a31316397db4e6, type: 3}
---- !u!223 &1265946537 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 7186986605046273629, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-    type: 3}
-  m_PrefabInstance: {fileID: 4628994462558936227}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1268453336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16188,21 +16176,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 636162037}
-    - target: {fileID: 2594883469358102064, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4628994462558936229, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: mainMenuCanvas
-      value: 
-      objectReference: {fileID: 1265946537}
-    - target: {fileID: 4628994462558936229, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: settingsCanvas
-      value: 
-      objectReference: {fileID: 332266535}
     - target: {fileID: 6402877783268258543, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16263,21 +16236,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 636162037}
-    - target: {fileID: 7186986605046273629, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7233891059402078136, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8866858784256329384, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c58ae69ae4bc964ea530f3662c7ffc8, type: 3}
 --- !u!1001 &5328493029214940028
