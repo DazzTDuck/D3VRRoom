@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - projectile
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
@@ -17,8 +19,8 @@ TagManager:
   - Grabbed
   - UV
   - RayUI
-  - 
-  - 
+  - DoorHandle
+  - Door
   - 
   - 
   - 

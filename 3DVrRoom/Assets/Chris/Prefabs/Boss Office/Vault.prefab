@@ -11,6 +11,11 @@ GameObject:
   - component: {fileID: 7565325588302454433}
   - component: {fileID: 5880404002716024394}
   - component: {fileID: 2577827994352995863}
+  - component: {fileID: 3756806666239557846}
+  - component: {fileID: 5881316045902402959}
+  - component: {fileID: 5922848187420489110}
+  - component: {fileID: 7389631515932644594}
+  - component: {fileID: 9007003854942877962}
   m_Layer: 0
   m_Name: Vault
   m_TagString: Untagged
@@ -79,6 +84,71 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3756806666239557846
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027154461600129135}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.63869613, y: 1.0445979, z: 0.038924687}
+  m_Center: {x: 0.10142124, y: 0.168769, z: -0.40130794}
+--- !u!65 &5881316045902402959
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027154461600129135}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.63869613, y: 1.0445979, z: 0.046056587}
+  m_Center: {x: 0.10142124, y: 0.168769, z: 0.39774007}
+--- !u!65 &5922848187420489110
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027154461600129135}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.63869613, y: 0.03151822, z: 0.8415385}
+  m_Center: {x: 0.10142124, y: 0.6753088, z: -0.0000009536743}
+--- !u!65 &7389631515932644594
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027154461600129135}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.63869613, y: 0.052726746, z: 0.8415385}
+  m_Center: {x: 0.10142124, y: -0.32716656, z: -0.0000009536743}
+--- !u!65 &9007003854942877962
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027154461600129135}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03584177, y: 1.0445979, z: 0.8415385}
+  m_Center: {x: -0.20000607, y: 0.168769, z: -0.0000009536743}
 --- !u!1 &8187203563264670794
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +160,7 @@ GameObject:
   - component: {fileID: 5155438367646283810}
   - component: {fileID: 8307642262584389734}
   - component: {fileID: 573853366133170994}
+  - component: {fileID: 3851259976230388289}
   m_Layer: 0
   m_Name: VaultDoor
   m_TagString: Untagged
@@ -104,13 +175,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8187203563264670794}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.20573139, y: 0.09531617, z: 0.19002353}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8790867469098730253}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &8307642262584389734
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -158,6 +229,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3851259976230388289
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8187203563264670794}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7630152, y: 0.9483557, z: 0.08421212}
+  m_Center: {x: 0.38147792, y: -0.021749213, z: -0.030697443}
 --- !u!1 &8265442114085231031
 GameObject:
   m_ObjectHideFlags: 0

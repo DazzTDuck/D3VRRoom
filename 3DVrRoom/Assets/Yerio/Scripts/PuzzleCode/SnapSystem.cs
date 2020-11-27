@@ -70,7 +70,7 @@ public class SnapSystem : MonoBehaviour
     
     void CheckHandsForObject()
     {
-        if (!hasSnapped)
+        if (!hasSnapped && rightHand && leftHand)
         {
             if (rightHand.ObjectIsAttached(ObjectToSnap.gameObject))
             {

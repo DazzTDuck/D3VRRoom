@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2412656797799289248}
   - component: {fileID: 1645116812713336325}
   - component: {fileID: 3544427806356007631}
+  - component: {fileID: 2015607248}
   m_Layer: 0
   m_Name: big plant
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3040116939246684954}
-  m_LocalRotation: {x: -0, y: 0.7156528, z: -0, w: 0.69845617}
+  m_LocalRotation: {x: 0, y: 0.7156501, z: 0, w: 0.69845897}
   m_LocalPosition: {x: -4.867, y: 0.0027794838, z: 14.486}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2015607248
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3040116939246684954}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4626084150751352532, guid: a905db9c271bebb49bdb19dbd0ab9a5d, type: 3}

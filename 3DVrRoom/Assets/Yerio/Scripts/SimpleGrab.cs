@@ -5,40 +5,21 @@ using Valve.VR;
 using Valve.VR.InteractionSystem;
 
 [RequireComponent(typeof(Interactable))]
-public class SimpleAttach : MonoBehaviour
+public class SimpleGrab : MonoBehaviour
 {
-    Interactable interactable;
-
-    // Start is called before the first frame update
-    void Awake()
-    {
-        interactable = GetComponent<Interactable>();
-    }
-    
-    private void OnHandHoverBegin(Hand hand)
-    {
-        hand.ShowGrabHint();
-    }
-    private void OnHandHoverEnd(Hand hand)
-    {
-        hand.HideGrabHint();
-    }
+    [SerializeField] SteamVR_Action_Boolean grabInput;
 
     private void HandHoverUpdate(Hand hand)
     {
-        GrabTypes grabType = hand.GetGrabStarting();
-        bool isGrabEnding = hand.IsGrabEnding(gameObject);
-
-        if (interactable == null && grabType != GrabTypes.None)
+        if (grabInput[hand.handType].stateDown)
         {
-            hand.AttachObject(gameObject, grabType);
-            hand.HoverLock(interactable);
+            hand.AttachObject(gameObject, GrabTypes.Grip);
             hand.HideGrabHint();
         }
-        else if (isGrabEnding)
+
+        if (grabInput[hand.handType].stateUp)
         {
             hand.DetachObject(gameObject);
-            hand.HoverUnlock(interactable);
         }
     }
 }

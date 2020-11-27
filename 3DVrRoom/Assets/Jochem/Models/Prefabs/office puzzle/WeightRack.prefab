@@ -11,7 +11,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8999911773206952699, guid: f341f6fefd3cde649bdfe939801fdf15, type: 3}
 --- !u!64 &1723658004345301200
@@ -25,7 +25,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 7567532504055388576, guid: c5c4b446b7cb6f34d8f7b7f9e1c193cc, type: 3}
 --- !u!64 &5936535733307937349
@@ -39,7 +39,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8792586484180348971, guid: 9f6692056583aa0499f42f1ea5e9e998, type: 3}
 --- !u!1 &8773813509853287251
@@ -53,6 +53,7 @@ GameObject:
   - component: {fileID: 8253136907511548393}
   - component: {fileID: 4982902992747054668}
   - component: {fileID: 7116290592073298566}
+  - component: {fileID: 38765419}
   m_Layer: 0
   m_Name: WeightRack
   m_TagString: Untagged
@@ -127,6 +128,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &38765419
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8773813509853287251}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5053925668127403250, guid: 6931c1648a9eb4f4288624d4571dcc6e, type: 3}
 --- !u!64 &1412329327293573352
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -138,7 +153,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8999911773206952699, guid: f341f6fefd3cde649bdfe939801fdf15, type: 3}
 --- !u!64 &3286587821925077595
@@ -152,7 +167,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8792586484180348971, guid: 9f6692056583aa0499f42f1ea5e9e998, type: 3}
 --- !u!64 &1911404839062696030
@@ -166,7 +181,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 7567532504055388576, guid: c5c4b446b7cb6f34d8f7b7f9e1c193cc, type: 3}
 --- !u!1001 &8431777777248617758
