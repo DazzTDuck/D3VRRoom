@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.Events;
 
-public class KeypadScreen : MonoBehaviour
+public class Keypad : MonoBehaviour
 {
     public TMP_Text keypadSceenText;
 

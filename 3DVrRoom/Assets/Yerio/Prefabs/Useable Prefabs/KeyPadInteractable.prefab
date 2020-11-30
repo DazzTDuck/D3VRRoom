@@ -153,7 +153,7 @@ MonoBehaviour:
   onButtonDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4005821882469493527}
+      - m_Target: {fileID: 8719507267357509356}
         m_MethodName: AddNumber
         m_Mode: 5
         m_Arguments:
@@ -339,7 +339,7 @@ MonoBehaviour:
   onButtonDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4005821882469493527}
+      - m_Target: {fileID: 8719507267357509356}
         m_MethodName: AddNumber
         m_Mode: 5
         m_Arguments:
@@ -381,8 +381,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1207377030222130275}
+  - component: {fileID: 8719507267357509356}
   m_Layer: 0
-  m_Name: KeyPad
+  m_Name: KeyPadInteractable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -405,6 +406,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
+--- !u!114 &8719507267357509356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984582958269036249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc249b3108d841d43ace2712fdafeb82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keypadSceenText: {fileID: 1719186913263619975}
+  onCorrectCode:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2814153944184244274
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,7 +575,7 @@ MonoBehaviour:
   onButtonDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4005821882469493527}
+      - m_Target: {fileID: 8719507267357509356}
         m_MethodName: ConfirmCode
         m_Mode: 1
         m_Arguments:
@@ -744,7 +761,7 @@ MonoBehaviour:
   onButtonDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4005821882469493527}
+      - m_Target: {fileID: 8719507267357509356}
         m_MethodName: AddNumber
         m_Mode: 5
         m_Arguments:
@@ -930,7 +947,7 @@ MonoBehaviour:
   onButtonDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4005821882469493527}
+      - m_Target: {fileID: 8719507267357509356}
         m_MethodName: AddNumber
         m_Mode: 5
         m_Arguments:
@@ -1116,7 +1133,7 @@ MonoBehaviour:
   onButtonDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4005821882469493527}
+      - m_Target: {fileID: 8719507267357509356}
         m_MethodName: AddNumber
         m_Mode: 5
         m_Arguments:
@@ -1158,7 +1175,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5302953803554704308}
-  - component: {fileID: 4005821882469493527}
   m_Layer: 0
   m_Name: Screen
   m_TagString: Untagged
@@ -1181,22 +1197,6 @@ Transform:
   m_Father: {fileID: 1207377030222130275}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4005821882469493527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5774075247892319423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc249b3108d841d43ace2712fdafeb82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keypadSceenText: {fileID: 1719186913263619975}
-  onCorrectCode:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &5869250626213288174
 GameObject:
   m_ObjectHideFlags: 0
@@ -1392,7 +1392,7 @@ MonoBehaviour:
   onButtonDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4005821882469493527}
+      - m_Target: {fileID: 8719507267357509356}
         m_MethodName: AddNumber
         m_Mode: 5
         m_Arguments:
@@ -1578,7 +1578,7 @@ MonoBehaviour:
   onButtonDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4005821882469493527}
+      - m_Target: {fileID: 8719507267357509356}
         m_MethodName: AddNumber
         m_Mode: 5
         m_Arguments:
@@ -1863,7 +1863,7 @@ MonoBehaviour:
   onButtonDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4005821882469493527}
+      - m_Target: {fileID: 8719507267357509356}
         m_MethodName: SetText
         m_Mode: 5
         m_Arguments:
@@ -2143,7 +2143,7 @@ MonoBehaviour:
   onButtonDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4005821882469493527}
+      - m_Target: {fileID: 8719507267357509356}
         m_MethodName: AddNumber
         m_Mode: 5
         m_Arguments:
@@ -2329,7 +2329,7 @@ MonoBehaviour:
   onButtonDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4005821882469493527}
+      - m_Target: {fileID: 8719507267357509356}
         m_MethodName: AddNumber
         m_Mode: 5
         m_Arguments:
@@ -2515,7 +2515,7 @@ MonoBehaviour:
   onButtonDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4005821882469493527}
+      - m_Target: {fileID: 8719507267357509356}
         m_MethodName: AddNumber
         m_Mode: 5
         m_Arguments:

@@ -252,6 +252,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8790867469098730253}
+  - component: {fileID: 1038479967}
   m_Layer: 0
   m_Name: Vault
   m_TagString: Untagged
@@ -276,6 +277,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1038479967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265442114085231031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53e7cbc0adb265e47a5acc0beb0dea54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vaultDoor: {fileID: 5155438367646283810}
+  openSpeed: 2
 --- !u!114 &3317757922614161162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,17 +399,17 @@ PrefabInstance:
     - target: {fileID: 1207377030222130275, guid: 62a7d978bbc32d14f96ba8d1572ca1aa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.38402385
+      value: 0.395
       objectReference: {fileID: 0}
     - target: {fileID: 1207377030222130275, guid: 62a7d978bbc32d14f96ba8d1572ca1aa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.18231615
+      value: -0.172
       objectReference: {fileID: 0}
     - target: {fileID: 1207377030222130275, guid: 62a7d978bbc32d14f96ba8d1572ca1aa,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.05766976
+      value: 0.058
       objectReference: {fileID: 0}
     - target: {fileID: 1207377030222130275, guid: 62a7d978bbc32d14f96ba8d1572ca1aa,
         type: 3}
@@ -435,16 +450,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1207377030222130275, guid: 62a7d978bbc32d14f96ba8d1572ca1aa,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2399998
-      objectReference: {fileID: 0}
-    - target: {fileID: 1207377030222130275, guid: 62a7d978bbc32d14f96ba8d1572ca1aa,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.2399998
       objectReference: {fileID: 0}
     - target: {fileID: 1984582958269036249, guid: 62a7d978bbc32d14f96ba8d1572ca1aa,
         type: 3}
