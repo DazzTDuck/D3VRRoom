@@ -18,9 +18,23 @@ public class GameManager : MonoBehaviour
     [SerializeField] Keypad officeVaultKeypad;
     bool codeSet = false;
 
-    private void Update()
+    [Header("Dumbell Puzzle")]
+    [SerializeField] GameObject[] dumbells;
+    [SerializeField] GameObject[] hidingPlacesDumbell;
+    [SerializeField] GameObject[] dumbellsInDrawer;
+
+    int amountDumbellsToHide = 3;
+    int amountChosen;
+    List<GameObject> dumbellsChosen = new List<GameObject>();
+
+    [Header("Hidden Key Office")]
+    [SerializeField] GameObject[] keyHidingPlaces;
+    
+
+    public void StartGame()
     {
         SetDumbellNumbers();
+        HideDumbells();
     }
 
     public void SetDumbellNumbers()
@@ -38,6 +52,28 @@ public class GameManager : MonoBehaviour
 
             officeVaultKeypad.SetCorrectCode(code);
         }      
+    }
+
+    public void HideDumbells()
+    {
+        foreach (var dumbell in dumbells)
+        {
+            if(amountChosen != amountDumbellsToHide)
+            {
+                var index = Random.Range(0, dumbells.Length - 1);
+
+                if (!dumbellsChosen.Contains(dumbells[index]))
+                {
+                    dumbellsChosen.Add(dumbells[index]);
+                }
+                else return;
+
+                amountChosen++;
+            }
+        }
+
+
+
     }
 
     public int GetCode()

@@ -6,6 +6,9 @@ TagManager:
   tags:
   - projectile
   - FxTemporaire
+  - 20kg
+  - 30kg
+  - 40kg
   layers:
   - Default
   - TransparentFX
