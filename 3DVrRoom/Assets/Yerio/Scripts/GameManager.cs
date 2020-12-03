@@ -5,6 +5,12 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Timer")]
+    [SerializeField] TMP_Text[] timerText;
+    [SerializeField] float minutesToFinishGame;
+    bool startTimer = false;
+    float timerSeconds;
+
     [Header("Code Randomizer")]
     [SerializeField] int minCodeRange;
     [SerializeField] int maxCodeRange;
@@ -35,6 +41,49 @@ public class GameManager : MonoBehaviour
     {
         SetDumbellNumbers();
         HideDumbells();
+    }
+
+    private void Start()
+    {
+        StartTimer();
+    }
+
+    private void Update()
+    {
+        UpdateTimer();
+    }
+
+    public void StartTimer()
+    {
+        timerSeconds = minutesToFinishGame * 60;
+        startTimer = true;
+    }
+
+    public void UpdateTimer()
+    {
+        if (startTimer)
+        {
+            timerSeconds -= Time.deltaTime;
+
+            int hours = (int)(timerSeconds / 3600) % 24;
+            int minutes = (int)(timerSeconds / 60) % 60;
+            int seconds = (int)(timerSeconds % 60);
+
+            bool lower10Seconds = seconds < 10;
+
+            foreach (var text in timerText)
+            {
+                if (lower10Seconds)
+                    text.text = $"0{hours}:{minutes}:0{seconds}";
+                else
+                    text.text = $"0{hours}:{minutes}:{seconds}";
+            }
+
+            if(timerSeconds <= 0)
+            {
+                //end game
+            }
+        }
     }
 
     public void SetDumbellNumbers()
