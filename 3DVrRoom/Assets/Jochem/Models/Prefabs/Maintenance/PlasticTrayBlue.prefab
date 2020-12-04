@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 819523496567377686}
   - component: {fileID: 4391101800106885299}
   - component: {fileID: 1951365526834115705}
+  - component: {fileID: 830086175333109631}
   m_Layer: 0
   m_Name: PlasticTrayBlue
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &830086175333109631
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5727268748678572}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3480541071020662742, guid: 947bd1770d132204f9c07da039a89ccc, type: 3}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7669024818522389953}
   - component: {fileID: 6755965577734484580}
   - component: {fileID: 8801992641323566766}
+  - component: {fileID: 4240988621741893456}
   m_Layer: 0
   m_Name: ShortPiecePipes
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4240988621741893456
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7000293512014866299}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8314571269056883277, guid: ba6724966a8d1264387c44bd7edbba72, type: 3}

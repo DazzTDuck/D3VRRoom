@@ -30,12 +30,19 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject[] dumbellsInDrawer;
 
     int amountDumbellsToHide = 3;
-    int amountChosen;
     List<GameObject> dumbellsChosen = new List<GameObject>();
 
     [Header("Hidden Key Office")]
     [SerializeField] GameObject[] keyHidingPlaces;
-    
+
+    //private
+    PauseMenuManager pauseManager;
+
+
+    private void Awake()
+    {
+        pauseManager = GetComponent<PauseMenuManager>();
+    }
 
     public void StartGame()
     {
@@ -46,6 +53,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         StartTimer();
+        StartGame();
     }
 
     private void Update()
@@ -61,7 +69,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateTimer()
     {
-        if (startTimer)
+        if (startTimer && !pauseManager.paused)
         {
             timerSeconds -= Time.deltaTime;
 
@@ -70,10 +78,15 @@ public class GameManager : MonoBehaviour
             int seconds = (int)(timerSeconds % 60);
 
             bool lower10Seconds = seconds < 10;
+            bool lower10minutes = minutes < 10;
 
             foreach (var text in timerText)
             {
-                if (lower10Seconds)
+                if (lower10Seconds && lower10minutes)
+                    text.text = $"0{hours}:0{minutes}:0{seconds}";
+                else if(lower10minutes)
+                    text.text = $"0{hours}:0{minutes}:{seconds}";
+                else if(lower10Seconds)
                     text.text = $"0{hours}:{minutes}:0{seconds}";
                 else
                     text.text = $"0{hours}:{minutes}:{seconds}";
@@ -82,6 +95,7 @@ public class GameManager : MonoBehaviour
             if(timerSeconds <= 0)
             {
                 //end game
+                startTimer = false;
             }
         }
     }
@@ -105,24 +119,50 @@ public class GameManager : MonoBehaviour
 
     public void HideDumbells()
     {
-        foreach (var dumbell in dumbells)
+        for (int i = 0; i < dumbellsInDrawer.Length; i++)
         {
-            if(amountChosen != amountDumbellsToHide)
+            dumbellsInDrawer[i].SetActive(true);
+        }
+
+        while (dumbellsChosen.Count < amountDumbellsToHide)
+        {
+            var index = Random.Range(0, dumbells.Length - 1);
+
+            if (!dumbellsChosen.Contains(dumbells[index]))
             {
-                var index = Random.Range(0, dumbells.Length - 1);
+                dumbellsChosen.Add(dumbells[index]);
 
-                if (!dumbellsChosen.Contains(dumbells[index]))
+                if (dumbells[index].GetComponentInChildren<Canvas>())
                 {
-                    dumbellsChosen.Add(dumbells[index]);
+                    dumbells[index].GetComponentInChildren<Canvas>().gameObject.SetActive(false);
                 }
-                else return;
-
-                amountChosen++;
             }
         }
 
+        var randomDumbell = hidingPlacesDumbell[Random.Range(0, hidingPlacesDumbell.Length - 1)];
+        randomDumbell.SetActive(true);
 
+        for (int i = 0; i < dumbellsChosen.Count; i++)
+        {
+            var snapSystem = dumbellsChosen[i].GetComponent<SnapSystem>();
+            snapSystem.enabled = true;
+            snapSystem.SnapPlaceShow(false, false);
+        }
 
+        var dumbell0Snap = dumbellsChosen[0].GetComponent<SnapSystem>();
+        var dumbell1Snap = dumbellsChosen[1].GetComponent<SnapSystem>();
+        var dumbell2Snap = dumbellsChosen[2].GetComponent<SnapSystem>();
+
+        var dumbell0Canvas = dumbellsChosen[0].GetComponentInChildren<Canvas>();
+        var dumbell1Canvas = dumbellsChosen[1].GetComponentInChildren<Canvas>();
+        var dumbell2Canvas = dumbellsChosen[2].GetComponentInChildren<Canvas>();
+
+        dumbell0Snap.ObjectToSnap = dumbellsInDrawer[0].transform;
+        dumbell0Snap.OnSnapped.AddListener(() => dumbell0Canvas.gameObject.SetActive(true));
+        dumbell1Snap.ObjectToSnap = randomDumbell.transform;
+        dumbell1Snap.OnSnapped.AddListener(() => dumbell1Canvas.gameObject.SetActive(true));
+        dumbell2Snap.ObjectToSnap = dumbellsInDrawer[1].transform;
+        dumbell2Snap.OnSnapped.AddListener(() => dumbell2Canvas.gameObject.SetActive(true));
     }
 
     public int GetCode()

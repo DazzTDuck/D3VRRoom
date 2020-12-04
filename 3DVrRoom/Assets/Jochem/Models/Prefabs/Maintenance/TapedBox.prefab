@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4053279637913256569}
   - component: {fileID: 1148417691425164764}
   - component: {fileID: 2885409365080881430}
+  - component: {fileID: 2750291262370897369}
   m_Layer: 0
   m_Name: TapedBox
   m_TagString: Untagged
@@ -79,3 +80,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &2750291262370897369
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3678302864982448323}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4751221, y: 0.478783, z: 0.62588227}
+  m_Center: {x: 0, y: 0.2393915, z: 0.0006932169}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 615872480592670899}
   - component: {fileID: 4549725614783151894}
   - component: {fileID: 1785439889755851740}
+  - component: {fileID: -7445722771060891012}
   m_Layer: 0
   m_Name: WindowBlinder
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &-7445722771060891012
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272419873707682313}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5952513959285001090, guid: d34786f1e6e1ccd489d8cf18c9859860, type: 3}
