@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     List<GameObject> dumbellsChosen = new List<GameObject>();
 
     [Header("Hidden Key Office")]
-    [SerializeField] GameObject[] keyHidingPlaces;
+    [SerializeField] GameObject[] greenKeyHidingPlaces;
 
     //private
     PauseMenuManager pauseManager;
@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         SetDumbellNumbers();
-        HideDumbells();
+        HideDumbellsAndGreenKey();
     }
 
     private void Start()
@@ -117,7 +117,7 @@ public class GameManager : MonoBehaviour
         }      
     }
 
-    public void HideDumbells()
+    public void HideDumbellsAndGreenKey()
     {
         for (int i = 0; i < dumbellsInDrawer.Length; i++)
         {
@@ -131,16 +131,24 @@ public class GameManager : MonoBehaviour
             if (!dumbellsChosen.Contains(dumbells[index]))
             {
                 dumbellsChosen.Add(dumbells[index]);
-
-                if (dumbells[index].GetComponentInChildren<Canvas>())
-                {
-                    dumbells[index].GetComponentInChildren<Canvas>().gameObject.SetActive(false);
-                }
             }
         }
 
+        var dumbell0Canvas = dumbellsChosen[0].GetComponentInChildren<Canvas>();
+        var dumbell1Canvas = dumbellsChosen[1].GetComponentInChildren<Canvas>();
+        var dumbell2Canvas = dumbellsChosen[2].GetComponentInChildren<Canvas>();
+
+        dumbell0Canvas.gameObject.SetActive(false);
+        dumbell1Canvas.gameObject.SetActive(false);
+        dumbell2Canvas.gameObject.SetActive(false);
+
         var randomDumbell = hidingPlacesDumbell[Random.Range(0, hidingPlacesDumbell.Length - 1)];
         randomDumbell.SetActive(true);
+
+        //greenKey
+        var greenKey = greenKeyHidingPlaces[Random.Range(0, greenKeyHidingPlaces.Length - 1)];
+        greenKey.SetActive(true);
+        //
 
         for (int i = 0; i < dumbellsChosen.Count; i++)
         {
@@ -152,10 +160,6 @@ public class GameManager : MonoBehaviour
         var dumbell0Snap = dumbellsChosen[0].GetComponent<SnapSystem>();
         var dumbell1Snap = dumbellsChosen[1].GetComponent<SnapSystem>();
         var dumbell2Snap = dumbellsChosen[2].GetComponent<SnapSystem>();
-
-        var dumbell0Canvas = dumbellsChosen[0].GetComponentInChildren<Canvas>();
-        var dumbell1Canvas = dumbellsChosen[1].GetComponentInChildren<Canvas>();
-        var dumbell2Canvas = dumbellsChosen[2].GetComponentInChildren<Canvas>();
 
         dumbell0Snap.ObjectToSnap = dumbellsInDrawer[0].transform;
         dumbell0Snap.OnSnapped.AddListener(() => dumbell0Canvas.gameObject.SetActive(true));

@@ -17,8 +17,8 @@ public class SnapSystem : MonoBehaviour
     [SerializeField] MeshRenderer baseMeshRenderer;
     [SerializeField] MeshRenderer bossMeshRenderer;
     [SerializeField] SkinnedMeshRenderer SkinnedMeshRenderer;
-    Material baseMaterial;
-    Material bossMaterial;
+    [SerializeField] Material baseMaterial;
+    [SerializeField] Material bossMaterial;
 
     Material originalMaterial;
     MeshRenderer meshRenderer;
@@ -39,11 +39,6 @@ public class SnapSystem : MonoBehaviour
         {
             meshRenderer = GetComponent<MeshRenderer>();
             originalMaterial = meshRenderer.material;
-        }
-        else
-        {
-            bossMaterial = bossMeshRenderer.material;
-            baseMaterial = baseMeshRenderer.material;
         }
 
         //to get the hands
@@ -152,7 +147,11 @@ public class SnapSystem : MonoBehaviour
                 else if (isHoldingObjectLeft)
                     leftHand.DetachObject(ObjectToSnap.gameObject);
 
-                ChangeMaterial(originalMaterial);
+                if (!ballerina)
+                    ChangeMaterial(originalMaterial);
+                else
+                    ChangeBackBallerina();
+
                 SnapPlaceShow(true, true);
 
                 Destroy(ObjectToSnap.gameObject);

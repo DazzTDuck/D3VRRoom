@@ -4,21 +4,25 @@ using UnityEngine;
 
 public class Key : MonoBehaviour
 {
-    public Door doorToOpen;
+    [SerializeField] bool openDoor = true;
+    public Door[] doorToOpen;
     public Lockable lockableToOpen;
     public float keyOpenDistance = 0.15f;
     private void Update()
     {
-        if (doorToOpen)
+        if (openDoor)
         {
-            if (doorToOpen.GetDistance(gameObject.transform) <= keyOpenDistance)
+            foreach (var door in doorToOpen)
             {
-                if (doorToOpen.locked)
-                    doorToOpen.UnlockDoor();
-            }
+                if (door.GetDistance(gameObject.transform) <= keyOpenDistance)
+                {
+                    if (door.locked)
+                        door.UnlockDoor();
+                }
+            }          
         }
 
-        if (lockableToOpen)
+        if (!openDoor)
         {
             if (lockableToOpen.GetDistance(gameObject.transform) <= keyOpenDistance)
             {
