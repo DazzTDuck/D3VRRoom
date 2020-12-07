@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: ed99ba3f87855064ab123089ee34b0d1,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -11120,21 +11120,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1795508793}
     m_Modifications:
-    - target: {fileID: 2854775599538365125, guid: 7be75791259806e45b35d45b4fd49836,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.771
-      objectReference: {fileID: 0}
-    - target: {fileID: 3146900395179450031, guid: 7be75791259806e45b35d45b4fd49836,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.174
-      objectReference: {fileID: 0}
-    - target: {fileID: 5023929499810358102, guid: 7be75791259806e45b35d45b4fd49836,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.31
-      objectReference: {fileID: 0}
     - target: {fileID: 8485573896434529024, guid: 7be75791259806e45b35d45b4fd49836,
         type: 3}
       propertyPath: m_Name
@@ -11194,21 +11179,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8485573896434529025, guid: 7be75791259806e45b35d45b4fd49836,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8485573896434529025, guid: 7be75791259806e45b35d45b4fd49836,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8485573896434529025, guid: 7be75791259806e45b35d45b4fd49836,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be75791259806e45b35d45b4fd49836, type: 3}
