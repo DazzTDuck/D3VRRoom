@@ -8,6 +8,7 @@ public class SnapSystem : MonoBehaviour
     public Transform snapPlace;
     public Transform ObjectToSnap;
     public float minDistanceToSnap = 0.05f;
+    [SerializeField] bool showSnapPlaceWhenHolding = false;
     public Material snapMaterial;
     [Space]
     public UnityEvent OnSnapped;
@@ -94,7 +95,7 @@ public class SnapSystem : MonoBehaviour
 
     void ShowSnapPosistion()
     {
-        if (!hasSnapped)
+        if (!hasSnapped && showSnapPlaceWhenHolding)
         {
             if (isHoldingObjectRight || isHoldingObjectLeft)
             {

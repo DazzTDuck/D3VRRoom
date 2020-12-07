@@ -253,6 +253,7 @@ GameObject:
   - component: {fileID: 5328493029214940006}
   - component: {fileID: 5328493029214940001}
   - component: {fileID: 970074448239442733}
+  - component: {fileID: 3905616484201467433}
   m_Layer: 0
   m_Name: FlashlightUseable
   m_TagString: Untagged
@@ -451,7 +452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  precomputeOutline: 0
+  precomputeOutline: 1
   bakeKeys: []
   bakeValues: []
 --- !u!114 &5328493029214940001
@@ -467,21 +468,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poseEditorExpanded: 1
-  blendEditorExpanded: 0
+  blendEditorExpanded: 1
   poseNames:
   - FlashLight (MAIN)
+  - FlashLightPress
   overridePreviewLeftHandPrefab: {fileID: 1000013348574242, guid: 638779290bce1af49b356f33dcc6fccf,
     type: 3}
   overridePreviewRightHandPrefab: {fileID: 1000010304998954, guid: 6def53d002137b747aec0b29551e0e25,
     type: 3}
   skeletonMainPose: {fileID: 11400000, guid: 9ced506ebbf12e444881cca5def0d58a, type: 2}
-  skeletonAdditionalPoses: []
+  skeletonAdditionalPoses:
+  - {fileID: 11400000, guid: 83d80458e9e8f174f9b27c1c685ff591, type: 2}
   showLeftPreview: 0
   showRightPreview: 0
   previewLeftInstance: {fileID: 0}
   previewRightInstance: {fileID: 0}
   previewPoseSelection: 0
-  blendingBehaviours: []
+  blendingBehaviours:
+  - name: ButtonPress
+    enabled: 1
+    influence: 1
+    pose: 1
+    value: 0
+    action_single:
+      actionPath: 
+      needsReinit: 0
+    action_bool:
+      actionPath: /actions/default/in/FlashlightSwitch
+      needsReinit: 0
+    smoothingSpeed: 45
+    type: 2
+    useMask: 0
+    mask:
+      palm: 1
+      thumb: 1
+      index: 1
+      middle: 1
+      ring: 1
+      pinky: 1
+      values: 010101010101
+    previewEnabled: 1
   scale: 1
 --- !u!114 &970074448239442733
 MonoBehaviour:
@@ -501,6 +527,27 @@ MonoBehaviour:
   lights:
   - {fileID: 5328493029753676271}
   - {fileID: 5328493029513329563}
+  buttonAnimator: {fileID: 3905616484201467433}
+  skeletonPoser: {fileID: 5328493029214940001}
+--- !u!95 &3905616484201467433
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4937345692898086992}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b17cf3e3b45de9144a29cc69bdcbc225, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5328493029513329560
 GameObject:
   m_ObjectHideFlags: 0
