@@ -1,0 +1,412 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &138652103598644757
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 767661383862699183}
+  m_Layer: 0
+  m_Name: Washing Machine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &767661383862699183
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138652103598644757}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.575, y: 2.494202, z: 2.933}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7387986150830879880}
+  - {fileID: 150209746976042004}
+  - {fileID: 387946389099647769}
+  - {fileID: 2432106082024567810}
+  - {fileID: 2432106082444805215}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &119604230657192368
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 767661383862699183}
+    m_Modifications:
+    - target: {fileID: 345273337831400105, guid: 9ecb29acd7cca4a43bb5ebf46e6f0159,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6745572
+      objectReference: {fileID: 0}
+    - target: {fileID: 345273337831400105, guid: 9ecb29acd7cca4a43bb5ebf46e6f0159,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.9695246
+      objectReference: {fileID: 0}
+    - target: {fileID: 345273337831400105, guid: 9ecb29acd7cca4a43bb5ebf46e6f0159,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.4112178
+      objectReference: {fileID: 0}
+    - target: {fileID: 345273337831400105, guid: 9ecb29acd7cca4a43bb5ebf46e6f0159,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 345273337831400105, guid: 9ecb29acd7cca4a43bb5ebf46e6f0159,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 345273337831400105, guid: 9ecb29acd7cca4a43bb5ebf46e6f0159,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 345273337831400105, guid: 9ecb29acd7cca4a43bb5ebf46e6f0159,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 345273337831400105, guid: 9ecb29acd7cca4a43bb5ebf46e6f0159,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 345273337831400105, guid: 9ecb29acd7cca4a43bb5ebf46e6f0159,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 345273337831400105, guid: 9ecb29acd7cca4a43bb5ebf46e6f0159,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 345273337831400105, guid: 9ecb29acd7cca4a43bb5ebf46e6f0159,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702432858455406025, guid: 9ecb29acd7cca4a43bb5ebf46e6f0159,
+        type: 3}
+      propertyPath: m_Name
+      value: Washing Machine Door
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9ecb29acd7cca4a43bb5ebf46e6f0159, type: 3}
+--- !u!4 &387946389099647769 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 345273337831400105, guid: 9ecb29acd7cca4a43bb5ebf46e6f0159,
+    type: 3}
+  m_PrefabInstance: {fileID: 119604230657192368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &165520002686847489
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 767661383862699183}
+    m_Modifications:
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.363293
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.359003
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.42849436
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7419653950844841602, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_Name
+      value: Washing Machine Dial
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 94c4f0f6d89f65b49a17e75d38a39883, type: 3}
+--- !u!4 &7387986150830879880 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+    type: 3}
+  m_PrefabInstance: {fileID: 165520002686847489}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3102066489840512780
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 767661383862699183}
+    m_Modifications:
+    - target: {fileID: 2961512516617290520, guid: b4ca183457085344296e5ee7c3a984ba,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.0413876
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961512516617290520, guid: b4ca183457085344296e5ee7c3a984ba,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.875512
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961512516617290520, guid: b4ca183457085344296e5ee7c3a984ba,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.021084428
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961512516617290520, guid: b4ca183457085344296e5ee7c3a984ba,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961512516617290520, guid: b4ca183457085344296e5ee7c3a984ba,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961512516617290520, guid: b4ca183457085344296e5ee7c3a984ba,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961512516617290520, guid: b4ca183457085344296e5ee7c3a984ba,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961512516617290520, guid: b4ca183457085344296e5ee7c3a984ba,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961512516617290520, guid: b4ca183457085344296e5ee7c3a984ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961512516617290520, guid: b4ca183457085344296e5ee7c3a984ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961512516617290520, guid: b4ca183457085344296e5ee7c3a984ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3733487824378713402, guid: b4ca183457085344296e5ee7c3a984ba,
+        type: 3}
+      propertyPath: m_Name
+      value: Washing Machine Base
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b4ca183457085344296e5ee7c3a984ba, type: 3}
+--- !u!4 &150209746976042004 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2961512516617290520, guid: b4ca183457085344296e5ee7c3a984ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 3102066489840512780}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4975349809519823499
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 767661383862699183}
+    m_Modifications:
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.2167
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.359003
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.42849436
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7419653950844841602, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_Name
+      value: Washing Machine Dial (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 94c4f0f6d89f65b49a17e75d38a39883, type: 3}
+--- !u!4 &2432106082024567810 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+    type: 3}
+  m_PrefabInstance: {fileID: 4975349809519823499}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4975349809602378454
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 767661383862699183}
+    m_Modifications:
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.0732
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.359003
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.42849436
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7419653950844841602, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+        type: 3}
+      propertyPath: m_Name
+      value: Washing Machine Dial (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 94c4f0f6d89f65b49a17e75d38a39883, type: 3}
+--- !u!4 &2432106082444805215 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7263019573020507785, guid: 94c4f0f6d89f65b49a17e75d38a39883,
+    type: 3}
+  m_PrefabInstance: {fileID: 4975349809602378454}
+  m_PrefabAsset: {fileID: 0}
