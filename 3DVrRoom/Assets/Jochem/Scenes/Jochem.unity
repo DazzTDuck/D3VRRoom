@@ -6911,8 +6911,8 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
-  m_Pitch: 0.95
+  m_Volume: 0.1
+  m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -6920,7 +6920,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 15
+  MaxDistance: 5
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -6955,7 +6955,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -6970,7 +6970,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.2361111
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -7007,7 +7007,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15598c95732a9ea44adbd872575fde25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - {fileID: 8300000, guid: 974d153298f6c4e44bace14c49316939, type: 3}
+  - {fileID: 8300000, guid: e72ab79a8373828409fae0efda2fb602, type: 3}
+  - {fileID: 8300000, guid: d03eaa859d7c83e4881848413753f9e9, type: 3}
+  - {fileID: 8300000, guid: 70f782fc30f899b4b953174e32a7aa24, type: 3}
+  - {fileID: 8300000, guid: 77cf97d63e149f84c985e8830d8d65c5, type: 3}
+  - {fileID: 8300000, guid: fa7d037cdde0a8a4b9c091a630ade670, type: 3}
 --- !u!1001 &202361884
 PrefabInstance:
   m_ObjectHideFlags: 0
