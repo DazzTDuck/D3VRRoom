@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8684493362515845011}
   - component: {fileID: 5704476495384252470}
   - component: {fileID: 7552158823245505788}
+  - component: {fileID: 507646288}
   m_Layer: 0
   m_Name: glass fake door
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &507646288
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8344699655917847849}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6347241726286313812, guid: 591d0d06b549add49b3ac0aa1c5cc6db, type: 3}

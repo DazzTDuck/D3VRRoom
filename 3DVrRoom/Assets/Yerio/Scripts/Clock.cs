@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+[ExecuteInEditMode]
 public class Clock : MonoBehaviour
 {
     [SerializeField] TMP_Text clockText;
