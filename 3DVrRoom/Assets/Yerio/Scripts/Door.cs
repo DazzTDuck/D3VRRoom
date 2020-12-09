@@ -10,9 +10,18 @@ public class Door : MonoBehaviour
     public Collider doorOpenCollider;
     public Collider handleCollider;
 
+    Quaternion closedRotation;
+
     private void Awake()
     {
-        CloseDoor();
+        //CloseDoor();
+        doorOpenCollider.enabled = false;
+        handleCollider.enabled = true;
+    }
+
+    private void Start()
+    {
+        closedRotation = transform.rotation;
     }
 
     public void UnlockDoor()
@@ -41,12 +50,13 @@ public class Door : MonoBehaviour
     {
         doorOpenCollider.enabled = false;
         handleCollider.enabled = true;
+        transform.rotation = closedRotation;
+        LockDoor();     
     }
     public void LockDoor()
     {
         locked = true;
     }
-
 
     public float GetDistance(Transform transform)
     {

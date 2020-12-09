@@ -7,12 +7,15 @@ public class MainMenuButtons : MonoBehaviour
     [SerializeField] Animator whiteBoardAnimator;
     [SerializeField] Canvas mainMenuCanvas;
     [SerializeField] Canvas settingsCanvas;
+    [SerializeField] GameObject normalWhiteBoard;
+    [SerializeField] GameObject menuWhiteBoard;
 
     float timeToWait = 0.20f;
 
     public void StartGame()
     {
         //call StartGame fuction
+        StartCoroutine(WhiteBoardReplace());
     }
     public void OpenSettings()
     {
@@ -42,5 +45,14 @@ public class MainMenuButtons : MonoBehaviour
         settingsCanvas.enabled = false;
         mainMenuCanvas.enabled = true;
         StopCoroutine(DisableSettingsCanvas());
+    }
+
+    IEnumerator WhiteBoardReplace()
+    {
+        whiteBoardAnimator.SetTrigger("Flip");
+        yield return new WaitForSeconds(timeToWait + 0.2f);
+        normalWhiteBoard.SetActive(true);
+        menuWhiteBoard.SetActive(false);
+        StopCoroutine(WhiteBoardReplace());
     }
 }
