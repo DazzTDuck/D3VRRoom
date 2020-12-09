@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3816617786553770540}
   - component: {fileID: 241085733823491465}
   - component: {fileID: 2647119854257461571}
+  - component: {fileID: 2837698408642756466}
   m_Layer: 0
   m_Name: 2 by 2 tile for flooring and roofing
   m_TagString: Untagged
@@ -79,3 +80,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &2837698408642756466
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4592696401561516182}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 0, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
