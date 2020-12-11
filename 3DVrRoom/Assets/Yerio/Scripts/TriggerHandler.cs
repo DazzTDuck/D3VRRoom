@@ -12,13 +12,11 @@ public class TriggerHandler : MonoBehaviour
     {
         if (hasActivated) return;
 
-        Debug.Log("detected");
-        triggerEnter.Invoke();
-        hasActivated = true;
-    }
-
-    public void Kinker()
-    {
-        Debug.Log("quack");
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("detected");
+            triggerEnter.Invoke();
+            hasActivated = true;
+        }        
     }
 }

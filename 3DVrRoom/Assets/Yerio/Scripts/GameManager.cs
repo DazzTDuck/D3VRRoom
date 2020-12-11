@@ -5,17 +5,20 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    [Header("Timer")]
+    [Header("--Timer--")]
     [SerializeField] TMP_Text[] timerText;
     [SerializeField] float minutesToFinishGame;
     bool startTimer = false;
     float timerSeconds;
 
-    [Header("Code Randomizer")]
+    [Header("--Code Randomizer--")]
     [SerializeField] int minCodeRange;
     [SerializeField] int maxCodeRange;
 
-    [Header("Dumbell Code")]
+    [Header("--Lighting--")]
+    [SerializeField] GameObject[] lights;
+
+    [Header("--Dumbell Code--")]
     [SerializeField] TMP_Text number1;
     [SerializeField] TMP_Text number2;
     [SerializeField] TMP_Text number3;
@@ -24,7 +27,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Keypad officeVaultKeypad;
     bool codeSet = false;
 
-    [Header("Dumbell Puzzle")]
+    [Header("--Dumbell Puzzle--")]
     [SerializeField] GameObject[] dumbells;
     [SerializeField] GameObject[] hidingPlacesDumbell;
     [SerializeField] GameObject[] dumbellsInDrawer;
@@ -32,7 +35,7 @@ public class GameManager : MonoBehaviour
     int amountDumbellsToHide = 3;
     List<GameObject> dumbellsChosen = new List<GameObject>();
 
-    [Header("Hidden Key Office")]
+    [Header("--Hidden Key Office--")]
     [SerializeField] GameObject[] greenKeyHidingPlaces;
 
     //private
@@ -172,4 +175,14 @@ public class GameManager : MonoBehaviour
     {
         return Random.Range(minCodeRange, maxCodeRange);
     }
+
+
+    public void ChangeLightState(bool state)
+    {
+        foreach (var light in lights)
+        {
+            light.SetActive(state);
+        }
+    }
+
 }
