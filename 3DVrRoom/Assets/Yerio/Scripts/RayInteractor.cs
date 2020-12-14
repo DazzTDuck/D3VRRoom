@@ -20,6 +20,7 @@ public class RayInteractor : MonoBehaviour
 
     //UI
     Button SelectedButton;
+    VRUiButton SelectedVRButton;
 
     //Pickup
     LineRenderer lineRenderer;
@@ -103,17 +104,14 @@ public class RayInteractor : MonoBehaviour
                 {
                     SetLineRenderer(hitUi.point);
 
-                    if (!hitUi.transform.GetComponent<Button>() && SelectedButton)
-                        ResetSelectedButton();
-
-                    if (SelectedButton != hitUi.transform.GetComponent<Button>())
+                    if (SelectedVRButton != hitUi.transform.GetComponent<VRUiButton>())
                     {
-                        if (SelectedButton)
+                        if (SelectedVRButton)
                         {
-                            ResetSelectedButton();
+                            SelectedVRButton.ButtonDeselect();
                         }
-                        SelectedButton = hitUi.transform.GetComponent<Button>();
-                        SelectedButton.animator.SetTrigger(SelectedButton.animationTriggers.highlightedTrigger);
+                        SelectedVRButton = hitUi.transform.GetComponent<VRUiButton>();
+                        SelectedVRButton.ButtonSelect();
                     }
 
                     if (uiInput[hand.handType].stateDown)
@@ -121,20 +119,22 @@ public class RayInteractor : MonoBehaviour
                         //press input
                         SetLineRendererColor(pressColor);
 
-                        SelectedButton.animator.ResetTrigger(SelectedButton.animationTriggers.highlightedTrigger);
-                        SelectedButton.animator.SetTrigger(SelectedButton.animationTriggers.pressedTrigger);
-                        SelectedButton.onClick.Invoke();
+                        SelectedVRButton.ButtonClick();
                     }
 
                     if (uiInput[hand.handType].stateUp) //just to reset Color
                         SetLineRendererColor(originalColor);
-
                 }
                 else
                 {
-                    if (SelectedButton)
-                        ResetSelectedButton();
-                }
+                    //if (SelectedButton)
+                    //    ResetSelectedButton();
+                    if (SelectedVRButton)
+                    {
+                        SetLineRendererColor(originalColor);
+                        SelectedVRButton.ButtonDeselect();
+                    }                        
+                }           
             }
             #endregion
         }

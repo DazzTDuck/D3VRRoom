@@ -38,6 +38,12 @@ public class GameManager : MonoBehaviour
     [Header("--Hidden Key Office--")]
     [SerializeField] GameObject[] greenKeyHidingPlaces;
 
+    [Header("Valves Puzzle")]
+    [SerializeField] ValvePuzzle valves;
+    [SerializeField] Texture[] codeTextures;
+    [SerializeField] Material codeMaterial1, codeMaterial2, codeMaterial3;
+    Texture texturesOne, texturesTwo, texturesThree;
+
     //private
     PauseMenuManager pauseManager;
 
@@ -51,6 +57,7 @@ public class GameManager : MonoBehaviour
     {
         SetDumbellNumbers();
         HideDumbellsAndGreenKey();
+        RandomizeValveCodes();
     }
 
     private void Start()
@@ -184,5 +191,43 @@ public class GameManager : MonoBehaviour
             light.SetActive(state);
         }
     }
+
+
+    public void RandomizeValveCodes()
+    {
+        List<Texture> selectedTextures = new List<Texture>();
+
+        while (selectedTextures.Count < 3)
+        {
+            int randomIndex = Random.Range(0, codeTextures.Length - 1);
+
+            Texture selected = codeTextures[randomIndex];
+
+            if (!selectedTextures.Contains(selected))
+            {
+                selectedTextures.Add(selected);
+            }
+        }
+
+        texturesOne = selectedTextures[0];
+        texturesTwo = selectedTextures[1];
+        texturesThree = selectedTextures[2];
+
+        codeMaterial1.SetTexture("Texture2D_CEE8BD67", texturesOne);
+        codeMaterial2.SetTexture("Texture2D_CEE8BD67", texturesTwo);
+        codeMaterial3.SetTexture("Texture2D_CEE8BD67", texturesThree);
+
+        //set Valves
+        int code1 = GetValveCode(texturesOne.name);
+        int code2 = GetValveCode(texturesTwo.name);
+        int code3 = GetValveCode(texturesThree.name);
+        valves.SetNewCodes(code1, code2, code3);
+    }
+
+    public int GetValveCode(string name)
+    {
+        return int.Parse(name.TrimStart('c', 'o', 'd', 'e'));
+    }
+
 
 }

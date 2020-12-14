@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8117419345742177684}
   - component: {fileID: 8117419345742177687}
   - component: {fileID: 8117419345742177685}
+  - component: {fileID: 193295117}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -70,3 +71,89 @@ MonoBehaviour:
   sounds: []
   awakeMainMenuMusic: 0
   awakeInGameMusic: 0
+--- !u!114 &193295117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8117419345742177686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 239d7acccaed2424bbe9a560cf533d43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText:
+  - {fileID: 0}
+  - {fileID: 0}
+  minutesToFinishGame: 30
+  minCodeRange: 11111
+  maxCodeRange: 99999
+  lights:
+  - {fileID: 0}
+  - {fileID: 0}
+  number1: {fileID: 0}
+  number2: {fileID: 0}
+  number3: {fileID: 0}
+  number4: {fileID: 0}
+  number5: {fileID: 0}
+  officeVaultKeypad: {fileID: 0}
+  dumbells:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  hidingPlacesDumbell:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  dumbellsInDrawer:
+  - {fileID: 0}
+  - {fileID: 0}
+  greenKeyHidingPlaces:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  valves: {fileID: 0}
+  codeTextures:
+  - {fileID: 2800000, guid: fa72628742c6eb642971b492728c84ea, type: 3}
+  - {fileID: 2800000, guid: 2047e3c674fd0334ab6413703aa24898, type: 3}
+  - {fileID: 2800000, guid: a1070ab160e2d60478cea8a9192c16d4, type: 3}
+  - {fileID: 2800000, guid: ddfbdf6193e73244d919886589973641, type: 3}
+  - {fileID: 2800000, guid: 2dd6721833098e6489a30314cc79ce1a, type: 3}
+  - {fileID: 2800000, guid: bddb16a7bc015cf4c97047a29a5f41b6, type: 3}
+  - {fileID: 2800000, guid: 91a2a0a4a8d2b4546891ba6c5d3da518, type: 3}
+  - {fileID: 2800000, guid: c681e840d504a5346b6e89561ed693b7, type: 3}
+  - {fileID: 2800000, guid: 11d4df8a600bc54439d3cd6966540402, type: 3}
+  - {fileID: 2800000, guid: 04cd04d5dd0f66642922baf7167a8afb, type: 3}
+  - {fileID: 2800000, guid: e08fe6c6922bbc343842b84f9767385b, type: 3}
+  - {fileID: 2800000, guid: e1e031fe9bc099645a55cfd0fed40f2a, type: 3}
+  - {fileID: 2800000, guid: 17f562db5d1cc394bb61c5ea599a6b44, type: 3}
+  - {fileID: 2800000, guid: 3ea07b3a418dee94dab3025d1dbb400d, type: 3}
+  - {fileID: 2800000, guid: e54088362b5772a4984c9c29edbf897b, type: 3}
+  - {fileID: 2800000, guid: 538a465b6e05be3449582a0959be9e25, type: 3}
+  - {fileID: 2800000, guid: f087b99c6a907fd4099d4972ec7892dd, type: 3}
+  - {fileID: 2800000, guid: 2e5d0e7749930994998d460299e3e28f, type: 3}
+  - {fileID: 2800000, guid: 4b7898463adb496428ff3eaf695a4d19, type: 3}
+  - {fileID: 2800000, guid: 1ca1e47859d765d45ab5eac8ba63b8b1, type: 3}
+  - {fileID: 2800000, guid: 3fd16c38680309d48a36b032da9bc129, type: 3}
+  - {fileID: 2800000, guid: 05bb31d821f12ab4ea6044bc9cc8433e, type: 3}
+  - {fileID: 2800000, guid: 27594a9a4b214c04f88bb43d52213881, type: 3}
+  - {fileID: 2800000, guid: 49b9bc8724142c44d9590551d897bf04, type: 3}
+  - {fileID: 2800000, guid: 3925bfdb6c0eee1439bc96c920833668, type: 3}
+  - {fileID: 2800000, guid: bfd540677561f164ea76f0538142136a, type: 3}
+  - {fileID: 2800000, guid: ccb21461d2a5e4a448c9b572f347cfc9, type: 3}
+  - {fileID: 2800000, guid: 8c3acb404b6467f4ea31b774bc7877d3, type: 3}
+  - {fileID: 2800000, guid: 8d8ed9f2b21c1fc408af0e3c73daf54f, type: 3}
+  - {fileID: 2800000, guid: 717778c5566bef14d80beb9cdac3e380, type: 3}
+  codeMaterial1: {fileID: 2100000, guid: 27a00ed3fab69ad4f906a743ce6cfd72, type: 2}
+  codeMaterial2: {fileID: 2100000, guid: f207d82d99467ce4386708f37a5de584, type: 2}
+  codeMaterial3: {fileID: 2100000, guid: 2e9244d4d3156a24697ef21fc36467e8, type: 2}

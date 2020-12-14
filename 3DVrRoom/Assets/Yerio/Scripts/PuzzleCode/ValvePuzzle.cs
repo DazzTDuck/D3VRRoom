@@ -118,6 +118,12 @@ public class ValvePuzzle : MonoBehaviour
         }
             
     }
+    public void SetNewCodes(int firstCode, int secondCode, int thirdCode)
+    {
+        correctPsiValueBlueValve = firstCode;
+        correctPsiValueGreenValve = secondCode;
+        correctPsiValueRedValve = thirdCode;
+    }
 
     public void ValvesInteractable(bool state)
     {
