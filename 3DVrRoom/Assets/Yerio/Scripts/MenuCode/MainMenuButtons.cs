@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
 
 public class MainMenuButtons : MonoBehaviour
 {
@@ -9,13 +10,18 @@ public class MainMenuButtons : MonoBehaviour
     [SerializeField] Canvas settingsCanvas;
     [SerializeField] GameObject normalWhiteBoard;
     [SerializeField] GameObject menuWhiteBoard;
+    [Space]
+    [SerializeField] GameObject player;
+    [SerializeField] Transform startPointPlayer;
+    [Space]
+    [SerializeField] Animator blackScreenAnimator;
 
     float timeToWait = 0.20f;
 
     public void StartGame()
     {
         //call StartGame fuction
-        StartCoroutine(WhiteBoardReplace());
+        StartCoroutine(SetupBeginScene());
     }
     public void OpenSettings()
     {
@@ -47,12 +53,25 @@ public class MainMenuButtons : MonoBehaviour
         StopCoroutine(DisableSettingsCanvas());
     }
 
-    IEnumerator WhiteBoardReplace()
+    IEnumerator SetupBeginScene()
     {
         whiteBoardAnimator.SetTrigger("Flip");
-        yield return new WaitForSeconds(timeToWait + 0.2f);
+        blackScreenAnimator.SetTrigger("FadeIn");
+        yield return new WaitForSeconds(timeToWait + 0.4f);
+
         normalWhiteBoard.SetActive(true);
         menuWhiteBoard.SetActive(false);
-        StopCoroutine(WhiteBoardReplace());
+
+        yield return new WaitForSeconds(0.5f);
+
+        player.transform.position = startPointPlayer.position;
+
+        yield return new WaitForSeconds(0.2f);
+
+        blackScreenAnimator.SetTrigger("FadeOut");
+
+        //call starting dialoge
+
+        StopCoroutine(SetupBeginScene());
     }
 }

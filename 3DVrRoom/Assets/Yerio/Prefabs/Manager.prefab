@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8117419345742177687}
   - component: {fileID: 8117419345742177685}
   - component: {fileID: 193295117}
+  - component: {fileID: 811898955}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -157,3 +158,23 @@ MonoBehaviour:
   codeMaterial1: {fileID: 2100000, guid: 27a00ed3fab69ad4f906a743ce6cfd72, type: 2}
   codeMaterial2: {fileID: 2100000, guid: f207d82d99467ce4386708f37a5de584, type: 2}
   codeMaterial3: {fileID: 2100000, guid: 2e9244d4d3156a24697ef21fc36467e8, type: 2}
+--- !u!114 &811898955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8117419345742177686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 970cf8678596e8746b335db4473dffaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whiteBoardAnimator: {fileID: 0}
+  mainMenuCanvas: {fileID: 0}
+  settingsCanvas: {fileID: 0}
+  normalWhiteBoard: {fileID: 0}
+  menuWhiteBoard: {fileID: 0}
+  player: {fileID: 0}
+  startPointPlayer: {fileID: 0}
+  blackScreenAnimator: {fileID: 0}

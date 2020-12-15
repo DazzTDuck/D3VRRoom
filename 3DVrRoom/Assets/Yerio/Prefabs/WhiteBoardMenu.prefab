@@ -53,11 +53,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6402877783268258543}
     m_Modifications:
-    - target: {fileID: 1107083383569717383, guid: 150981bde84c9744c870d6f8d4a50955,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8546673275712412686, guid: 150981bde84c9744c870d6f8d4a50955,
         type: 3}
       propertyPath: m_Name
@@ -66,17 +61,17 @@ PrefabInstance:
     - target: {fileID: 9065801727581210292, guid: 150981bde84c9744c870d6f8d4a50955,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.5637884
+      value: -1.576
       objectReference: {fileID: 0}
     - target: {fileID: 9065801727581210292, guid: 150981bde84c9744c870d6f8d4a50955,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.68251824
+      value: 0.732
       objectReference: {fileID: 0}
     - target: {fileID: 9065801727581210292, guid: 150981bde84c9744c870d6f8d4a50955,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.000000059604645
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9065801727581210292, guid: 150981bde84c9744c870d6f8d4a50955,
         type: 3}
@@ -197,6 +192,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: whiteboard stand
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f3ccd00ac2f103d4a988ada1b16f93bb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3ccd00ac2f103d4a988ada1b16f93bb, type: 3}

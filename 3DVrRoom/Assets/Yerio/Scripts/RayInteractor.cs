@@ -103,15 +103,19 @@ public class RayInteractor : MonoBehaviour
                 if (Physics.Raycast(HandPos(), hand.renderModelInstance.transform.forward, out hitUi, 100f, uiLayer))
                 {
                     SetLineRenderer(hitUi.point);
+                    SetLineRendererColor(originalColor);
 
                     if (SelectedVRButton != hitUi.transform.GetComponent<VRUiButton>())
                     {
                         if (SelectedVRButton)
                         {
+
                             SelectedVRButton.ButtonDeselect();
                         }
                         SelectedVRButton = hitUi.transform.GetComponent<VRUiButton>();
-                        SelectedVRButton.ButtonSelect();
+
+                        if (SelectedVRButton)
+                            SelectedVRButton.ButtonSelect();
                     }
 
                     if (uiInput[hand.handType].stateDown)
