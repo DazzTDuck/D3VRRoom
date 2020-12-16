@@ -73,5 +73,6 @@ public class MainMenuButtons : MonoBehaviour
         //call starting dialoge
 
         StopCoroutine(SetupBeginScene());
+
     }
 }
