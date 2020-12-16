@@ -24906,17 +24906,17 @@ PrefabInstance:
     - target: {fileID: 5318454006432073870, guid: 047db8177e0be4746938a7c8e652eccf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.305
+      value: -3.488
       objectReference: {fileID: 0}
     - target: {fileID: 5318454006432073870, guid: 047db8177e0be4746938a7c8e652eccf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.264
+      value: -1.2642
       objectReference: {fileID: 0}
     - target: {fileID: 5318454006432073870, guid: 047db8177e0be4746938a7c8e652eccf,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.445
+      value: 7.4448
       objectReference: {fileID: 0}
     - target: {fileID: 5318454006432073870, guid: 047db8177e0be4746938a7c8e652eccf,
         type: 3}
@@ -24961,7 +24961,7 @@ PrefabInstance:
     - target: {fileID: 5318454006432073870, guid: 047db8177e0be4746938a7c8e652eccf,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.41
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 047db8177e0be4746938a7c8e652eccf, type: 3}
@@ -25721,7 +25721,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &589191508
 Transform:
   m_ObjectHideFlags: 0
@@ -68560,7 +68560,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1709664353
 Transform:
   m_ObjectHideFlags: 0
@@ -69438,7 +69438,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1726897900
 Transform:
   m_ObjectHideFlags: 0
@@ -80343,7 +80343,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1982151565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.03, y: -1.228, z: 3.13}
+  m_LocalPosition: {x: 0.08, y: -1.228, z: 3.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1709664353}
@@ -80364,7 +80364,7 @@ ReflectionProbe:
   m_TimeSlicingMode: 0
   m_Resolution: 128
   m_UpdateFrequency: 0
-  m_BoxSize: {x: 3.54, y: 2.6, z: 9.34}
+  m_BoxSize: {x: 3.54, y: 2.6, z: 10.33}
   m_BoxOffset: {x: 0, y: 0, z: 0}
   m_NearClip: 0.3
   m_FarClip: 1000
