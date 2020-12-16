@@ -21,6 +21,7 @@ public class RayInteractor : MonoBehaviour
     //UI
     Button SelectedButton;
     VRUiButton SelectedVRButton;
+    Toggle selectedToggle;
 
     //Pickup
     LineRenderer lineRenderer;
@@ -109,7 +110,6 @@ public class RayInteractor : MonoBehaviour
                     {
                         if (SelectedVRButton)
                         {
-
                             SelectedVRButton.ButtonDeselect();
                         }
                         SelectedVRButton = hitUi.transform.GetComponent<VRUiButton>();
@@ -118,16 +118,26 @@ public class RayInteractor : MonoBehaviour
                             SelectedVRButton.ButtonSelect();
                     }
 
+                    if (selectedToggle != hitUi.transform.GetComponent<Toggle>())
+                    {
+                        selectedToggle = hitUi.transform.GetComponent<Toggle>();
+                    }
+
                     if (uiInput[hand.handType].stateDown)
                     {
                         //press input
                         SetLineRendererColor(pressColor);
 
-                        SelectedVRButton.ButtonClick();
+                        if (SelectedVRButton)
+                            SelectedVRButton.ButtonClick();
+
+                        if (selectedToggle)
+                            selectedToggle.isOn = !selectedToggle.isOn;
                     }
 
                     if (uiInput[hand.handType].stateUp) //just to reset Color
                         SetLineRendererColor(originalColor);
+
                 }
                 else
                 {

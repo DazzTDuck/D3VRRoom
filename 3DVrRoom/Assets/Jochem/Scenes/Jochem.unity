@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: ed99ba3f87855064ab123089ee34b0d1,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1650,70 +1650,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1888133140}
     m_Modifications:
-    - target: {fileID: 173260888, guid: 9c58ae69ae4bc964ea530f3662c7ffc8, type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 225574307, guid: 9c58ae69ae4bc964ea530f3662c7ffc8, type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 477167600, guid: 9c58ae69ae4bc964ea530f3662c7ffc8, type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 477167600, guid: 9c58ae69ae4bc964ea530f3662c7ffc8, type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1685377118}
-    - target: {fileID: 477167600, guid: 9c58ae69ae4bc964ea530f3662c7ffc8, type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 1709664352}
-    - target: {fileID: 2098461552, guid: 9c58ae69ae4bc964ea530f3662c7ffc8, type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1409984633286860803, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 811898955}
-    - target: {fileID: 1409984633286860803, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CloseSettings
-      objectReference: {fileID: 0}
     - target: {fileID: 1409984633500769067, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 811898955}
-    - target: {fileID: 1409984633500769067, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Quit
-      objectReference: {fileID: 0}
-    - target: {fileID: 1409984633553069776, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 811898955}
     - target: {fileID: 1409984633553069776, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
         type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenSettings
-      objectReference: {fileID: 0}
-    - target: {fileID: 1409984633804792963, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 811898955}
     - target: {fileID: 1409984633804792963, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
         type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartGame
-      objectReference: {fileID: 0}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 811898955}
     - target: {fileID: 1409984633804792963, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -1721,24 +1672,19 @@ PrefabInstance:
       objectReference: {fileID: 1685377118}
     - target: {fileID: 1409984633804792963, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
         type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: UnlockDoor
-      objectReference: {fileID: 0}
-    - target: {fileID: 1409984633804792963, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1709664352}
-    - target: {fileID: 1409984633804792963, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
     - target: {fileID: 2099139531824774794, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
         type: 3}
       propertyPath: m_Name
       value: WhiteBoardMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 2657635788733249029, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 811898955}
     - target: {fileID: 6402877783268258543, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
         type: 3}
       propertyPath: m_LocalPosition.x
