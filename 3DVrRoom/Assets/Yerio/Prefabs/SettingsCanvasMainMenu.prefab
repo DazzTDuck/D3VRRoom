@@ -138,7 +138,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2319269741171476261}
   OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3192511056489942665}
+        m_MethodName: AddVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &4693911764512684275
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -161,6 +172,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1484524099138662308}
+  - component: {fileID: 3192511056489942665}
   m_Layer: 11
   m_Name: VolumeDialog
   m_TagString: Untagged
@@ -191,6 +203,23 @@ RectTransform:
   m_AnchoredPosition: {x: -0.35899997, y: -0.37618002}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3192511056489942665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251446754808783327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e366f0b21193db43b1d0bd3a293260c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  number: {fileID: 8021223207775463090}
+  minVolume: 0
+  maxVolume: 10
+  startVolume: 7
+  volume: 0
 --- !u!1 &757296001042569959
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,7 +492,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4288586483261209480}
   OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2676226849856452881}
+        m_MethodName: AddVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &738789214066038018
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1122,7 +1162,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7194513085134572034}
   OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5561392224365952671}
+        m_MethodName: DecreaseVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &428945230605871436
 Animator:
   serializedVersion: 3
@@ -1164,6 +1215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1335911576879846613}
+  - component: {fileID: 2676226849856452881}
   m_Layer: 11
   m_Name: VolumeMaster
   m_TagString: Untagged
@@ -1194,6 +1246,23 @@ RectTransform:
   m_AnchoredPosition: {x: -0.35899997, y: 0.07625898}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2676226849856452881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3555741511537101084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e366f0b21193db43b1d0bd3a293260c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  number: {fileID: 4759277194072468555}
+  minVolume: 0
+  maxVolume: 10
+  startVolume: 7
+  volume: 0
 --- !u!1 &3621993678157068328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1447,7 +1516,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2543255738350280692}
   OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2676226849856452881}
+        m_MethodName: DecreaseVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &2259600973143179559
 Animator:
   serializedVersion: 3
@@ -1698,6 +1778,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8867596305948497744}
+  - component: {fileID: 5561392224365952671}
   m_Layer: 11
   m_Name: VolumeSFX
   m_TagString: Untagged
@@ -1728,6 +1809,23 @@ RectTransform:
   m_AnchoredPosition: {x: -0.359, y: -0.156}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5561392224365952671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5133206118446199278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e366f0b21193db43b1d0bd3a293260c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  number: {fileID: 7439843726899297466}
+  minVolume: 0
+  maxVolume: 10
+  startVolume: 7
+  volume: 0
 --- !u!1 &5249562760614121688
 GameObject:
   m_ObjectHideFlags: 0
@@ -1941,7 +2039,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4132453534660053531}
   OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3192511056489942665}
+        m_MethodName: DecreaseVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &6951289517047617147
 Animator:
   serializedVersion: 3
@@ -2246,7 +2355,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1045411674776317507}
   OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5561392224365952671}
+        m_MethodName: AddVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &4787185932372935430
 BoxCollider:
   m_ObjectHideFlags: 0
