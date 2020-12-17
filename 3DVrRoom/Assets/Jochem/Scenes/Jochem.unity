@@ -1652,34 +1652,9 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 619929219851635451, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
         type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 619929219851635451, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 619929219851635451, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 619929219851635451, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 581136936}
-    - target: {fileID: 619929219851635451, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: UpdateVolume
-      objectReference: {fileID: 0}
-    - target: {fileID: 619929219851635451, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 1409984633500769067, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1707,43 +1682,13 @@ PrefabInstance:
       objectReference: {fileID: 1709664352}
     - target: {fileID: 1896985399144489393, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
         type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1896985399144489393, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1896985399144489393, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1896985399144489393, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 581136936}
-    - target: {fileID: 1896985399144489393, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetBloom
-      objectReference: {fileID: 0}
-    - target: {fileID: 1896985399144489393, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 2099139531824774794, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
         type: 3}
       propertyPath: m_Name
       value: WhiteBoardMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 2594883469358102064, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2657635788733249029, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
         type: 3}
@@ -1752,64 +1697,14 @@ PrefabInstance:
       objectReference: {fileID: 811898955}
     - target: {fileID: 4458651272170685118, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
         type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4458651272170685118, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4458651272170685118, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4458651272170685118, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 581136936}
-    - target: {fileID: 4458651272170685118, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: UpdateVolume
-      objectReference: {fileID: 0}
-    - target: {fileID: 4458651272170685118, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6024695214336687382, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6024695214336687382, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6024695214336687382, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6024695214336687382, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 581136936}
     - target: {fileID: 6024695214336687382, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
         type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: UpdateVolume
-      objectReference: {fileID: 0}
-    - target: {fileID: 6024695214336687382, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 581136936}
     - target: {fileID: 6402877783268258543, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1867,94 +1762,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6822848626963624880, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
         type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6822848626963624880, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6822848626963624880, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6822848626963624880, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 581136936}
-    - target: {fileID: 6822848626963624880, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: UpdateVolume
-      objectReference: {fileID: 0}
-    - target: {fileID: 6822848626963624880, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7513793810366000874, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7513793810366000874, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7513793810366000874, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7513793810366000874, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 581136936}
     - target: {fileID: 7513793810366000874, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: UpdateVolume
-      objectReference: {fileID: 0}
-    - target: {fileID: 7513793810366000874, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8248453735909220537, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8248453735909220537, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8248453735909220537, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8248453735909220537, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 581136936}
     - target: {fileID: 8248453735909220537, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
         type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: UpdateVolume
-      objectReference: {fileID: 0}
-    - target: {fileID: 8248453735909220537, guid: 9c58ae69ae4bc964ea530f3662c7ffc8,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 581136936}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c58ae69ae4bc964ea530f3662c7ffc8, type: 3}
 --- !u!4 &45965561 stripped
