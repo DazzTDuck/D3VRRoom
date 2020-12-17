@@ -58,16 +58,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: whiteboardMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 8680406225289041333, guid: 150981bde84c9744c870d6f8d4a50955,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8680406225289041333, guid: 150981bde84c9744c870d6f8d4a50955,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9065801727581210292, guid: 150981bde84c9744c870d6f8d4a50955,
         type: 3}
       propertyPath: m_LocalPosition.x
