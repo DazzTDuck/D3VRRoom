@@ -30,6 +30,8 @@ public class ValvePuzzle : MonoBehaviour
     bool greenValveSet = false;
     bool redValveSet = false;
 
+    bool puzzleCompleted = false;
+
     float blueValveRotProcent;
     float greenValveRotProcent;
     float redValveRotProcent;
@@ -95,31 +97,31 @@ public class ValvePuzzle : MonoBehaviour
         //subtracted from the rotation and maxValue it acts like if the begin value is 0 so it begins on 0% too.
 
         int bluePsiValue = Mathf.RoundToInt(maxPsiValue / 100 * blueGaugePercentage);
-        int bluePsiValueRoundedToTen = Mathf.FloorToInt(bluePsiValue / 10) * 10;
+        int bluePsiValueRoundedToTen = Mathf.RoundToInt((float)bluePsiValue / 10f) * 10;
         blueValveSet = bluePsiValueRoundedToTen == correctPsiValueBlueValve;
 
-        Debug.Log(bluePsiValueRoundedToTen);
+        //Debug.Log(bluePsiValueRoundedToTen);
 
         //---green---
         float greenGaugePercentage = (greenHandleRotation - minHandleRot) / (maxHandleRot - minHandleRot) * 100;
         int greenPsiValue = Mathf.RoundToInt(maxPsiValue / 100 * greenGaugePercentage);
-        int greenPsiValueRoundedToTen = Mathf.RoundToInt(greenPsiValue / 10 * 10);
+        int greenPsiValueRoundedToTen = Mathf.RoundToInt((float)greenPsiValue / 10f) * 10;
         greenValveSet = greenPsiValueRoundedToTen == correctPsiValueGreenValve;
 
         //---red---
         float redGaugePercentage = (redHandleRotation - minHandleRot) / (maxHandleRot - minHandleRot) * 100;
         int redPsiValue = Mathf.RoundToInt(maxPsiValue / 100 * redGaugePercentage);
-        int redPsiValueRoundedToTen = Mathf.RoundToInt(redPsiValue / 10 * 10);
+        int redPsiValueRoundedToTen = Mathf.RoundToInt((float)redPsiValue / 10f) * 10;
         redValveSet = redPsiValueRoundedToTen == correctPsiValueRedValve;
 
-        if (blueValveSet && greenValveSet && redValveSet) 
+        if (blueValveSet && greenValveSet && redValveSet && !puzzleCompleted) 
         { 
             OnValvesSet.Invoke();
-
             ValvesInteractable(false);
-        }
-            
+            puzzleCompleted = true;
+        }      
     }
+
     public void SetNewCodes(int firstCode, int secondCode, int thirdCode)
     {
         correctPsiValueBlueValve = firstCode;
