@@ -137,7 +137,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9812ab3eea85e8b48ad42f7c82518408, type: 2}
+  - {fileID: 2100000, guid: faed6edd59616044b8d41d0e4993c69d, type: 2}
   - {fileID: 2100000, guid: 9a11ac1515d1d4643ac247481005e6db, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -381,7 +381,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9812ab3eea85e8b48ad42f7c82518408, type: 2}
+  - {fileID: 2100000, guid: 202e10cda0292f6479208ef180159a24, type: 2}
   - {fileID: 2100000, guid: 9a11ac1515d1d4643ac247481005e6db, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -549,13 +549,35 @@ MonoBehaviour:
   greenGaugeHandle: {fileID: 3662342068095249287}
   redGaugeHandle: {fileID: 3688921383024495454}
   minHandleRot: 0
-  maxHandleRot: 266.94
+  maxHandleRot: 267.31
   correctPsiValueBlueValve: 100
   correctPsiValueGreenValve: 200
   correctPsiValueRedValve: 300
   OnValvesSet:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!64 &945399090
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -828,6 +850,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 4.4
       objectReference: {fileID: 0}
+    - target: {fileID: 4722289181816410286, guid: a60c2c651668e58408619ca6552ef3b1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4fbf1db7800f933408ce514925bbeb63, type: 2}
     - target: {fileID: 4829551650551357996, guid: a60c2c651668e58408619ca6552ef3b1,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -851,7 +878,17 @@ PrefabInstance:
     - target: {fileID: 4829551650551357996, guid: a60c2c651668e58408619ca6552ef3b1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.041
+      value: 0.04100001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829551650551357996, guid: a60c2c651668e58408619ca6552ef3b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0049998616
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829551650551357996, guid: a60c2c651668e58408619ca6552ef3b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.012500053
       objectReference: {fileID: 0}
     - target: {fileID: 4853532575114601394, guid: a60c2c651668e58408619ca6552ef3b1,
         type: 3}
@@ -876,17 +913,17 @@ PrefabInstance:
     - target: {fileID: 4853532575114601394, guid: a60c2c651668e58408619ca6552ef3b1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.0003942241
       objectReference: {fileID: 0}
     - target: {fileID: 4853532575114601394, guid: a60c2c651668e58408619ca6552ef3b1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.0004964355
       objectReference: {fileID: 0}
     - target: {fileID: 4853532575114601394, guid: a60c2c651668e58408619ca6552ef3b1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0089
+      value: 0.008899927
       objectReference: {fileID: 0}
     - target: {fileID: 4853532575114601394, guid: a60c2c651668e58408619ca6552ef3b1,
         type: 3}

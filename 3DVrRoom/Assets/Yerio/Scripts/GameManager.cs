@@ -5,6 +5,8 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] bool startGameOnStart = true;
+
     [Header("--Timer--")]
     [SerializeField] TMP_Text[] timerText;
     [SerializeField] float minutesToFinishGame;
@@ -17,6 +19,10 @@ public class GameManager : MonoBehaviour
 
     [Header("--Lighting--")]
     [SerializeField] GameObject[] lights;
+
+    [Header("--PrinterCode--")]
+    [SerializeField] PrinterPuzzle printerPuzzle;
+    [SerializeField] Keypad maintananceVaultKeypad;
 
     [Header("--Dumbell Code--")]
     [SerializeField] TMP_Text number1;
@@ -38,7 +44,7 @@ public class GameManager : MonoBehaviour
     [Header("--Hidden Key Office--")]
     [SerializeField] GameObject[] greenKeyHidingPlaces;
 
-    [Header("Valves Puzzle")]
+    [Header("--Valves Puzzle--")]
     [SerializeField] ValvePuzzle valves;
     [SerializeField] Texture[] codeTextures;
     [SerializeField] Material codeMaterial1, codeMaterial2, codeMaterial3;
@@ -58,11 +64,15 @@ public class GameManager : MonoBehaviour
         SetDumbellNumbers();
         HideDumbellsAndGreenKey();
         RandomizeValveCodes();
+        SetSecondVaultCode();
     }
 
     private void Start()
     {
-        StartGame();
+        if (startGameOnStart)
+        {
+            StartGame();
+        }
     }
 
     private void Update()
@@ -74,6 +84,13 @@ public class GameManager : MonoBehaviour
     {
         timerSeconds = minutesToFinishGame * 60;
         startTimer = true;
+    }
+
+    public void SetSecondVaultCode()
+    {
+        string code = GetCode().ToString();
+        printerPuzzle.SetCode(code);
+        maintananceVaultKeypad.SetCorrectCode(code);
     }
 
     public void UpdateTimer()
