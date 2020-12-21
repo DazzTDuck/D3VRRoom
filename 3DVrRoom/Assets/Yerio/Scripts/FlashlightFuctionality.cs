@@ -11,6 +11,8 @@ public class FlashlightFuctionality : MonoBehaviour
     [SerializeField] Animator buttonAnimator;
     [SerializeField] SteamVR_Skeleton_Poser skeletonPoser;
 
+    [SerializeField] bool hasUVAttachment = false;
+
     int lightsIndex = 2;
     Hand holdingHand;
     Hand[] hands;
@@ -37,8 +39,14 @@ public class FlashlightFuctionality : MonoBehaviour
                         break;
                     case 1:
                         //UV light
-                        lights[lightsIndex - 1].enabled = false;
-                        lights[lightsIndex].enabled = true;
+                        if (hasUVAttachment)
+                        {
+                            lights[lightsIndex - 1].enabled = false;
+                            lights[lightsIndex].enabled = true;
+                        }
+                        else
+                            lightsIndex = 2;
+
                         break;
                     case 2:
                         //nothing
@@ -49,6 +57,8 @@ public class FlashlightFuctionality : MonoBehaviour
             }
         }      
     }
+
+    public void UVAttachment() { hasUVAttachment = true; }
 
     private void OnAttachedToHand(Hand hand)
     {

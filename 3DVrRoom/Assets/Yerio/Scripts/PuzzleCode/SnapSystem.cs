@@ -7,9 +7,9 @@ public class SnapSystem : MonoBehaviour
 {
     public Transform snapPlace;
     public Transform ObjectToSnap;
+    [SerializeField] MeshRenderer[] meshRenderers;
+    [SerializeField] Collider[] Colliders;
     public float minDistanceToSnap = 0.05f;
-    [SerializeField] bool showSnapPlaceWhenHolding = false;
-    public Material snapMaterial;
     [Space]
     public UnityEvent OnSnapped;
 
@@ -18,12 +18,6 @@ public class SnapSystem : MonoBehaviour
     [SerializeField] MeshRenderer baseMeshRenderer;
     [SerializeField] MeshRenderer bossMeshRenderer;
     [SerializeField] SkinnedMeshRenderer SkinnedMeshRenderer;
-    [SerializeField] Material baseMaterial;
-    [SerializeField] Material bossMaterial;
-
-    Material originalMaterial;
-    MeshRenderer meshRenderer;
-    Collider Collider;
 
     Hand rightHand;
     Hand leftHand;
@@ -34,14 +28,6 @@ public class SnapSystem : MonoBehaviour
 
     private void Awake()
     {
-        Collider = GetComponent<Collider>();
-
-        if (!ballerina)
-        {
-            meshRenderer = GetComponent<MeshRenderer>();
-            originalMaterial = meshRenderer.material;
-        }
-
         //to get the hands
         foreach (var hand in FindObjectsOfType<Hand>())
         {
@@ -64,52 +50,38 @@ public class SnapSystem : MonoBehaviour
             baseMeshRenderer.enabled = canShow;
             bossMeshRenderer.enabled = canShow;
             SkinnedMeshRenderer.enabled = canShow;
-            Collider.enabled = hasCollision;
+            foreach (var coll in Colliders)
+            {
+                coll.enabled = hasCollision;
+            }
             return;
         }
 
-        if(meshRenderer)
-        meshRenderer.enabled = canShow;
-
-        Collider.enabled = hasCollision;   
-    }
-    void ChangeMaterial(Material newMaterial)
-    {
-        if (ballerina)
+        if(meshRenderers.Length > 0)
         {
-            baseMeshRenderer.material = newMaterial;
-            bossMeshRenderer.material = newMaterial;
-            SkinnedMeshRenderer.material = newMaterial;
-            return;
+            foreach (var mesh in meshRenderers)
+            {
+                mesh.enabled = canShow;
+            }
         }
 
-        meshRenderer.material = newMaterial;
-    }
-
-    void ChangeBackBallerina()
-    {
-        baseMeshRenderer.material = baseMaterial;
-        bossMeshRenderer.material = bossMaterial;
-        SkinnedMeshRenderer.material = bossMaterial;
+        foreach (var coll in Colliders)
+        {
+            coll.enabled = hasCollision;
+        }
     }
 
     void ShowSnapPosistion()
     {
-        if (!hasSnapped && showSnapPlaceWhenHolding)
+        if (!hasSnapped)
         {
             if (isHoldingObjectRight || isHoldingObjectLeft)
             {
                 SnapPlaceShow(true, false);
-                ChangeMaterial(snapMaterial);
             }
             else
             {
                 SnapPlaceShow(false, false);
-
-                if (!ballerina)
-                    ChangeMaterial(originalMaterial);
-                else
-                    ChangeBackBallerina();
             }
         }      
     }  
@@ -147,11 +119,6 @@ public class SnapSystem : MonoBehaviour
                     rightHand.DetachObject(ObjectToSnap.gameObject);
                 else if (isHoldingObjectLeft)
                     leftHand.DetachObject(ObjectToSnap.gameObject);
-
-                if (!ballerina)
-                    ChangeMaterial(originalMaterial);
-                else
-                    ChangeBackBallerina();
 
                 SnapPlaceShow(true, true);
 

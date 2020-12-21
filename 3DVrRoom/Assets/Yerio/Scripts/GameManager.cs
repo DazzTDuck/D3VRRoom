@@ -49,6 +49,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] Texture[] codeTextures;
     [SerializeField] Material codeMaterial1, codeMaterial2, codeMaterial3;
     Texture texturesOne, texturesTwo, texturesThree;
+    [Space]
+    [SerializeField] GameObject[] greenGaugeHidingPlaces;
+    [SerializeField] SnapSystem greenGaugeSnap;
+
+    [Header("--Hidden Fuze--")]
+    [SerializeField] GameObject[] fuzeHidingPlaces;
+    [SerializeField] FuzeBoxPuzzle fuzeSnap;
 
     //private
     PauseMenuManager pauseManager;
@@ -65,6 +72,7 @@ public class GameManager : MonoBehaviour
         HideDumbellsAndGreenKey();
         RandomizeValveCodes();
         SetSecondVaultCode();
+        HideGreenGaugeAndFuze();
     }
 
     private void Start()
@@ -86,14 +94,14 @@ public class GameManager : MonoBehaviour
         startTimer = true;
     }
 
-    public void SetSecondVaultCode()
+    void SetSecondVaultCode()
     {
         string code = GetCode().ToString();
         printerPuzzle.SetCode(code);
         maintananceVaultKeypad.SetCorrectCode(code);
     }
 
-    public void UpdateTimer()
+    void UpdateTimer()
     {
         if (startTimer && !pauseManager.paused)
         {
@@ -126,7 +134,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SetDumbellNumbers()
+    void SetDumbellNumbers()
     {
         if (!codeSet)
         {
@@ -143,7 +151,7 @@ public class GameManager : MonoBehaviour
         }      
     }
 
-    public void HideDumbellsAndGreenKey()
+    void HideDumbellsAndGreenKey()
     {
         for (int i = 0; i < dumbellsInDrawer.Length; i++)
         {
@@ -195,6 +203,19 @@ public class GameManager : MonoBehaviour
         dumbell2Snap.OnSnapped.AddListener(() => dumbell2Canvas.gameObject.SetActive(true));
     }
 
+    void HideGreenGaugeAndFuze()
+    {
+        var gauge = greenGaugeHidingPlaces[Random.Range(0, greenGaugeHidingPlaces.Length - 1)];
+        gauge.SetActive(true);
+
+        greenGaugeSnap.ObjectToSnap = gauge.transform;
+
+        var fuze = fuzeHidingPlaces[Random.Range(0, fuzeHidingPlaces.Length - 1)];
+        fuze.SetActive(true);
+
+        fuzeSnap.newFuze = fuze;
+    }
+
     public int GetCode()
     {
         return Random.Range(minCodeRange, maxCodeRange);
@@ -210,7 +231,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void RandomizeValveCodes()
+    void RandomizeValveCodes()
     {
         List<Texture> selectedTextures = new List<Texture>();
 
@@ -245,6 +266,5 @@ public class GameManager : MonoBehaviour
     {
         return int.Parse(name.TrimStart('c', 'o', 'd', 'e'));
     }
-
 
 }
