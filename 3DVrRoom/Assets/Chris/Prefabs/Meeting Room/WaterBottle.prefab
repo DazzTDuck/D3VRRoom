@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5888905098839257145}
   - component: {fileID: 5480319540772546584}
   - component: {fileID: 467561542900050614}
-  - component: {fileID: 1224070890}
+  - component: {fileID: 134508026307048748}
   m_Layer: 0
   m_Name: WaterBottle
   m_TagString: Untagged
@@ -266,8 +266,8 @@ MonoBehaviour:
   previewPoseSelection: 0
   blendingBehaviours: []
   scale: 1
---- !u!136 &1224070890
-CapsuleCollider:
+--- !u!64 &134508026307048748
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -276,7 +276,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.035
-  m_Height: 0.2004073
-  m_Direction: 1
-  m_Center: {x: 0.00000011920929, y: 0.057671294, z: -0.00000023841858}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3329825995488561363, guid: 206dc4d3b5ca26248a7521342a71ca49, type: 3}
