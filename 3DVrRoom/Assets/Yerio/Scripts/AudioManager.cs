@@ -8,9 +8,6 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
 
-    public bool awakeMainMenuMusic;
-    public bool awakeInGameMusic;
-
     public static AudioManager instance;
     private void Awake()
     {
@@ -35,19 +32,10 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
 
             s.source.loop = s.loop;
-
-            s.source.playOnAwake = false;
+            s.source.playOnAwake = s.playOnAwake;
+            if (s.playOnAwake)
+                s.source.Play();
         }     
-    }
-
-    private void Start()
-    {
-        //main menu music
-        if(awakeMainMenuMusic)
-            PlaySound("MainMenu");
-
-        if (awakeInGameMusic)
-            PlaySound("InGame");
     }
 
     public void PlaySound(string name)
