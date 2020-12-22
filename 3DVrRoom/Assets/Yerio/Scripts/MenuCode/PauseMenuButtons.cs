@@ -6,8 +6,8 @@ public class PauseMenuButtons : MonoBehaviour
 {
     static PauseMenuManager pauseMenuManager;
     SettingsMenu settings;
-    [SerializeField] Animator whiteBoardAnimator;
 
+    [SerializeField] Animator whiteBoardAnimator;
 
     private void Awake()
     {

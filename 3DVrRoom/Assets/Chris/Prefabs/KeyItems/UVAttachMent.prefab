@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8645127928411691832}
   - component: {fileID: 4636017769656521885}
   - component: {fileID: 7472182962471460951}
+  - component: {fileID: 6057122328657331800}
+  - component: {fileID: 3247358800908539121}
   m_Layer: 0
   m_Name: UVAttachMent
   m_TagString: Untagged
@@ -79,3 +81,42 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &6057122328657331800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8985379036594815362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19284b8357b33f54d87687107a8a11f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snapPlace: {fileID: 8645127928411691832}
+  ObjectToSnap: {fileID: 0}
+  meshRenderers:
+  - {fileID: 7472182962471460951}
+  Colliders:
+  - {fileID: 3247358800908539121}
+  minDistanceToSnap: 0.1
+  OnSnapped:
+    m_PersistentCalls:
+      m_Calls: []
+  ballerina: 0
+  baseMeshRenderer: {fileID: 0}
+  bossMeshRenderer: {fileID: 0}
+  SkinnedMeshRenderer: {fileID: 0}
+--- !u!65 &3247358800908539121
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8985379036594815362}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.06238105, y: 0.059396982, z: 0.11584805}
+  m_Center: {x: -0.0011875331, y: -0.017725348, z: 0.005593002}

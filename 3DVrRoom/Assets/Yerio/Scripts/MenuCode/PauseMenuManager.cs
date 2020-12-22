@@ -34,9 +34,8 @@ public class PauseMenuManager : MonoBehaviour
     {
         teleportObject.SetActive(false);
         paused = true;
-        instantiatedPauseMenu = Instantiate(pauseMenu, vrCamera.position + vrCamera.forward, Quaternion.identity);
         var rotation = Quaternion.LookRotation(vrCamera.forward, Vector3.up);
-        instantiatedPauseMenu.transform.rotation = rotation;
+        instantiatedPauseMenu = Instantiate(pauseMenu, vrCamera.position + vrCamera.forward, rotation);
     }
 
     public void CloseMenu()
