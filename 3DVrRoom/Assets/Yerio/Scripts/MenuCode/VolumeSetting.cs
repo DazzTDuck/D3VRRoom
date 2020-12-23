@@ -2,6 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
+
+[System.Serializable]
+/// <summary>
+/// UnityEvent callback for when a toggle is toggled.
+/// </summary>
+public class VolumeEvent : UnityEvent<int>
+{ }
 
 public class VolumeSetting : MonoBehaviour
 {
@@ -10,8 +18,9 @@ public class VolumeSetting : MonoBehaviour
     [SerializeField] int maxVolume = 10;
     [SerializeField] int startVolume = 7;
 
-    [HideInInspector]
-    public int volume;
+    [SerializeField] VolumeEvent OnValueChanged = new VolumeEvent();
+
+    int volume;
 
     private void Awake()
     {
@@ -25,6 +34,7 @@ public class VolumeSetting : MonoBehaviour
 
         volume++;
         UpdateText();
+        OnValueChanged.Invoke(volume);
     }
 
     public void DecreaseVolume()
@@ -33,9 +43,13 @@ public class VolumeSetting : MonoBehaviour
 
         volume--;
         UpdateText();
+        OnValueChanged.Invoke(volume);
     }
 
+    public void SetVolume(int newVolume) { volume = newVolume; UpdateText(); }
+
     public int GetDefaultVolume() { return startVolume; }
+    public int GetCurrentVolume() { return volume; }
 
     public void UpdateText() { number.text = volume.ToString(); }
 }

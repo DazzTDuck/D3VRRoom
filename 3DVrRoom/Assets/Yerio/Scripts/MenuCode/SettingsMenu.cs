@@ -5,10 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 using UnityEngine.Rendering.Universal;
-using UnityEngine.SceneManagement;
 using UnityEngine.Rendering;
-using UnityEngine.Assertions.Must;
-using System.Linq;
 
 public class SettingsMenu : MonoBehaviour
 {
@@ -42,23 +39,26 @@ public class SettingsMenu : MonoBehaviour
 
     //List<Resolution> resolutionsList = new List<Resolution>();
 
-    private void Start()
+    private void Awake()
     {
+        //ResetAllSettings();
+        postFx.TryGet(out bloom);
         LoadSettings();
     }
 
     public void LoadSettings()
     {
-        postFx.TryGet(out bloom);
-        //postFx.TryGet(out motionBlur);
+        SetMasterVolume(PlayerPrefs.GetInt("masterVolume", master.GetDefaultVolume()));
+        master.SetVolume(PlayerPrefs.GetInt("masterVolume", master.GetDefaultVolume()));
 
-        UpdateVolume();
+        SetSFXVolume(PlayerPrefs.GetInt("sfxVolume", sfx.GetDefaultVolume()));
+        sfx.SetVolume(PlayerPrefs.GetInt("sfxVolume", sfx.GetDefaultVolume()));
 
-        if (bloomToggle)
-        {
-            SetBloom(PlayerPrefs.GetInt("bloomBool", 1) != 0);
-            bloomToggle.isOn = PlayerPrefs.GetInt("bloomBool", 1) != 0;
-        }
+        SetDialogueVolume(PlayerPrefs.GetInt("dialogueVolume", dialogue.GetDefaultVolume()));
+        dialogue.SetVolume(PlayerPrefs.GetInt("dialogueVolume", dialogue.GetDefaultVolume()));
+
+        SetBloom(PlayerPrefs.GetInt("bloomBool", 1) != 0);
+        bloomToggle.isOn = PlayerPrefs.GetInt("bloomBool", 1) != 0;
     }
 
     public void ResetAllSettings()
@@ -70,14 +70,6 @@ public class SettingsMenu : MonoBehaviour
 
         LoadSettings();
     }
-    public void UpdateVolume()
-    {
-        SetMasterVolume(PlayerPrefs.GetInt("masterVolume", master.GetDefaultVolume()));
-
-        SetSFXVolume(PlayerPrefs.GetInt("sfxVolume", sfx.GetDefaultVolume()));
-
-        SetDialogueVolume(PlayerPrefs.GetInt("dialogueVolume", dialogue.GetDefaultVolume()));
-    }
 
     public void SetMasterVolume(int volumeAmt)
     {
@@ -85,16 +77,16 @@ public class SettingsMenu : MonoBehaviour
 
         masterMixer.SetFloat("MasterVolume", volume);
 
-        PlayerPrefs.SetInt("masterVolume", master.volume);
+        PlayerPrefs.SetInt("masterVolume", volumeAmt);
         PlayerPrefs.Save();
     }
     public void SetDialogueVolume(int volumeAmt)
     {
         float volume = Mathf.Lerp(minVolume, maxVolume, (float)volumeAmt / 10f);
 
-        masterMixer.SetFloat("DialogueVolume", volume);;
+        masterMixer.SetFloat("DialogueVolume", volume);
 
-        PlayerPrefs.SetInt("dialogueVolume", dialogue.volume);
+        PlayerPrefs.SetInt("dialogueVolume", volumeAmt);
         PlayerPrefs.Save();
     }
     public void SetSFXVolume(int volumeAmt)
@@ -103,7 +95,7 @@ public class SettingsMenu : MonoBehaviour
 
         masterMixer.SetFloat("SFXVolume", volume);
 
-        PlayerPrefs.SetInt("sfxVolume", sfx.volume);
+        PlayerPrefs.SetInt("sfxVolume", volumeAmt);
         PlayerPrefs.Save();
     }
 

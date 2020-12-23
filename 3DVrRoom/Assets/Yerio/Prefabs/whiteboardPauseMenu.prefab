@@ -190,7 +190,6 @@ MonoBehaviour:
   minVolume: 0
   maxVolume: 10
   startVolume: 7
-  volume: 0
 --- !u!1 &2156090660980168575
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +246,6 @@ MonoBehaviour:
   minVolume: 0
   maxVolume: 10
   startVolume: 7
-  volume: 0
 --- !u!1 &2157541306307995676
 GameObject:
   m_ObjectHideFlags: 0
@@ -2169,7 +2167,6 @@ MonoBehaviour:
   minVolume: 0
   maxVolume: 10
   startVolume: 7
-  volume: 0
 --- !u!1 &3871302835763112748
 GameObject:
   m_ObjectHideFlags: 0
@@ -3010,6 +3007,7 @@ GameObject:
   - component: {fileID: 6858570805024415481}
   - component: {fileID: 7530390599822168412}
   - component: {fileID: 5721160405758748054}
+  - component: {fileID: 5735604056471658043}
   m_Layer: 0
   m_Name: whiteboardPauseMenu
   m_TagString: Untagged
@@ -3080,6 +3078,25 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!95 &5735604056471658043
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6081365155967927363}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6465af3c59eb63a40b8b92840379f650, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6100432407368508043
 GameObject:
   m_ObjectHideFlags: 0
@@ -3243,8 +3260,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6965404583705842949}
   m_LocalRotation: {x: -1, y: 0.00000018725352, z: 0.0000014603136, w: -2.5579536e-13}
-  m_LocalPosition: {x: 0, y: 0, z: -0.008003473}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalPosition: {x: 0, y: 0, z: -0.008}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5759608783601960725}
   m_Father: {fileID: 5667431547052771335}
@@ -3252,8 +3269,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -180.00002, z: 179.99998}
   m_AnchorMin: {x: 0.38663033, y: 0.014838361}
   m_AnchorMax: {x: 0.61331517, y: 0.12388727}
-  m_AnchoredPosition: {x: 0.005, y: 0.747}
-  m_SizeDelta: {x: 0.24481964, y: 0.07960567}
+  m_AnchoredPosition: {x: 0.025, y: 0.736}
+  m_SizeDelta: {x: 0.019499995, y: 0.012401372}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4333113464603332837
 CanvasRenderer:
@@ -3815,10 +3832,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.1
-  m_fontSizeBase: 0
+  m_fontSize: 0.075
+  m_fontSizeBase: 0.075
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 0.06
   m_fontSizeMax: 0.4
   m_fontStyle: 0
