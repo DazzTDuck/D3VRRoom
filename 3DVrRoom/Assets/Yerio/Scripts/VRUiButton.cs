@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 public class VRUiButton : Selectable, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    [SerializeField] UnityEvent OnClick;
+    public UnityEvent OnClick;
 
     public void OnPointerClick(PointerEventData eventData)
     {

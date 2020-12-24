@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -59,8 +60,6 @@ public class GameManager : MonoBehaviour
 
     //private
     PauseMenuManager pauseManager;
-
-
     private void Awake()
     {
         pauseManager = GetComponent<PauseMenuManager>();
@@ -265,6 +264,17 @@ public class GameManager : MonoBehaviour
     public int GetValveCode(string name)
     {
         return int.Parse(name.TrimStart('c', 'o', 'd', 'e'));
+    }
+
+    public IEnumerator ResetGame()
+    {
+        BlackScreen.FadeIn();
+
+        yield return new WaitForSeconds(1f);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        StopCoroutine(ResetGame());
     }
 
 }

@@ -3141,6 +3141,7 @@ GameObject:
   - component: {fileID: 62883674}
   - component: {fileID: 62883678}
   - component: {fileID: 62883679}
+  - component: {fileID: 62883680}
   m_Layer: 5
   m_Name: BlackScreen1
   m_TagString: Untagged
@@ -3259,6 +3260,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &62883680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62883673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ba8db69a70bb9c44a3f5a515418788d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &64556935
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61014,6 +61027,10 @@ PrefabInstance:
       propertyPath: blackScreenAnimator
       value: 
       objectReference: {fileID: 62883679}
+    - target: {fileID: 884162176, guid: 561c8234b751cef4cabcbe03d49cdb76, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1335521995907368464, guid: 561c8234b751cef4cabcbe03d49cdb76,
         type: 3}
       propertyPath: master

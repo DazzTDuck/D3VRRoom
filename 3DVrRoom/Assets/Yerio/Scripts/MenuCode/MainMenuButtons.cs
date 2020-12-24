@@ -14,7 +14,6 @@ public class MainMenuButtons : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] Transform startPointPlayer;
     [Space]
-    [SerializeField] Animator blackScreenAnimator;
 
     float timeToWait = 0.20f;
 
@@ -56,7 +55,7 @@ public class MainMenuButtons : MonoBehaviour
     IEnumerator SetupBeginScene()
     {
         whiteBoardAnimator.SetTrigger("Flip");
-        blackScreenAnimator.SetTrigger("FadeIn");
+        BlackScreen.FadeIn();
         yield return new WaitForSeconds(timeToWait + 0.4f);
 
         normalWhiteBoard.SetActive(true);
@@ -68,11 +67,10 @@ public class MainMenuButtons : MonoBehaviour
 
         yield return new WaitForSeconds(0.2f);
 
-        blackScreenAnimator.SetTrigger("FadeOut");
+        BlackScreen.FadeOut();
 
         //call starting dialoge
 
         StopCoroutine(SetupBeginScene());
-
     }
 }
