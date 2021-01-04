@@ -6,7 +6,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] bool startGameOnStart = true;
+    [SerializeField] bool startTimerOnStart = true;
 
     [Header("--Timer--")]
     [SerializeField] TMP_Text[] timerText;
@@ -60,9 +60,13 @@ public class GameManager : MonoBehaviour
 
     //private
     PauseMenuManager pauseManager;
+    AudioManager audioManager;
+    BossBarks bossBarks;
     private void Awake()
     {
         pauseManager = GetComponent<PauseMenuManager>();
+        audioManager = GetComponent<AudioManager>();
+        bossBarks = FindObjectOfType<BossBarks>();
     }
 
     public void StartGame()
@@ -76,9 +80,11 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        if (startGameOnStart)
+        StartGame();
+
+        if (startTimerOnStart)
         {
-            StartGame();
+            StartTimer();
         }
     }
 
@@ -125,9 +131,31 @@ public class GameManager : MonoBehaviour
                     text.text = $"0{hours}:{minutes}:{seconds}";
             }
 
-            if(timerSeconds <= 0)
+            if(minutes == 20)
             {
-                //end game
+                bossBarks.CallBark(1);
+            }
+            if (minutes == 10)
+            {
+                bossBarks.CallBark(2);
+            }
+            if (minutes == 5)
+            {
+                bossBarks.CallBark(3);
+            }
+            if (minutes == 1)
+            {
+                bossBarks.CallBark(4);
+            }
+
+            if (seconds == 6 && minutes == 0)
+            {
+                bossBarks.CallBark(5);
+            }
+
+            if(timerSeconds == 0)
+            {
+                //end
                 startTimer = false;
             }
         }

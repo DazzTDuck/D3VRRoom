@@ -19,7 +19,7 @@ public class SubtitleManager : MonoBehaviour
         settingsMenu = FindObjectOfType<SettingsMenu>();
     }
 
-    public void SetupSubtitleBarks(string text, string name, float time)
+    public void SetupSubtitle(string text, string name, float time)
     {
         subtilePanel.SetActive(true);
         nameText.text = name;

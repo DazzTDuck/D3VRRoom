@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
 
-    SubtitleManager subtitleManager;
+    [SerializeField, Space] SubtitleManager subtitleManager;
     public static AudioManager instance;
     private void Awake()
     {
@@ -22,32 +22,23 @@ public class AudioManager : MonoBehaviour
 
         //DontDestroyOnLoad(gameObject);
 
-        subtitleManager = FindObjectOfType<SubtitleManager>();
-
         foreach (var s in sounds)
         {
-            if (!s.voiceLine.lineActivated)
-            {
-                s.source = gameObject.AddComponent<AudioSource>();
-                s.source.outputAudioMixerGroup = s.mixer;
 
-                s.source.clip = s.clip;
+            s.source = gameObject.AddComponent<AudioSource>();
+            s.source.outputAudioMixerGroup = s.mixer;
 
-                s.source.volume = s.volume;
-                s.source.pitch = s.pitch;
+            s.source.clip = s.clip;
 
-                s.source.loop = s.loop;
-                s.source.playOnAwake = s.playOnAwake;
-                if (s.playOnAwake)
-                    s.source.Play();
+            s.source.volume = s.volume;
+            s.source.pitch = s.pitch;
 
-                if (s.isVoiceLine)
-                {
-                    subtitleManager.SetupSubtitleBarks(s.voiceLine.name, s.voiceLine.line, s.voiceLine.lineLength);
-                    s.voiceLine.lineActivated = true;
-                }
-            }           
-        }     
+            s.source.loop = s.loop;
+            s.source.playOnAwake = s.playOnAwake;
+            if (s.playOnAwake)
+                s.source.Play();
+
+        } 
     }
 
     public void PlaySound(string name)
@@ -59,7 +50,13 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        s.source.Play();
+        if (!s.voiceLine.lineActivated) { s.source.Play(); }
+
+        if (s.isVoiceLine)
+        {
+            subtitleManager.SetupSubtitle(s.voiceLine.line, s.voiceLine.name, s.voiceLine.lineLength);
+            s.voiceLine.lineActivated = true;
+        }
 
         if (s.clip == null)
         {
