@@ -19,8 +19,12 @@ public class BossWalking : MonoBehaviour
 
     private void Awake()
     {
-        //StartWalking();
+        audioManager = FindObjectOfType<AudioManager>();
         subtitleManager = FindObjectOfType<SubtitleManager>();
+    }
+    private void Start()
+    {
+        //StartWalking();
     }
 
     private void Update()
@@ -46,15 +50,17 @@ public class BossWalking : MonoBehaviour
     public void StartWalking() 
     { 
         startWalking = true;
-
-        audioSource.Play();
-        subtitleManager.SetupSubtitle(line.line, line.name, line.lineLength);
-        StartCoroutine(SE2Line2());
+        StartCoroutine(SE2());
     }
 
-    IEnumerator SE2Line2()
+    IEnumerator SE2()
     {
-        yield return new WaitForSeconds(line.lineLength + 1);
+        yield return new WaitForSeconds(0.5f);
+
+        subtitleManager.SetupSubtitle(line.line, line.name, line.lineLength);
+        audioSource.Play();
+
+        yield return new WaitForSeconds(line.lineLength + 1f);
         audioManager.PlaySound("SE_2.2");
     }
 

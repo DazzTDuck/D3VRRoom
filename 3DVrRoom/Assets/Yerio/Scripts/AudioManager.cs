@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
 
-    [SerializeField, Space] SubtitleManager subtitleManager;
+    SubtitleManager subtitleManager;
     public static AudioManager instance;
     private void Awake()
     {
@@ -22,9 +22,10 @@ public class AudioManager : MonoBehaviour
 
         //DontDestroyOnLoad(gameObject);
 
+        subtitleManager = FindObjectOfType<SubtitleManager>();
+
         foreach (var s in sounds)
         {
-
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.outputAudioMixerGroup = s.mixer;
 
@@ -37,7 +38,6 @@ public class AudioManager : MonoBehaviour
             s.source.playOnAwake = s.playOnAwake;
             if (s.playOnAwake)
                 s.source.Play();
-
         } 
     }
 
