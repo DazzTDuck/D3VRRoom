@@ -36,5 +36,5 @@ public class BossWalking : MonoBehaviour
         }
     }
 
-    public static void StartWalking() { startWalking = true; }
+    public void StartWalking() { startWalking = true; }
 }

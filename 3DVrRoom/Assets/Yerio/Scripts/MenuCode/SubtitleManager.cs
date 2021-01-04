@@ -11,43 +11,31 @@ public class SubtitleManager : MonoBehaviour
     public GameObject subtilePanel;
     public TMP_Text subtitleText;
     public TMP_Text nameText;
-    [Header("--Lines--")]
-    public Line[] startingStageLines;
-    int startingStageLineIndex;
-    public Line[] officeStageLines;
-    int officeStageLineIndex;
-    public Line[] maintenanceStageLines;
-    int maintenanceStageLineIndex;
 
-    Line[] currentLinesSelected;
+    SettingsMenu settingsMenu;
 
-    /// <summary>
-    /// Here you can set the text with a line from the line stages
-    /// </summary>
-    /// <param name="lineIndex">here you can give the index of the line you want to show</param>
-    /// <param name="stage">you can select what stage you want to select for the correct lines, 
-    /// you can choose out of 'starting', 'office' or 'maintenance'</param>
-    public void SetText(int lineIndex, float timeToShow, string stage = "starting")
+    private void Awake()
     {
-        switch (stage)
-        {
-            case "starting":
-                currentLinesSelected = startingStageLines;
-                break;
-            case "office":
-                currentLinesSelected = officeStageLines;
-                break;
-            case "maintenance":
-                currentLinesSelected = maintenanceStageLines;
-                break;
-            default:
-                Debug.LogError("A stage has not been selected, change it to 'starting', 'office' or 'maintenance'");
-                break;
-        }
+        settingsMenu = FindObjectOfType<SettingsMenu>();
     }
 
-    IEnumerator ShowTextTimed(float time)
+    public void SetupSubtitleBarks(string text, string name, float time)
+    {
+        subtilePanel.SetActive(true);
+        nameText.text = name;
+        subtitleText.text = text;
+
+        StartCoroutine(CloseSubtitles(time));
+    }
+
+    public IEnumerator CloseSubtitles(float time)
     {
         yield return new WaitForSeconds(time);
+        subtilePanel.SetActive(false);
+    }
+
+    public IEnumerator SequenceWakeUp()
+    {
+        yield return new WaitForSeconds(2f);
     }
 }

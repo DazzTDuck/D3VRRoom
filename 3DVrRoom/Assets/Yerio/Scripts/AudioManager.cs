@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
 
+    SubtitleManager subtitleManager;
     public static AudioManager instance;
     private void Awake()
     {
@@ -21,20 +22,31 @@ public class AudioManager : MonoBehaviour
 
         //DontDestroyOnLoad(gameObject);
 
+        subtitleManager = FindObjectOfType<SubtitleManager>();
+
         foreach (var s in sounds)
         {
-            s.source = gameObject.AddComponent<AudioSource>();
-            s.source.outputAudioMixerGroup = s.mixer;
+            if (!s.voiceLine.lineActivated)
+            {
+                s.source = gameObject.AddComponent<AudioSource>();
+                s.source.outputAudioMixerGroup = s.mixer;
 
-            s.source.clip = s.clip;
+                s.source.clip = s.clip;
 
-            s.source.volume = s.volume;
-            s.source.pitch = s.pitch;
+                s.source.volume = s.volume;
+                s.source.pitch = s.pitch;
 
-            s.source.loop = s.loop;
-            s.source.playOnAwake = s.playOnAwake;
-            if (s.playOnAwake)
-                s.source.Play();
+                s.source.loop = s.loop;
+                s.source.playOnAwake = s.playOnAwake;
+                if (s.playOnAwake)
+                    s.source.Play();
+
+                if (s.isVoiceLine)
+                {
+                    subtitleManager.SetupSubtitleBarks(s.voiceLine.name, s.voiceLine.line, s.voiceLine.lineLength);
+                    s.voiceLine.lineActivated = true;
+                }
+            }           
         }     
     }
 

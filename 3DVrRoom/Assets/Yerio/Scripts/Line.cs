@@ -7,5 +7,6 @@ public class Line
 {
     public string name;
     public string line;
-    public AudioClip lineSound;
+    public float lineLength;
+    public bool lineActivated = false;
 }

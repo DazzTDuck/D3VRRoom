@@ -18,6 +18,9 @@ public class Sound
 
     public bool loop;
     public bool playOnAwake;
+    [Space]
+    public bool isVoiceLine;
+    public Line voiceLine;
 
     [HideInInspector]
     public AudioSource source;
