@@ -12,7 +12,7 @@ public class TriggerHandler : MonoBehaviour
     {
         if (hasActivated) return;
 
-        if (other.CompareTag("Player"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             Debug.Log("detected");
             triggerEnter.Invoke();

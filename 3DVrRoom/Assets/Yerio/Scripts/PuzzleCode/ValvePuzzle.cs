@@ -42,7 +42,9 @@ public class ValvePuzzle : MonoBehaviour
     float redHandleRotation;
     private void Awake()
     {
-        ValvesInteractable(true);
+        BlueValveInteractable(true);
+        GreenValveInteractable(false);
+        RedValveInteractable(false);
     }
     void ValveRotationsProcent()
     {
@@ -117,7 +119,7 @@ public class ValvePuzzle : MonoBehaviour
         if (blueValveSet && greenValveSet && redValveSet && !puzzleCompleted) 
         { 
             OnValvesSet.Invoke();
-            ValvesInteractable(false);
+            AllValvesInteractable(false);
             puzzleCompleted = true;
         }      
     }
@@ -129,12 +131,26 @@ public class ValvePuzzle : MonoBehaviour
         correctPsiValueRedValve = thirdCode;
     }
 
-    public void ValvesInteractable(bool state)
+    public void AllValvesInteractable(bool state)
     {
         blueValve.GetComponent<Interactable>().enabled = state;
         greenValve.GetComponent<Interactable>().enabled = state;
         redValve.GetComponent<Interactable>().enabled = state;
     }
+    public void BlueValveInteractable(bool state)
+    {
+        blueValve.GetComponent<Interactable>().enabled = state;
+    }
+    public void GreenValveInteractable(bool state)
+    {
+        greenValve.GetComponent<Interactable>().enabled = state;
+    }
+    public void RedValveInteractable(bool state)
+    {
+        redValve.GetComponent<Interactable>().enabled = state;
+    }
+
+    
 
     private void Update()
     {

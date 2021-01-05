@@ -120,7 +120,7 @@ public class SnapSystem : MonoBehaviour
                 else if (isHoldingObjectLeft)
                     leftHand.DetachObject(ObjectToSnap.gameObject);
 
-               // SnapPlaceShow(true, true);
+               SnapPlaceShow(true, true);
 
                 Destroy(ObjectToSnap.gameObject);
                 ObjectToSnap = null;
@@ -133,7 +133,7 @@ public class SnapSystem : MonoBehaviour
     private void Update()
     {
         CheckHandsForObject();
-        ShowSnapPosistion();
+        //ShowSnapPosistion();
         SnapObject();
     }
 }

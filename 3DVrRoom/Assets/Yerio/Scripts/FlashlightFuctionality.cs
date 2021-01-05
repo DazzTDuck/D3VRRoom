@@ -44,13 +44,11 @@ public class FlashlightFuctionality : MonoBehaviour
                             lights[lightsIndex - 1].enabled = false;
                             lights[lightsIndex].enabled = true;
                         }
-                        else
-                            lightsIndex = 2;
-
                         break;
                     case 2:
                         //nothing
                         lights[lightsIndex - 1].enabled = false;
+                        lights[0].enabled = false;
                         break;
                 }
 

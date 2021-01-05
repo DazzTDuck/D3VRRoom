@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 253106464}
   - component: {fileID: 253106463}
   - component: {fileID: 253106462}
-  - component: {fileID: 482796609601957308}
+  - component: {fileID: 3655125731537747932}
   m_Layer: 0
   m_Name: Energy
   m_TagString: Untagged
@@ -265,7 +265,7 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!114 &482796609601957308
+--- !u!114 &3655125731537747932
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
