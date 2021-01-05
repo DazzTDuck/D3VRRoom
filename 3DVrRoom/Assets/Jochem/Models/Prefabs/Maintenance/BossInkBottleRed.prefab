@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 44384975}
   - component: {fileID: 44384974}
   - component: {fileID: 44384973}
+  - component: {fileID: 5757182055621917789}
   m_Layer: 0
   m_Name: BossInkBottleRed
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 3338110496056640109}
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
   m_LocalPosition: {x: -7.4184, y: 0.565, z: 7.799}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -235,3 +236,16 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!65 &5757182055621917789
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3338110496056640109}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.13054311, y: 0.38855308, z: 0.24647315}
+  m_Center: {x: 0, y: 0.19427654, z: -0.0000010803344}
