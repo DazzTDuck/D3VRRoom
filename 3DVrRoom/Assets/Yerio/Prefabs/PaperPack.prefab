@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8220115810021163539}
   - component: {fileID: 6194490795915130585}
   - component: {fileID: 3535171026091537585}
+  - component: {fileID: 1377502647349314106}
   m_Layer: 0
   m_Name: PaperPack
   m_TagString: Untagged
@@ -93,3 +94,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.37524715, y: 0.13112395, z: 0.26465905}
   m_Center: {x: 0.00000002980233, y: 0.06556197, z: 0}
+--- !u!114 &1377502647349314106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5690224458285782796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7418c7dd8f977d4e969202d3fa7e926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poseEditorExpanded: 1
+  blendEditorExpanded: 1
+  poseNames:
+  - PaperPack (MAIN)
+  overridePreviewLeftHandPrefab: {fileID: 1000013348574242, guid: 638779290bce1af49b356f33dcc6fccf,
+    type: 3}
+  overridePreviewRightHandPrefab: {fileID: 1000010304998954, guid: 6def53d002137b747aec0b29551e0e25,
+    type: 3}
+  skeletonMainPose: {fileID: 11400000, guid: c8b48775da73fa947a8c1d7dda22a146, type: 2}
+  skeletonAdditionalPoses: []
+  showLeftPreview: 0
+  showRightPreview: 0
+  previewLeftInstance: {fileID: 0}
+  previewRightInstance: {fileID: 0}
+  previewPoseSelection: 0
+  blendingBehaviours: []
+  scale: 1
