@@ -44,9 +44,10 @@ GameObject:
   - component: {fileID: 5675219648376008184}
   - component: {fileID: 7208006732596962628}
   - component: {fileID: 3959246425086932447}
-  - component: {fileID: 1236539534}
   - component: {fileID: 1763286774}
   - component: {fileID: 1763286773}
+  - component: {fileID: 236594620}
+  - component: {fileID: 5327977418214620517}
   m_Layer: 0
   m_Name: Door01
   m_TagString: Untagged
@@ -115,20 +116,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1236539534
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2243487680991499202}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8161670898622400657, guid: fd2bcfb84baef1e43a8bc9302f29c69c, type: 3}
 --- !u!54 &1763286774
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -156,7 +143,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 5.983246, y: 0.48372757, z: 1.7272148}
+  m_ConnectedAnchor: {x: -3.183786, y: 0.5507272, z: 0.58875453}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -169,7 +156,7 @@ HingeJoint:
     freeSpin: 0
   m_UseLimits: 1
   m_Limits:
-    min: -90
+    min: -89
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
@@ -180,6 +167,32 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!65 &236594620
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2243487680991499202}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.005418489, y: 0.5213911, z: 0.40124658}
+  m_Center: {x: -0.00014397586, y: -0.01925667, z: 0.21277991}
+--- !u!65 &5327977418214620517
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2243487680991499202}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03427803, y: 0.16748954, z: 0.014974422}
+  m_Center: {x: 0.0142857935, y: 0.14792521, z: 0.4059158}
 --- !u!1 &5559023270027799421
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,9 +204,10 @@ GameObject:
   - component: {fileID: 5075080255951303111}
   - component: {fileID: 8196996691947978338}
   - component: {fileID: 6207475715169618600}
-  - component: {fileID: 1216544723}
   - component: {fileID: 1953735224}
   - component: {fileID: 1953735223}
+  - component: {fileID: 87971027}
+  - component: {fileID: 2515242053297500214}
   m_Layer: 0
   m_Name: TableDoor3
   m_TagString: Untagged
@@ -262,20 +276,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1216544723
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5559023270027799421}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -255209993884138339, guid: 6c0c75195d02f044fb8b0a0ed4747063, type: 3}
 --- !u!54 &1953735224
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -303,7 +303,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 6.961559, y: 0.48372757, z: 1.7272148}
+  m_ConnectedAnchor: {x: -3.183786, y: 0.5507272, z: -0.38955867}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -317,7 +317,7 @@ HingeJoint:
   m_UseLimits: 1
   m_Limits:
     min: 0
-    max: 90
+    max: 89
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -327,6 +327,32 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!65 &87971027
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5559023270027799421}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0066981153, y: 0.5205049, z: 0.39731613}
+  m_Center: {x: 0.0008591823, y: -0.0195765, z: 0.21365808}
+--- !u!65 &2515242053297500214
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5559023270027799421}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02608986, y: 0.16748954, z: 0.014974422}
+  m_Center: {x: -0.016272567, y: 0.14792521, z: 0.4059158}
 --- !u!1 &7706880591988254446
 GameObject:
   m_ObjectHideFlags: 0

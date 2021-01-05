@@ -295,6 +295,12 @@ public class GameManager : MonoBehaviour
         return int.Parse(name.TrimStart('c', 'o', 'd', 'e'));
     }
 
+    public void EndGame()
+    {
+        //calculate time that took to finish and save to a PlayerPref 
+        StartCoroutine(ResetGame());
+    }
+
     public IEnumerator ResetGame()
     {
         BlackScreen.FadeIn();

@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2591966517066952612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8732019567059091912}
+  - component: {fileID: 3178492663186859837}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8732019567059091912
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2591966517066952612}
+  m_LocalRotation: {x: 0, y: 0, z: -0.12290873, w: 0.992418}
+  m_LocalPosition: {x: 0.037, y: 0.114, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8046730955014042450}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -14.12}
+--- !u!65 &3178492663186859837
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2591966517066952612}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.019416172, y: 0.2754287, z: 0.41930163}
+  m_Center: {x: -0.0005564647, y: 0.019078095, z: -0.001793325}
 --- !u!1 &3650308698938173989
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +272,6 @@ GameObject:
   - component: {fileID: 8046730955014042450}
   - component: {fileID: 9024902060614328230}
   - component: {fileID: 7414132474374384865}
-  - component: {fileID: 895826308}
   - component: {fileID: 8995418086196569620}
   - component: {fileID: 5975441875104550391}
   m_Layer: 0
@@ -245,13 +288,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5112085330228238763}
-  m_LocalRotation: {x: 0, y: 0, z: -0.18309344, w: 0.9830956}
+  m_LocalRotation: {x: 0, y: 0, z: -0.08924205, w: 0.99601}
   m_LocalPosition: {x: 0.067742586, y: 0.006892057, z: -0.00011381724}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 8732019567059091912}
   m_Father: {fileID: 4171266497417195679}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -21.1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10.24}
 --- !u!33 &9024902060614328230
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -299,19 +343,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &895826308
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5112085330228238763}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.08208596, y: 0.27177313, z: 0.41465056}
-  m_Center: {x: 0.041026864, y: 0.1328087, z: 0.0007057252}
 --- !u!54 &8995418086196569620
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -323,7 +354,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -339,7 +370,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.06774258, y: 0.0068921447, z: -0.000113811344}
+  m_ConnectedAnchor: {x: 0.06774258, y: 0.0068922043, z: -0.00011386722}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -352,8 +383,8 @@ HingeJoint:
     freeSpin: 0
   m_UseLimits: 1
   m_Limits:
-    min: -21.1
-    max: 103.7
+    min: -10.24
+    max: 103.42
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
