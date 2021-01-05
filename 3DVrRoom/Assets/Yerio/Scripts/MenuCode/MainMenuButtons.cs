@@ -15,7 +15,16 @@ public class MainMenuButtons : MonoBehaviour
     [SerializeField] Transform startPointPlayer;
     [Space]
 
+    AudioManager audioManager;
+    BossSE1 bossSE1;
+
     float timeToWait = 0.20f;
+
+    private void Awake()
+    {
+        audioManager = FindObjectOfType<AudioManager>();
+        bossSE1 = FindObjectOfType<BossSE1>();
+    }
 
     public void StartGame()
     {
@@ -69,7 +78,11 @@ public class MainMenuButtons : MonoBehaviour
 
         BlackScreen.FadeOut();
 
+        yield return new WaitForSeconds(2f);
+
         //call starting dialoge
+        audioManager.PlaySound("SE_1.1");
+        bossSE1.StartBeginningSequence();
 
         StopCoroutine(SetupBeginScene());
     }
