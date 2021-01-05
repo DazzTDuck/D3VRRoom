@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7315828246608979803}
   - component: {fileID: 5920211038932478206}
   - component: {fileID: 8488203219925359668}
-  - component: {fileID: -3228154798625910608}
   - component: {fileID: -1331739724267332496}
+  - component: {fileID: 405878080091056952}
   m_Layer: 0
   m_Name: SoapBottle
   m_TagString: Untagged
@@ -81,19 +81,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &-3228154798625910608
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7983997767415889377}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.10609536, y: 0.29076242, z: 0.107699044}
-  m_Center: {x: -0.0018337164, y: 0.1471822, z: 0.00000033155084}
 --- !u!54 &-1331739724267332496
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -110,3 +97,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &405878080091056952
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7983997767415889377}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.053849522
+  m_Height: 0.305
+  m_Direction: 1
+  m_Center: {x: -0.0018337142, y: 0.14, z: 0.0000012851158}
