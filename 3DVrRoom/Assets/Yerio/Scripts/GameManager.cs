@@ -131,19 +131,19 @@ public class GameManager : MonoBehaviour
                     text.text = $"0{hours}:{minutes}:{seconds}";
             }
 
-            if(minutes == 20)
+            if(minutes == 20 && seconds == 00)
             {
                 bossBarks.CallBark(1);
             }
-            if (minutes == 10)
+            if (minutes == 10 && seconds == 00)
             {
                 bossBarks.CallBark(2);
             }
-            if (minutes == 5)
+            if (minutes == 5 && seconds == 00)
             {
                 bossBarks.CallBark(3);
             }
-            if (minutes == 1)
+            if (minutes == 1 && seconds == 00)
             {
                 bossBarks.CallBark(4);
             }
@@ -157,6 +157,7 @@ public class GameManager : MonoBehaviour
             {
                 //end
                 startTimer = false;
+                StartCoroutine(ResetGame());
             }
         }
     }

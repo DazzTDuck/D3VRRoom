@@ -43,6 +43,9 @@ public class SettingsMenu : MonoBehaviour
     {
         //ResetAllSettings();
         postFx.TryGet(out bloom);
+    }
+    private void Start()
+    {
         LoadSettings();
     }
 
