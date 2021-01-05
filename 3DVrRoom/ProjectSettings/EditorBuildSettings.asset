@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Jochem/Scenes/Jochem.unity
+    path: Assets/Jochem/Scenes/MainScene.unity
     guid: e02c9ebd52184c643a8593448527f061
   m_configObjects: {}
