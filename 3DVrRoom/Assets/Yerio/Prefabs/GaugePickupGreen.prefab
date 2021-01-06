@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 4575808972179634611}
   - component: {fileID: 4575808972179634612}
   - component: {fileID: 4575808972179634613}
+  - component: {fileID: 369302643459111018}
   m_Layer: 0
   m_Name: GaugePickupGreen
   m_TagString: Untagged
@@ -282,6 +283,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b16a52248f3f71840a141a24d7d027d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &369302643459111018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5254873895308479840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7418c7dd8f977d4e969202d3fa7e926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poseEditorExpanded: 1
+  blendEditorExpanded: 1
+  poseNames:
+  - Gauge (MAIN)
+  overridePreviewLeftHandPrefab: {fileID: 1000013348574242, guid: 638779290bce1af49b356f33dcc6fccf,
+    type: 3}
+  overridePreviewRightHandPrefab: {fileID: 1000010304998954, guid: 6def53d002137b747aec0b29551e0e25,
+    type: 3}
+  skeletonMainPose: {fileID: 11400000, guid: 39285f1cc3fd215449b76beef87171ee, type: 2}
+  skeletonAdditionalPoses: []
+  showLeftPreview: 0
+  showRightPreview: 0
+  previewLeftInstance: {fileID: 0}
+  previewRightInstance: {fileID: 0}
+  previewPoseSelection: 0
+  blendingBehaviours: []
+  scale: 1
 --- !u!1 &6903119339165592411
 GameObject:
   m_ObjectHideFlags: 0
