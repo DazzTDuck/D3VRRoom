@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.3dvrroom.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\sammi\\Documents\\GitHub\\D5\\GamePorject\\D3VRRoom\\3DVrRoom\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "C:\\Users\\yerio\\Documents\\GitHub\\D3VRRoom\\3DVrRoom\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
           "name": "Escape The Office [Testing]"
