@@ -20,9 +20,13 @@ public class BossBarks : MonoBehaviour
 
     public void CallBark(int index)
     {
-        audioSource.clip = Barks[index];
-        audioSource.Play();
-        subtitleManager.SetupSubtitle(BarkLines[index].line, BarkLines[index].name, BarkLines[index].lineLength);
+        if (!IsVoiceLinePlaying.GetIfVoiceLinePlaying())
+        {
+            audioSource.clip = Barks[index];
+            audioSource.Play();
+            subtitleManager.SetupSubtitle(BarkLines[index].line, BarkLines[index].name, BarkLines[index].lineLength);
+            IsVoiceLinePlaying.VoicelinePlaying(BarkLines[index].lineLength);
+        }
     }
 
     public void StartOfficeSequence()

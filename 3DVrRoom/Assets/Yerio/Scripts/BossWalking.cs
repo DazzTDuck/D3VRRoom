@@ -57,8 +57,12 @@ public class BossWalking : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
 
-        subtitleManager.SetupSubtitle(line.line, line.name, line.lineLength);
-        audioSource.Play();
+        if (!IsVoiceLinePlaying.GetIfVoiceLinePlaying())
+        {
+            subtitleManager.SetupSubtitle(line.line, line.name, line.lineLength);
+            audioSource.Play();
+            IsVoiceLinePlaying.VoicelinePlaying(line.lineLength);
+        }
 
         yield return new WaitForSeconds(line.lineLength + 1f);
         audioManager.PlaySound("SE_2.2");

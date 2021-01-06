@@ -62,6 +62,7 @@ GameObject:
   - component: {fileID: 811898955}
   - component: {fileID: 1335521995907368464}
   - component: {fileID: 4571423039548840640}
+  - component: {fileID: 2252199364123585708}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -119,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 239d7acccaed2424bbe9a560cf533d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startGameOnStart: 1
+  startTimerOnStart: 0
   timerText:
   - {fileID: 0}
   - {fileID: 0}
@@ -230,7 +231,6 @@ MonoBehaviour:
   menuWhiteBoard: {fileID: 0}
   player: {fileID: 0}
   startPointPlayer: {fileID: 0}
-  blackScreenAnimator: {fileID: 0}
 --- !u!114 &1335521995907368464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,6 +248,7 @@ MonoBehaviour:
   sfx: {fileID: 0}
   dialogue: {fileID: 0}
   bloomToggle: {fileID: 0}
+  subtitlesToggle: {fileID: 0}
   postFx: {fileID: 11400000, guid: 09e53b26717ed0745b6103c8878a3adc, type: 2}
 --- !u!114 &4571423039548840640
 MonoBehaviour:
@@ -265,8 +266,126 @@ MonoBehaviour:
   - name: Ambient
     clip: {fileID: 8300000, guid: 7f83055ccb576314283ed68f0e6ec09d, type: 3}
     mixer: {fileID: 243366450046692526, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
-    volume: 0.05
+    volume: 0.02
     pitch: 1
     loop: 1
     playOnAwake: 1
+    isVoiceLine: 0
+    voiceLine:
+      name: 
+      line: 
+      lineLength: 0
+      lineActivated: 0
     source: {fileID: 0}
+  - name: SE_3.2
+    clip: {fileID: 8300000, guid: f9a0f5f64778e794aa87f2aee341dea7, type: 3}
+    mixer: {fileID: 243758081335279580, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 1
+    voiceLine:
+      name: 'You:'
+      line: No thank you! Okay stay calm there has to be another way out of here.
+      lineLength: 5.76
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: SE_2.2
+    clip: {fileID: 8300000, guid: dbe3cea57097b2542ad21edc808029f3, type: 3}
+    mixer: {fileID: 243758081335279580, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 1
+    voiceLine:
+      name: 'You:'
+      line: "Okay, can\u2019t get through there, there must be another way out of
+        here\u2026  one of these doors has to be unlocked\u2026"
+      lineLength: 5.76
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: SE_1.1
+    clip: {fileID: 8300000, guid: 97f5946a3d1f8664fa1f161eed5e9c44, type: 3}
+    mixer: {fileID: 243758081335279580, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 1
+    voiceLine:
+      name: 'You:'
+      line: "Did I really just sleep through the meeting\u2026 Oh god.. My boss is
+        gonna kill me\u2026 "
+      lineLength: 3.8
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: SE_1.5
+    clip: {fileID: 8300000, guid: 49cad8dfd029cc04d9ff8fcd08499699, type: 3}
+    mixer: {fileID: 243758081335279580, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 1
+    voiceLine:
+      name: 'You:'
+      line: "Oh shit he\u2019s going to kill me! I need to get out of here! "
+      lineLength: 3.1
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: HallwayExitBark
+    clip: {fileID: 8300000, guid: c7538eb0df6cbbc40898a2b583a450e0, type: 3}
+    mixer: {fileID: 243758081335279580, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 1
+    voiceLine:
+      name: 'You:'
+      line: 'Who locks an emergency door? '
+      lineLength: 2.2
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: HallwayPhotosBark
+    clip: {fileID: 8300000, guid: 6ffa46bfe96c1f44e82a49365ee8a649, type: 3}
+    mixer: {fileID: 243758081335279580, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 1
+    voiceLine:
+      name: 'You:'
+      line: Seems a bit flawed and unfair.
+      lineLength: 2.1
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: HallwayCoffeeBark
+    clip: {fileID: 8300000, guid: 5df0d7aafccbac343919b6cc4c10e2cf, type: 3}
+    mixer: {fileID: 243758081335279580, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 1
+    voiceLine:
+      name: 'You:'
+      line: 'Coffee is the last thing I need right now '
+      lineLength: 2
+      lineActivated: 0
+    source: {fileID: 0}
+--- !u!114 &2252199364123585708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8117419345742177686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 251315714ffe8a24aa0d2e62739f49fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

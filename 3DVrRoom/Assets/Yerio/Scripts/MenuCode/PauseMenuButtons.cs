@@ -21,11 +21,6 @@ public class PauseMenuButtons : MonoBehaviour
         pauseMenuManager.CloseMenu();
     }
 
-    public void MainMenu()
-    {
-        //call resetting game function
-    }
-
     public void OpenSettings()
     {
         whiteBoardAnimator.SetTrigger("Flip");

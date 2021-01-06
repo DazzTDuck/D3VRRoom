@@ -51,10 +51,15 @@ public class AudioManager : MonoBehaviour
         }
 
         if (!s.voiceLine.lineActivated && s.isVoiceLine) 
-        { 
-            s.source.Play();
-            subtitleManager.SetupSubtitle(s.voiceLine.line, s.voiceLine.name, s.voiceLine.lineLength);
-            s.voiceLine.lineActivated = true;
+        {
+            if (!IsVoiceLinePlaying.GetIfVoiceLinePlaying())
+            {
+                s.source.Play();
+                subtitleManager.SetupSubtitle(s.voiceLine.line, s.voiceLine.name, s.voiceLine.lineLength);
+                s.voiceLine.lineActivated = true;
+                IsVoiceLinePlaying.VoicelinePlaying(s.voiceLine.lineLength);
+            }
+            else return;
         }
 
         if (s.clip == null)

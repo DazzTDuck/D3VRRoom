@@ -21,11 +21,18 @@ public class SubtitleManager : MonoBehaviour
 
     public void SetupSubtitle(string text, string name, float time)
     {
-        subtilePanel.SetActive(true);
-        nameText.text = name;
-        subtitleText.text = text;
+        var isActive = PlayerPrefs.GetInt("subtitleBool", 1) != 0;
 
-        StartCoroutine(CloseSubtitles(time));
+        if (isActive)
+        {
+            subtilePanel.SetActive(true);
+            nameText.text = name;
+            subtitleText.text = text;
+
+            StartCoroutine(CloseSubtitles(time));
+        }
+        else { Debug.Log("Subtitles Not Activated in settings"); }
+
     }
 
     public IEnumerator CloseSubtitles(float time)

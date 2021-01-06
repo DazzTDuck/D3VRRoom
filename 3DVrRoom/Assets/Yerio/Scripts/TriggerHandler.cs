@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class TriggerHandler : MonoBehaviour
 {
+    [SerializeField] bool callsVoiceLine = false;
+    [SerializeField] float lengthVoiceLine = 0f;
     public UnityEvent triggerEnter;
     bool hasActivated = false;
 
@@ -14,9 +16,21 @@ public class TriggerHandler : MonoBehaviour
 
         if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-            Debug.Log("detected");
+            if (callsVoiceLine)
+            {
+                if (!IsVoiceLinePlaying.GetIfVoiceLinePlaying())
+                {
+                    triggerEnter.Invoke();
+                    hasActivated = true;
+                    IsVoiceLinePlaying.VoicelinePlaying(lengthVoiceLine);
+                    return;
+                }
+                else return;
+            }
+
             triggerEnter.Invoke();
             hasActivated = true;
         }        
     }
+
 }

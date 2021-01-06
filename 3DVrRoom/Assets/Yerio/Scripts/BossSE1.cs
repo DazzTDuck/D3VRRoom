@@ -25,9 +25,13 @@ public class BossSE1 : MonoBehaviour
 
     void CallLine(int index)
     {
-        audioSource.clip = lineSounds[index];
-        audioSource.Play();
-        subtitleManager.SetupSubtitle(lines[index].line, lines[index].name, GetLineLength(index));
+        if (!IsVoiceLinePlaying.GetIfVoiceLinePlaying())
+        {
+            audioSource.clip = lineSounds[index];
+            audioSource.Play();
+            subtitleManager.SetupSubtitle(lines[index].line, lines[index].name, GetLineLength(index));
+            IsVoiceLinePlaying.VoicelinePlaying(GetLineLength(index));
+        }
     }
     
     float GetLineLength(int index) { return lines[index].lineLength; }

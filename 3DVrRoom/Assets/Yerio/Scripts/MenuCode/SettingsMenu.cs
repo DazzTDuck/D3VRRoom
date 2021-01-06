@@ -28,6 +28,7 @@ public class SettingsMenu : MonoBehaviour
     //public Toggle fullscreenToggle;
     //public Toggle motionBlurToggle;
     public Toggle bloomToggle;
+    public Toggle subtitlesToggle;
 
     [Header("PostFX Profile")]
     public VolumeProfile postFx;
@@ -62,6 +63,9 @@ public class SettingsMenu : MonoBehaviour
 
         SetBloom(PlayerPrefs.GetInt("bloomBool", 1) != 0);
         bloomToggle.isOn = PlayerPrefs.GetInt("bloomBool", 1) != 0;
+
+        SetSubtitle(PlayerPrefs.GetInt("subtitleBool", 1) != 0);
+        subtitlesToggle.isOn = PlayerPrefs.GetInt("subtitleBool", 1) != 0;
     }
 
     public void ResetAllSettings()
@@ -70,6 +74,7 @@ public class SettingsMenu : MonoBehaviour
         PlayerPrefs.DeleteKey("sfxVolume");
         PlayerPrefs.DeleteKey("dialogueVolume");
         PlayerPrefs.DeleteKey("bloomBool");
+        PlayerPrefs.DeleteKey("subtitleBool");
 
         LoadSettings();
     }
@@ -107,6 +112,14 @@ public class SettingsMenu : MonoBehaviour
         bloom.active = isBloom;
 
         PlayerPrefs.SetInt("bloomBool", isBloom ? 1 : 0);
+        PlayerPrefs.Save();
+    }
+
+    public void SetSubtitle(bool subtitleOn)
+    {
+        subtitlesToggle.isOn = subtitleOn;
+
+        PlayerPrefs.SetInt("subtitleBool", subtitleOn ? 1 : 0);
         PlayerPrefs.Save();
     }
 }
