@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class TriggerHandler : MonoBehaviour
 {
-    [SerializeField] bool callsVoiceLine = false;
+    [SerializeField] bool callsVoiceLineNotAudioManager = false;
     [SerializeField] float lengthVoiceLine = 0f;
     public UnityEvent triggerEnter;
     bool hasActivated = false;
@@ -16,7 +16,7 @@ public class TriggerHandler : MonoBehaviour
 
         if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-            if (callsVoiceLine)
+            if (callsVoiceLineNotAudioManager)
             {
                 if (!IsVoiceLinePlaying.GetIfVoiceLinePlaying())
                 {

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Door : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Door : MonoBehaviour
     public Transform keyCheck;
     public Collider doorOpenCollider;
     public Collider handleCollider;
+
+    [SerializeField, Space] UnityEvent onDoorOpen;
 
     Quaternion closedRotation;
 
@@ -40,6 +43,8 @@ public class Door : MonoBehaviour
             handleCollider.enabled = false;
             doorOpenCollider.enabled = true;
             Debug.Log("open");
+
+            onDoorOpen.Invoke();
         }
         else
         {
