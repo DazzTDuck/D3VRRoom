@@ -6,6 +6,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] TMP_Text highscoreText;
     [SerializeField] bool startTimerOnStart = true;
 
     [Header("--Timer--")]
@@ -86,6 +87,9 @@ public class GameManager : MonoBehaviour
         {
             StartTimer();
         }
+
+        //set highscore on whiteboard
+        highscoreText.text = PlayerPrefs.GetString("highscore", "T.B.D");
     }
 
     private void Update()
@@ -305,6 +309,10 @@ public class GameManager : MonoBehaviour
     {
         BlackScreen.FadeIn();
 
+        startTimer = false;
+
+        SetHighScore();
+
         yield return new WaitForSeconds(1f);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -312,4 +320,15 @@ public class GameManager : MonoBehaviour
         StopCoroutine(ResetGame());
     }
 
+    void SetHighScore()
+    {
+        float timeRemaining = (minutesToFinishGame * 60) - timerSeconds;
+
+        int hours = (int)(timeRemaining / 3600) % 24;
+        int minutes = (int)(timeRemaining / 60) % 60;
+        int seconds = (int)(timeRemaining % 60);
+
+        PlayerPrefs.SetString("highscore", $"0{hours}:{minutes}:{seconds}");
+        PlayerPrefs.Save();
+    }
 }
