@@ -328,7 +328,21 @@ public class GameManager : MonoBehaviour
         int minutes = (int)(timeRemaining / 60) % 60;
         int seconds = (int)(timeRemaining % 60);
 
-        PlayerPrefs.SetString("highscore", $"0{hours}:{minutes}:{seconds}");
+        bool lower10Seconds = seconds < 10;
+        bool lower10minutes = minutes < 10;
+
+        string time;
+
+        if (lower10Seconds && lower10minutes)
+            time = $"0{hours}:0{minutes}:0{seconds}";
+        else if (lower10minutes)
+            time = $"0{hours}:0{minutes}:{seconds}";
+        else if (lower10Seconds)
+            time = $"0{hours}:{minutes}:0{seconds}";
+        else
+            time = $"0{hours}:{minutes}:{seconds}";
+
+        PlayerPrefs.SetString("highscore", time);
         PlayerPrefs.Save();
     }
 }
