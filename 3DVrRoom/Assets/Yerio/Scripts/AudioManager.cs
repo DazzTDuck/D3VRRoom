@@ -50,7 +50,7 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        if (!s.voiceLine.lineActivated && s.isVoiceLine) 
+        if (!s.voiceLine.lineActivated && s.isVoiceLine)
         {
             if (!IsVoiceLinePlaying.GetIfVoiceLinePlaying())
             {
@@ -61,6 +61,9 @@ public class AudioManager : MonoBehaviour
             }
             else return;
         }
+
+        if (!s.isVoiceLine)
+            s.source.Play();
 
         if (s.clip == null)
         {

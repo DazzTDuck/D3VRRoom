@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class TriggerHandler : MonoBehaviour
 {
     [SerializeField] bool callsVoiceLineNotAudioManager = false;
+    [SerializeField] bool callsVoiceLineAudioManager = false;
     [SerializeField] float lengthVoiceLine = 0f;
     public UnityEvent triggerEnter;
     bool hasActivated = false;
@@ -23,6 +24,17 @@ public class TriggerHandler : MonoBehaviour
                     triggerEnter.Invoke();
                     hasActivated = true;
                     IsVoiceLinePlaying.VoicelinePlaying(lengthVoiceLine);
+                    return;
+                }
+                else return;
+            }
+
+            if (callsVoiceLineAudioManager)
+            {
+                if (!IsVoiceLinePlaying.GetIfVoiceLinePlaying())
+                {
+                    triggerEnter.Invoke();
+                    hasActivated = true;
                     return;
                 }
                 else return;

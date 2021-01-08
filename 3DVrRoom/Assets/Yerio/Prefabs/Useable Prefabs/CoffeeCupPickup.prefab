@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 7713735630217004225}
   - component: {fileID: 6612117697053698111}
   - component: {fileID: 6597889742219619611}
-  - component: {fileID: 1021359068}
+  - component: {fileID: 8327679519125295246}
   m_Layer: 0
   m_Name: CoffeeCupPickup
   m_TagString: Untagged
@@ -203,7 +203,7 @@ MonoBehaviour:
   hideControllerOnAttach: 0
   handAnimationOnPickup: 0
   setRangeOfMotionOnPickup: -1
-  useHandObjectAttachmentPoint: 1
+  useHandObjectAttachmentPoint: 0
   attachEaseIn: 1
   snapAttachEaseInCurve:
     serializedVersion: 2
@@ -351,7 +351,7 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!114 &1021359068
+--- !u!114 &8327679519125295246
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

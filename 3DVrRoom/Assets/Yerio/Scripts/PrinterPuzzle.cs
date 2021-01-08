@@ -19,6 +19,13 @@ public class PrinterPuzzle : MonoBehaviour
     bool isPrinting = false;
     bool codeHasPrinted = false;
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = FindObjectOfType<AudioManager>();
+    }
+
     private void Start()
     {
         printerButtonText.text = "NEEDS\nPAPER";
@@ -40,6 +47,13 @@ public class PrinterPuzzle : MonoBehaviour
             if (Vector3.Distance(paper.position, paperMoveToPoint.position) < 0.03f)
             { isPrinting = false; printerButtonText.text = "PRINT"; interactablePaper.SetActive(true); paper.gameObject.SetActive(false); codeHasPrinted = true; }
         }
+    }
+
+    public void Sound()
+    {
+        if (!hasPaper) { audioManager.PlaySound("PrinterNoPaper"); audioManager.PlaySound("OfficeInteractivePrinter"); }
+
+        if (hasPaper) { audioManager.PlaySound("MRPrinterWorking"); audioManager.PlaySound("PrinterPrinting"); }
     }
 
     public void SetCode(string code)

@@ -32,8 +32,11 @@ public class RayInteractor : MonoBehaviour
 
     Color originalColor;
 
+    AudioManager audioManager;
+
     private void Awake()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         hand = GetComponent<Hand>();
         lineRenderer = GetComponent<LineRenderer>();
         originalColor = lineRenderer.startColor;
@@ -85,6 +88,7 @@ public class RayInteractor : MonoBehaviour
             {
                 DisableOutline();
                 DisableLineRenderer();
+                audioManager.PlaySound("Pickup");
 
                 GrabTypes bestGrabType = hand.GetBestGrabbingType();
 
@@ -206,6 +210,6 @@ public class RayInteractor : MonoBehaviour
 
     Vector3 HandPos()
     {
-        return hand.renderModelInstance.transform.position;
+        return hand.renderModelInstance.transform.position - hand.renderModelInstance.transform.forward * 0.08f;
     }
 }
