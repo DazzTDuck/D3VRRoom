@@ -10,18 +10,22 @@ public class Keypad : MonoBehaviour
 
     [Space]
     public UnityEvent onCorrectCode;
-   
+
+    AudioManager audioManager;
     string correctCode;
     Color textColor;
 
     private void Awake()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         textColor = keypadSceenText.color;
         SetCorrectCode("12345");
     }
 
     public void AddNumber(string number)
     {
+        audioManager.PlaySound("KeyBeep");
+
         if (keypadSceenText.text == "00000")
             SetText("");
         if (keypadSceenText.text == "Nice")
@@ -30,7 +34,6 @@ public class Keypad : MonoBehaviour
             SetTextColor(textColor);
         }
             
-
         if (keypadSceenText.text.Length < 5)
         {           
             keypadSceenText.text += number;
@@ -56,7 +59,9 @@ public class Keypad : MonoBehaviour
             onCorrectCode.Invoke();
             SetTextColor(Color.green);
             //Debug.Log("Correct Code");
+            audioManager.PlaySound("KeyAccept");
             return;
+            
         }
 
         switch (keypadSceenText.text)
@@ -69,6 +74,7 @@ public class Keypad : MonoBehaviour
             default:
                 //wrong code
                 //so play a sound or something
+                audioManager.PlaySound("KeyDeny");
                 SetText("Wrong");
                 break;
         }

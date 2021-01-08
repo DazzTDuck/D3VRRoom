@@ -9,6 +9,13 @@ public class VRUiButton : Selectable, IPointerClickHandler, IPointerEnterHandler
 {
     public UnityEvent OnClick;
 
+    AudioManager audioManager;
+
+    protected override void Awake()
+    {
+        audioManager = FindObjectOfType<AudioManager>();
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
         OnPointerClick(eventData);
@@ -19,12 +26,13 @@ public class VRUiButton : Selectable, IPointerClickHandler, IPointerEnterHandler
     public void ButtonClick()
     {
         DoStateTransition(SelectionState.Pressed, false);
-        OnClick.Invoke();
+        OnClick.Invoke();      
     }
 
     public void ButtonSelect()
     {
         DoStateTransition(SelectionState.Highlighted, false);
+        audioManager.PlaySound("WhiteboardButtonHover"); 
     }
     public void ButtonDeselect()
     {

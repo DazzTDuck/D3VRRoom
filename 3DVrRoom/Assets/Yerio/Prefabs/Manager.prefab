@@ -662,7 +662,7 @@ MonoBehaviour:
   - name: PrinterPrinting
     clip: {fileID: 8300000, guid: 687e8da91506b5445b768e227bb8cd54, type: 3}
     mixer: {fileID: 243366450046692526, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
-    volume: 0.3
+    volume: 0.15
     pitch: 1
     loop: 0
     playOnAwake: 0
@@ -676,7 +676,7 @@ MonoBehaviour:
   - name: PrinterNoPaper
     clip: {fileID: 8300000, guid: cdfb8874c9166564ba442ca38b2bc396, type: 3}
     mixer: {fileID: 243366450046692526, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
-    volume: 0.1
+    volume: 0.01
     pitch: 1
     loop: 0
     playOnAwake: 0
@@ -691,6 +691,160 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: db3e8b2fcc0aab641ac59e6cadbc6df7, type: 3}
     mixer: {fileID: 243366450046692526, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
     volume: 0.2
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 0
+    voiceLine:
+      name: 'You:'
+      line: "That\u2019s more like it!"
+      lineLength: 1.3
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: SnapPlace
+    clip: {fileID: 8300000, guid: eb592a32176c51c4f989baba5475f811, type: 3}
+    mixer: {fileID: 243366450046692526, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 0
+    voiceLine:
+      name: 'You:'
+      line: "That\u2019s more like it!"
+      lineLength: 1.3
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: LightsOff
+    clip: {fileID: 8300000, guid: 412a2eeb3ba00c54db5ea45c8ee2dfdd, type: 3}
+    mixer: {fileID: 243366450046692526, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 0
+    voiceLine:
+      name: 'You:'
+      line: "That\u2019s more like it!"
+      lineLength: 1.3
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: LightsOn
+    clip: {fileID: 8300000, guid: 1f4709d0b3805af4d905293f01b0adfd, type: 3}
+    mixer: {fileID: 243366450046692526, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.15
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 0
+    voiceLine:
+      name: 'You:'
+      line: "That\u2019s more like it!"
+      lineLength: 1.3
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: Unlock
+    clip: {fileID: 8300000, guid: 9e8a7f59bbfa8f9439865b696ede0202, type: 3}
+    mixer: {fileID: 243366450046692526, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 0
+    voiceLine:
+      name: 'You:'
+      line: "That\u2019s more like it!"
+      lineLength: 1.3
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: KeyBeep
+    clip: {fileID: 8300000, guid: 2dfd9cb6a8b76314a9b05b1395a534f9, type: 3}
+    mixer: {fileID: 243366450046692526, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.15
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 0
+    voiceLine:
+      name: 'You:'
+      line: "That\u2019s more like it!"
+      lineLength: 1.3
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: KeyDeny
+    clip: {fileID: 8300000, guid: 8b02b1130d4bc5847b1b1d751bf1588e, type: 3}
+    mixer: {fileID: 243366450046692526, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.15
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 0
+    voiceLine:
+      name: 'You:'
+      line: "That\u2019s more like it!"
+      lineLength: 1.3
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: KeyAccept
+    clip: {fileID: 8300000, guid: 5e80a50b401a3c6429ef530b5093652e, type: 3}
+    mixer: {fileID: 243366450046692526, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.15
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 0
+    voiceLine:
+      name: 'You:'
+      line: "That\u2019s more like it!"
+      lineLength: 1.3
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: WhiteboardFlip
+    clip: {fileID: 8300000, guid: 483956bb1fdd2c242891acf24309969b, type: 3}
+    mixer: {fileID: 243366450046692526, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 0
+    voiceLine:
+      name: 'You:'
+      line: "That\u2019s more like it!"
+      lineLength: 1.3
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: WhiteboardButtonClick
+    clip: {fileID: 8300000, guid: 333ab6bdce21e344ba56f7986c0b8120, type: 3}
+    mixer: {fileID: 243366450046692526, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 0
+    voiceLine:
+      name: 'You:'
+      line: "That\u2019s more like it!"
+      lineLength: 1.3
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: WhiteboardButtonHover
+    clip: {fileID: 8300000, guid: 7dd8f1830a7a43344a891491a28fa6a1, type: 3}
+    mixer: {fileID: 243366450046692526, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 0
+    voiceLine:
+      name: 'You:'
+      line: "That\u2019s more like it!"
+      lineLength: 1.3
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: PaperPackSnap
+    clip: {fileID: 8300000, guid: bb63f95d1e2d2f7439f1d4bcfba7302e, type: 3}
+    mixer: {fileID: 243366450046692526, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.15
     pitch: 1
     loop: 0
     playOnAwake: 0

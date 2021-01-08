@@ -10,6 +10,7 @@ public class Door : MonoBehaviour
     public Transform keyCheck;
     public Collider doorOpenCollider;
     public Collider handleCollider;
+    [SerializeField] AudioSource doorCloseSound;
 
     [SerializeField, Space] UnityEvent onDoorOpen;
 
@@ -56,7 +57,8 @@ public class Door : MonoBehaviour
         doorOpenCollider.enabled = false;
         handleCollider.enabled = true;
         transform.rotation = closedRotation;
-        LockDoor();     
+        LockDoor();
+        doorCloseSound.Play();
     }
     public void LockDoor()
     {

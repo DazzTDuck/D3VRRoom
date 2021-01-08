@@ -4,21 +4,23 @@ using UnityEngine;
 
 public class Radio : MonoBehaviour
 {
+    [SerializeField] AudioSource buttonSoundSource;
+    [SerializeField] AudioSource source;
     [SerializeField] AudioClip[] sounds;
 
     int soundsIndex = 0;
-    AudioSource source;
     float volume;
 
     private void Awake()
     {
-        source = GetComponent<AudioSource>();
         source.clip = sounds[soundsIndex];
         volume = source.volume;
     }
 
     public void SwitchSounds()
     {
+        buttonSoundSource.Play();
+
         source.volume = volume;
         soundsIndex++;
 
@@ -32,11 +34,15 @@ public class Radio : MonoBehaviour
 
     public void TurnOn()
     {
+        buttonSoundSource.Play();
+
         if (!source.isPlaying)
             source.Play();
     }
     public void TurnOff()
     {
+        buttonSoundSource.Play();
+
         source.Stop();
     }
 }
