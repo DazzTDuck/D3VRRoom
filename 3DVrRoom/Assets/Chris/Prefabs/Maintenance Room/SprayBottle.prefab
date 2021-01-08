@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1211994261}
   - component: {fileID: 1211994260}
   - component: {fileID: 1211994259}
-  - component: {fileID: 6847476035915956680}
+  - component: {fileID: 2378304139019384358}
   m_Layer: 0
   m_Name: SprayBottle
   m_TagString: Untagged
@@ -249,7 +249,7 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!114 &6847476035915956680
+--- !u!114 &2378304139019384358
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
