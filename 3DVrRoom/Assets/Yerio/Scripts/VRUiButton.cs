@@ -26,7 +26,8 @@ public class VRUiButton : Selectable, IPointerClickHandler, IPointerEnterHandler
     public void ButtonClick()
     {
         DoStateTransition(SelectionState.Pressed, false);
-        OnClick.Invoke();      
+        OnClick.Invoke();
+        audioManager.PlaySound("WhiteboardButtonClick");
     }
 
     public void ButtonSelect()
