@@ -6,6 +6,7 @@ using Valve.VR.InteractionSystem;
 
 public class FlashlightFuctionality : MonoBehaviour
 {
+    [SerializeField] AudioSource audioSource;
     [SerializeField] SteamVR_Action_Boolean switchInput;
     [SerializeField] Light[] lights;
     [SerializeField] Animator buttonAnimator;
@@ -22,7 +23,8 @@ public class FlashlightFuctionality : MonoBehaviour
         if (holdingHand)
         {
             if (switchInput[holdingHand.handType].stateDown)
-            { 
+            {
+                audioSource.Play();
                 buttonAnimator.SetTrigger("ButtonPress");
                 lightsIndex++;
 

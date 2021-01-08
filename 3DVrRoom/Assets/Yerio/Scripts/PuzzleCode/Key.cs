@@ -8,6 +8,14 @@ public class Key : MonoBehaviour
     public Door[] doorToOpen;
     public Lockable lockableToOpen;
     public float keyOpenDistance = 0.15f;
+
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = FindObjectOfType<AudioManager>();
+    }
+
     private void Update()
     {
         if (openDoor)
@@ -16,8 +24,7 @@ public class Key : MonoBehaviour
             {
                 if (door.GetDistance(gameObject.transform) <= keyOpenDistance)
                 {
-                    if (door.locked)
-                        door.UnlockDoor();
+                    if (door.locked) { audioManager.PlaySound("Unlock"); door.UnlockDoor();}                     
                 }
             }          
         }
@@ -26,9 +33,7 @@ public class Key : MonoBehaviour
         {
             if (lockableToOpen.GetDistance(gameObject.transform) <= keyOpenDistance)
             {
-                if (lockableToOpen.GetIfLocked())
-                    lockableToOpen.UnlockDoor();
-
+                if (lockableToOpen.GetIfLocked()) { lockableToOpen.UnlockDoor(); audioManager.PlaySound("Unlock"); }                   
             }
         }
 

@@ -7,6 +7,7 @@ using Valve.VR.InteractionSystem;
 
 public class FuzeBoxPuzzle : MonoBehaviour
 {
+    [SerializeField] AudioSource replacementSound;
     public GameObject replacementFuze;
     public GameObject newFuze;
     public float minDistanceToPlaceFuze = 0.05f;
@@ -49,6 +50,7 @@ public class FuzeBoxPuzzle : MonoBehaviour
             Destroy(newFuze);
 
             onFuzeReplaced.Invoke();
+            replacementSound.Play();
 
             Debug.Log("Fuze Replaced");
         }
