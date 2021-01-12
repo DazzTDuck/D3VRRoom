@@ -161,7 +161,7 @@ public class GameManager : MonoBehaviour
             {
                 //end
                 startTimer = false;
-                StartCoroutine(ResetGame());
+                StartCoroutine(ResetGame(false));
             }
         }
     }
@@ -299,25 +299,26 @@ public class GameManager : MonoBehaviour
         return int.Parse(name.TrimStart('c', 'o', 'd', 'e'));
     }
 
-    public void EndGame()
+    public void EndGame(bool setScore)
     {
         //calculate time that took to finish and save to a PlayerPref 
-        StartCoroutine(ResetGame());
+        StartCoroutine(ResetGame(setScore));
     }
 
-    public IEnumerator ResetGame()
+    public IEnumerator ResetGame(bool setScore)
     {
         BlackScreen.FadeIn();
 
         startTimer = false;
 
-        SetHighScore();
+        if (setScore)
+            SetHighScore();
 
         yield return new WaitForSeconds(1f);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
-        StopCoroutine(ResetGame());
+        StopCoroutine("ResetGame");
     }
 
     void SetHighScore()

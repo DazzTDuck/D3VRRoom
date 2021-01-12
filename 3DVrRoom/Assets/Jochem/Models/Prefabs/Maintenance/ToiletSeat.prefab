@@ -37,11 +37,11 @@ HingeJoint:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2835826740810222117}
-  m_ConnectedBody: {fileID: 0}
-  m_Anchor: {x: 0, y: 0.06342009, z: 0}
+  m_ConnectedBody: {fileID: 2951829423290523418}
+  m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -7.53402, y: 1.9416872, z: 5.5387}
+  m_ConnectedAnchor: {x: -0.00061755173, y: -0.008072611, z: -0.0007157326}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -54,42 +54,7 @@ HingeJoint:
     freeSpin: 0
   m_UseLimits: 1
   m_Limits:
-    min: -108
-    max: 0
-    bounciness: 0
-    bounceMinVelocity: 0.2
-    contactDistance: 0
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
---- !u!59 &6320748995599886868
-HingeJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2835826740810222117}
-  m_ConnectedBody: {fileID: 0}
-  m_Anchor: {x: 0, y: 0.06342009, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -7.53402, y: 1.9416872, z: 5.5387}
-  m_UseSpring: 0
-  m_Spring:
-    spring: 0
-    damper: 0
-    targetPosition: 0
-  m_UseMotor: 0
-  m_Motor:
-    targetVelocity: 0
-    force: 0
-    freeSpin: 0
-  m_UseLimits: 0
-  m_Limits:
-    min: 0
+    min: -90.00001
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
@@ -220,7 +185,7 @@ MonoBehaviour:
   hideControllerOnAttach: 0
   handAnimationOnPickup: 0
   setRangeOfMotionOnPickup: -1
-  useHandObjectAttachmentPoint: 1
+  useHandObjectAttachmentPoint: 0
   attachEaseIn: 1
   snapAttachEaseInCurve:
     serializedVersion: 2
@@ -479,17 +444,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c6a1bc1eddfaa1c45ab8830d9c381301,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c6a1bc1eddfaa1c45ab8830d9c381301,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c6a1bc1eddfaa1c45ab8830d9c381301,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.00000013411
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c6a1bc1eddfaa1c45ab8830d9c381301,
         type: 3}

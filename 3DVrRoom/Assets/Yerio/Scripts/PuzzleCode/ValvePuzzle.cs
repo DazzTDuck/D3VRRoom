@@ -40,8 +40,17 @@ public class ValvePuzzle : MonoBehaviour
     float blueHandleRotation;
     float greenHandleRotation;
     float redHandleRotation;
+
+    CircularDrive red;
+    CircularDrive green;
+    CircularDrive blue;
+
     private void Awake()
     {
+        blue = blueValve.GetComponent<CircularDrive>();
+        green = greenValve.GetComponent<CircularDrive>();
+        red = redValve.GetComponent<CircularDrive>();
+
         BlueValveInteractable(true);
         GreenValveInteractable(false);
         RedValveInteractable(false);
@@ -133,21 +142,21 @@ public class ValvePuzzle : MonoBehaviour
 
     public void AllValvesInteractable(bool state)
     {
-        blueValve.GetComponent<CircularDrive>().rotateGameObject = state;
-        greenValve.GetComponent<CircularDrive>().rotateGameObject = state;
-        redValve.GetComponent<CircularDrive>().rotateGameObject = state;
+        blue.enabled = state;
+        green.enabled = state;
+        red.enabled = state;
     }
     public void BlueValveInteractable(bool state)
     {
-        blueValve.GetComponent<CircularDrive>().rotateGameObject = state;
+        blue.enabled = state;
     }
     public void GreenValveInteractable(bool state)
     {
-        greenValve.GetComponent<CircularDrive>().rotateGameObject = state;
+        green.enabled = state;
     }
     public void RedValveInteractable(bool state)
     {
-        redValve.GetComponent<CircularDrive>().rotateGameObject = state;
+        red.enabled = state;
     }  
 
     private void Update()

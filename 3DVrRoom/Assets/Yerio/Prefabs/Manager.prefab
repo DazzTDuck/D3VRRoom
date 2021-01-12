@@ -732,7 +732,7 @@ MonoBehaviour:
   - name: LightsOn
     clip: {fileID: 8300000, guid: 1f4709d0b3805af4d905293f01b0adfd, type: 3}
     mixer: {fileID: 243366450046692526, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
-    volume: 0.15
+    volume: 0.2
     pitch: 1
     loop: 0
     playOnAwake: 0
@@ -746,7 +746,7 @@ MonoBehaviour:
   - name: Unlock
     clip: {fileID: 8300000, guid: 9e8a7f59bbfa8f9439865b696ede0202, type: 3}
     mixer: {fileID: 243366450046692526, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
-    volume: 0.2
+    volume: 0.15
     pitch: 1
     loop: 0
     playOnAwake: 0
@@ -830,7 +830,7 @@ MonoBehaviour:
   - name: WhiteboardButtonHover
     clip: {fileID: 8300000, guid: 7dd8f1830a7a43344a891491a28fa6a1, type: 3}
     mixer: {fileID: 243366450046692526, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
-    volume: 0.1
+    volume: 0.05
     pitch: 1
     loop: 0
     playOnAwake: 0
@@ -853,6 +853,247 @@ MonoBehaviour:
       name: 'You:'
       line: "That\u2019s more like it!"
       lineLength: 1.3
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: MRWindowBark
+    clip: {fileID: 8300000, guid: 947dce7a9926af04d93a6bea55b0c392, type: 3}
+    mixer: {fileID: 243758081335279580, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 1
+    voiceLine:
+      name: 'You:'
+      line: "Seems like the cleaning crew is taking a break, Maybe just maybe I could\u2026"
+      lineLength: 3.3
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: MRPickupInteractablePaper
+    clip: {fileID: 8300000, guid: 773f143346ca94040ae23bdcb2acb062, type: 3}
+    mixer: {fileID: 243758081335279580, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 1
+    voiceLine:
+      name: 'You:'
+      line: Where could this be used for?
+      lineLength: 1.7
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: MRLightsGoingOut
+    clip: {fileID: 8300000, guid: 63688d62f9f03e04b90bc5e67359eada, type: 3}
+    mixer: {fileID: 243758081335279580, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 1
+    voiceLine:
+      name: 'You:'
+      line: "OH! Ok, phew, fantastic\u2026 a new ambiance."
+      lineLength: 5.5
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: MRInteractFaucet
+    clip: {fileID: 8300000, guid: 9619f532c9abb27499c5a266db6785f4, type: 3}
+    mixer: {fileID: 243758081335279580, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 1
+    voiceLine:
+      name: 'You:'
+      line: "Doesn\u2019t seem to work."
+      lineLength: 1.2
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: MRInteractPipes
+    clip: {fileID: 8300000, guid: 82182e04115d3684baefb982842d1278, type: 3}
+    mixer: {fileID: 243758081335279580, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 1
+    voiceLine:
+      name: 'You:'
+      line: "Doesn\u2019t seem to work properly, the remaining parts must be around
+        here."
+      lineLength: 3.4
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: MRBasketball
+    clip: {fileID: 8300000, guid: 86b74293ff1d9c74a8993eb74e21a54e, type: 3}
+    mixer: {fileID: 243758081335279580, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 1
+    voiceLine:
+      name: 'You:'
+      line: "Let\u2019s see if I still got it."
+      lineLength: 1.3
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: MRBarrels
+    clip: {fileID: 8300000, guid: b1915325244c2ba408764600b2b206c4, type: 3}
+    mixer: {fileID: 243758081335279580, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 1
+    voiceLine:
+      name: 'You:'
+      line: "Ok yeah, he is addicted\u2026"
+      lineLength: 1.4
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: MRChessboard
+    clip: {fileID: 8300000, guid: b5e97399d6dc6724ba0c1f3f7b027755, type: 3}
+    mixer: {fileID: 243758081335279580, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 1
+    voiceLine:
+      name: 'You:'
+      line: Who plays chess in here?
+      lineLength: 1.4
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: MRDirtyLaundry
+    clip: {fileID: 8300000, guid: 8f55e0a547f080247950b01fdb781639, type: 3}
+    mixer: {fileID: 243758081335279580, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 1
+    voiceLine:
+      name: 'You:'
+      line: "PHEW, this hasn\u2019t been done for a while now, jeez\u2026"
+      lineLength: 4
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: MRPickupPaperPack
+    clip: {fileID: 8300000, guid: 85c1892a5b71251458bb39bf8e68cd78, type: 3}
+    mixer: {fileID: 243758081335279580, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 1
+    voiceLine:
+      name: 'You:'
+      line: "Wait a second\u2026"
+      lineLength: 1.2
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: MRInteractFuzebox
+    clip: {fileID: 8300000, guid: 84e368bb0b2e6f744bdfc3aa2762af79, type: 3}
+    mixer: {fileID: 243758081335279580, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 1
+    voiceLine:
+      name: 'You:'
+      line: "Looks like the Janitor was right, if only he told us where the other
+        fuze is\u2026"
+      lineLength: 3.8
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: MRPickupNewFuze
+    clip: {fileID: 8300000, guid: 2d45d6ec73a6bf640b7e6fc7a046a271, type: 3}
+    mixer: {fileID: 243758081335279580, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 1
+    voiceLine:
+      name: 'You:'
+      line: "This should fix it\u2026"
+      lineLength: 1.2
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: MRConnectingUVPiece
+    clip: {fileID: 8300000, guid: 7c26076effaf21343857519ef89ddcf5, type: 3}
+    mixer: {fileID: 243758081335279580, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 1
+    voiceLine:
+      name: 'You:'
+      line: "God the stuff I\u2019ll find is going to be horrible, I can imagine\u2026"
+      lineLength: 4.7
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: MRHandInVent
+    clip: {fileID: 8300000, guid: cfa054b8ce2f1874d81611ad8ecdfcbf, type: 3}
+    mixer: {fileID: 243758081335279580, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 1
+    voiceLine:
+      name: 'You:'
+      line: ' OH MY GOD, is that going to happen to me?! '
+      lineLength: 2.6
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: MRBossPowder
+    clip: {fileID: 8300000, guid: ed50af6126374f744b5486c54e558a80, type: 3}
+    mixer: {fileID: 243758081335279580, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 1
+    voiceLine:
+      name: 'You:'
+      line: "This doesn\u2019t seem legal\u2026"
+      lineLength: 1.3
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: MRPickupBlueKey
+    clip: {fileID: 8300000, guid: 1b5bc4e6fefcf6444a10dd2f8e3e4db6, type: 3}
+    mixer: {fileID: 243758081335279580, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 1
+    voiceLine:
+      name: 'You:'
+      line: "Does this mean I\u2019m free?!"
+      lineLength: 1.4
+      lineActivated: 0
+    source: {fileID: 0}
+  - name: MRRepairFuzebox
+    clip: {fileID: 8300000, guid: 2f3fe1d5ea919f5489c4cae181d2407f, type: 3}
+    mixer: {fileID: 243758081335279580, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    isVoiceLine: 1
+    voiceLine:
+      name: 'You:'
+      line: "Look at that! That\u2019s\u2026 not a whole lot better but I guess it\u2019ll
+        do\u2026"
+      lineLength: 4.2
       lineActivated: 0
     source: {fileID: 0}
 --- !u!114 &2252199364123585708
