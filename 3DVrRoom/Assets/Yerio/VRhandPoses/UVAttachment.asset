@@ -35,7 +35,7 @@ MonoBehaviour:
     ignoreRootPoseData: 1
     ignoreWristPoseData: 1
     position: {x: 0, y: 0, z: 0}
-    rotation: {x: -0, y: -0, z: -0, w: 1}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
     bonePositions: []
     boneRotations: []
   applyToSkeletonRoot: 1
