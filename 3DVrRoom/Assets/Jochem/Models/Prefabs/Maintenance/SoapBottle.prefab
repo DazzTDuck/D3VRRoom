@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1510469157927851888}
   - component: {fileID: 8221003876128220236}
   - component: {fileID: 6050096382264352003}
-  - component: {fileID: 7185350982799729508}
+  - component: {fileID: 4255357556540542727}
   m_Layer: 0
   m_Name: SoapBottle
   m_TagString: Untagged
@@ -250,7 +250,7 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!114 &7185350982799729508
+--- !u!114 &4255357556540542727
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -265,12 +265,12 @@ MonoBehaviour:
   poseEditorExpanded: 1
   blendEditorExpanded: 1
   poseNames:
-  - Boss Soap (MAIN)
+  - SoapBottle2 (MAIN)
   overridePreviewLeftHandPrefab: {fileID: 1000013348574242, guid: 638779290bce1af49b356f33dcc6fccf,
     type: 3}
   overridePreviewRightHandPrefab: {fileID: 1000010304998954, guid: 6def53d002137b747aec0b29551e0e25,
     type: 3}
-  skeletonMainPose: {fileID: 11400000, guid: 9d661a137ef39354ca19c9a25781dc32, type: 2}
+  skeletonMainPose: {fileID: 11400000, guid: 6b5f94c594ee4294eb2e02eed36435fb, type: 2}
   skeletonAdditionalPoses: []
   showLeftPreview: 0
   showRightPreview: 0

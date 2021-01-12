@@ -75,6 +75,7 @@ public class SettingsMenu : MonoBehaviour
         PlayerPrefs.DeleteKey("dialogueVolume");
         PlayerPrefs.DeleteKey("bloomBool");
         PlayerPrefs.DeleteKey("subtitleBool");
+        PlayerPrefs.DeleteKey("highscore");
 
         LoadSettings();
     }

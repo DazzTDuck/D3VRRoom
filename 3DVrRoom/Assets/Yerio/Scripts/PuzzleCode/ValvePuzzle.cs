@@ -44,12 +44,19 @@ public class ValvePuzzle : MonoBehaviour
     CircularDrive red;
     CircularDrive green;
     CircularDrive blue;
+    Interactable iRed;
+    Interactable iGreen;
+    Interactable iBlue;
 
     private void Awake()
     {
         blue = blueValve.GetComponent<CircularDrive>();
         green = greenValve.GetComponent<CircularDrive>();
         red = redValve.GetComponent<CircularDrive>();
+
+        iBlue = blueValve.GetComponent<Interactable>();
+        iGreen = greenValve.GetComponent<Interactable>();
+        iRed = redValve.GetComponent<Interactable>();
 
         BlueValveInteractable(true);
         GreenValveInteractable(false);
@@ -58,13 +65,16 @@ public class ValvePuzzle : MonoBehaviour
     void ValveRotationsProcent()
     {
         //---blue---
-        blueValveRotProcent = GetLinearMappingValue(blueValve) * 100;
+        if(blue.isActiveAndEnabled)
+            blueValveRotProcent = GetLinearMappingValue(blueValve) * 100;
 
         //---green---
-        greenValveRotProcent = GetLinearMappingValue(greenValve) * 100;
+        if (green.isActiveAndEnabled)
+            greenValveRotProcent = GetLinearMappingValue(greenValve) * 100;
 
         //---red---
-        redValveRotProcent = GetLinearMappingValue(redValve) * 100;
+        if (red.isActiveAndEnabled)
+            redValveRotProcent = GetLinearMappingValue(redValve) * 100;
     }
 
     float GetLinearMappingValue(Transform transform)
@@ -145,18 +155,25 @@ public class ValvePuzzle : MonoBehaviour
         blue.enabled = state;
         green.enabled = state;
         red.enabled = state;
+
+        iRed.enabled = state;
+        iGreen.enabled = state;
+        iBlue.enabled = state;
     }
     public void BlueValveInteractable(bool state)
     {
         blue.enabled = state;
+        iBlue.enabled = state;
     }
     public void GreenValveInteractable(bool state)
     {
         green.enabled = state;
+        iGreen.enabled = state;
     }
     public void RedValveInteractable(bool state)
     {
         red.enabled = state;
+        iRed.enabled = state;
     }  
 
     private void Update()

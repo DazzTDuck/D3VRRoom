@@ -318,7 +318,7 @@ public class GameManager : MonoBehaviour
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
-        StopCoroutine("ResetGame");
+        StopCoroutine(nameof(ResetGame));
     }
 
     void SetHighScore()
