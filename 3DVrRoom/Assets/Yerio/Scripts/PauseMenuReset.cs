@@ -12,6 +12,6 @@ public class PauseMenuReset : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>();
         button = GetComponent<VRUiButton>();
 
-        button.OnClick.AddListener(() => { StartCoroutine(gameManager.ResetGame(false)); });
+        button.OnClick.AddListener(() => { StartCoroutine(gameManager.ResetGame(false, 0)); });
     }
 }

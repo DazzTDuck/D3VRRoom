@@ -161,7 +161,7 @@ public class GameManager : MonoBehaviour
             {
                 //end
                 startTimer = false;
-                StartCoroutine(ResetGame(false));
+                StartCoroutine(ResetGame(false, 2));
             }
         }
     }
@@ -302,11 +302,13 @@ public class GameManager : MonoBehaviour
     public void EndGame(bool setScore)
     {
         //calculate time that took to finish and save to a PlayerPref 
-        StartCoroutine(ResetGame(setScore));
+        StartCoroutine(ResetGame(setScore, 0));
     }
 
-    public IEnumerator ResetGame(bool setScore)
+    public IEnumerator ResetGame(bool setScore, float delay)
     {
+        yield return new WaitForSeconds(delay);
+
         BlackScreen.FadeIn();
 
         startTimer = false;
