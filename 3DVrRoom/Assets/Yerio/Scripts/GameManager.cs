@@ -152,12 +152,12 @@ public class GameManager : MonoBehaviour
                 bossBarks.CallBark(4);
             }
 
-            if (seconds == 6 && minutes == 0)
+            if (seconds == 5 && minutes == 00)
             {
                 bossBarks.CallBark(5);
             }
 
-            if(timerSeconds == 0)
+            if(seconds == 00 && minutes == 00)
             {
                 //end
                 startTimer = false;
