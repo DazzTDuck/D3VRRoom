@@ -192,7 +192,7 @@ public class GameManager : MonoBehaviour
 
         while (dumbellsChosen.Count < amountDumbellsToHide)
         {
-            var index = Random.Range(0, dumbells.Length - 1);
+            var index = Random.Range(0, dumbells.Length);
 
             if (!dumbellsChosen.Contains(dumbells[index]))
             {
@@ -208,11 +208,11 @@ public class GameManager : MonoBehaviour
         dumbell1Canvas.gameObject.SetActive(false);
         dumbell2Canvas.gameObject.SetActive(false);
 
-        var randomDumbell = hidingPlacesDumbell[Random.Range(0, hidingPlacesDumbell.Length - 1)];
+        var randomDumbell = hidingPlacesDumbell[Random.Range(0, hidingPlacesDumbell.Length)];
         randomDumbell.SetActive(true);
 
         //greenKey
-        var greenKey = greenKeyHidingPlaces[Random.Range(0, greenKeyHidingPlaces.Length - 1)];
+        var greenKey = greenKeyHidingPlaces[Random.Range(0, greenKeyHidingPlaces.Length)];
         greenKey.SetActive(true);
         //
 
@@ -237,12 +237,12 @@ public class GameManager : MonoBehaviour
 
     void HideGreenGaugeAndFuze()
     {
-        var gauge = greenGaugeHidingPlaces[Random.Range(0, greenGaugeHidingPlaces.Length - 1)];
+        var gauge = greenGaugeHidingPlaces[Random.Range(0, greenGaugeHidingPlaces.Length)];
         gauge.SetActive(true);
 
         greenGaugeSnap.ObjectToSnap = gauge.transform;
 
-        var fuze = fuzeHidingPlaces[Random.Range(0, fuzeHidingPlaces.Length - 1)];
+        var fuze = fuzeHidingPlaces[Random.Range(0, fuzeHidingPlaces.Length)];
         fuze.SetActive(true);
 
         fuzeSnap.newFuze = fuze;
@@ -269,7 +269,7 @@ public class GameManager : MonoBehaviour
 
         while (selectedTextures.Count < 3)
         {
-            int randomIndex = Random.Range(0, codeTextures.Length - 1);
+            int randomIndex = Random.Range(0, codeTextures.Length);
 
             Texture selected = codeTextures[randomIndex];
 
